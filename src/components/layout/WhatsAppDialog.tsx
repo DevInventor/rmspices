@@ -77,7 +77,7 @@ export const WhatsAppDialog: React.FC<WhatsAppDialogProps> = ({
       {/* Dialog */}
       <div
         ref={dialogRef}
-        className={`fixed bottom-24 left-6 z-50 w-80 bg-white rounded-2xl shadow-2xl border border-gray-200 transition-all duration-300 transform ${
+        className={`fixed bottom-24 left-6 z-50 w-80 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-slate-800 transition-all duration-300 transform ${
           isVisible 
             ? 'translate-y-0 opacity-100 scale-100' 
             : 'translate-y-4 opacity-0 scale-95'
@@ -119,7 +119,7 @@ export const WhatsAppDialog: React.FC<WhatsAppDialogProps> = ({
 
         {/* Body */}
         <div className="p-4">
-          <div className="bg-gray-100 rounded-2xl p-4 mb-4">
+          <div className="bg-gray-100 dark:bg-slate-800 rounded-2xl p-4 mb-4">
             <div className="flex items-start gap-3">
               {/* Avatar */}
               <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
@@ -130,12 +130,12 @@ export const WhatsAppDialog: React.FC<WhatsAppDialogProps> = ({
               
               {/* Message Bubble */}
               <div className="flex-1">
-                <div className="bg-white rounded-lg p-3 shadow-sm">
-                  <p className="text-gray-800 text-sm leading-relaxed whitespace-pre-line">
+                <div className="bg-white dark:bg-slate-900 rounded-lg p-3 shadow-sm">
+                  <p className="text-gray-800 dark:text-white text-sm leading-relaxed whitespace-pre-line">
                     {message}
                   </p>
                 </div>
-                <div className="text-xs text-gray-500 mt-1 ml-3">
+                <div className="text-xs text-gray-500 dark:text-slate-400 mt-1 ml-3">
                   Now
                 </div>
               </div>

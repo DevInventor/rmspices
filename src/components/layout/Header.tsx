@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, Sun, Moon } from 'lucide-react';
 import { useLanguage } from '../../contexts/useLanguage';
+import { useTheme } from '../../contexts/useTheme';
 import { Button } from '../common/Button';
 
 interface NavigationItem {
@@ -11,6 +12,7 @@ interface NavigationItem {
 
 export const Header: React.FC = () => {
   const { language, setLanguage, translations } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
@@ -27,7 +29,7 @@ export const Header: React.FC = () => {
   
   return (
     <header 
-      className="sticky top-0 z-50 bg-white shadow-sm border-b border-spice-100"
+      className="sticky top-0 z-50 bg-white dark:bg-slate-900 shadow-sm border-b border-spice-100 dark:border-slate-800"
       style={{ position: 'sticky', top: 0, zIndex: 50 }}
     >
       <div className="container-fluid">
@@ -44,7 +46,7 @@ export const Header: React.FC = () => {
                 />
               </svg>
             </div>
-            <h2 className="text-xl font-bold text-gray-900">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white">
               RM Spices
             </h2>
           </Link>
@@ -58,7 +60,7 @@ export const Header: React.FC = () => {
                 className={`text-base font-medium transition-colors hover:text-primary-500 hover:scale-105 transform transition-all duration-200 ${
                   isActiveRoute(item.href)
                     ? 'text-primary-500 font-semibold'
-                    : 'text-gray-600'
+                    : 'text-gray-600 dark:text-gray-300'
                 }`}
               >
                 {item.name}
@@ -68,6 +70,15 @@ export const Header: React.FC = () => {
 
           {/* Actions */}
           <div className="flex items-center gap-4">
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="hidden sm:flex p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-spice-100 dark:hover:bg-slate-800 transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+            </button>
+
             {/* Language Toggle */}
             <Button 
               onClick={() => setLanguage(language === 'eng' ? 'ger' : 'eng')} 
@@ -92,7 +103,7 @@ export const Header: React.FC = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-spice-100"
+              className="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-spice-100 dark:hover:bg-slate-800"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -102,7 +113,7 @@ export const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-spice-100">
+          <div className="md:hidden py-4 border-t border-spice-100 dark:border-slate-800">
             <div className="flex flex-col space-y-4">
               {navigationItems.map((item) => (
                 <Link
@@ -112,21 +123,29 @@ export const Header: React.FC = () => {
                   className={`text-lg font-medium px-3 py-2 rounded-lg transition-colors hover:scale-105 transform transition-all duration-200 ${
                     isActiveRoute(item.href)
                       ? 'text-primary-500 bg-primary-500/10 font-semibold'
-                      : 'text-gray-600 hover:bg-spice-100'
+                      : 'text-gray-600 dark:text-gray-300 hover:bg-spice-100 dark:hover:bg-slate-800'
                   }`}
                 >
                   {item.name}
                 </Link>
               ))}
               
-              <div className="flex items-center justify-between px-3 py-2">
+              <div className="flex items-center justify-between px-3 py-2 gap-2">
                 <Button
                   variant="primary"
                   size="sm"
                   href="/contact"
+                  className="flex-1"
                 >
                   {language === 'eng' ? 'Request a Quote' : 'Angebot anfordern'}
                 </Button>
+                <button
+                  onClick={toggleTheme}
+                  className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-spice-100 dark:hover:bg-slate-800 transition-colors"
+                  aria-label="Toggle theme"
+                >
+                  {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+                </button>
                 <Button
                   onClick={() => setLanguage(language === 'eng' ? 'ger' : 'eng')}
                   variant="outline"

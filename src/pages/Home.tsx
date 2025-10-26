@@ -149,27 +149,27 @@ export const Home: React.FC = () => {
           </div>
           
           {/* Why Choose Us Section */}
-          <h2 className="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+          <h2 className="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-gray-900 dark:text-white">
             {whyChooseUs.title}
           </h2>
           <div className="flex flex-col gap-10 px-4 py-10">
             <div className="flex flex-col gap-4">
-              <h1 className="tracking-light text-[32px] md:text-4xl font-bold md:font-black leading-tight md:tracking-[-0.033em] max-w-[720px]">
+              <h1 className="tracking-light text-[32px] md:text-4xl font-bold md:font-black leading-tight md:tracking-[-0.033em] max-w-[720px] text-gray-900 dark:text-white">
                 {whyChooseUs.subtitle}
               </h1>
-              <p className="text-base font-normal leading-normal max-w-[720px]">
+              <p className="text-base font-normal leading-normal max-w-[720px] text-gray-600 dark:text-slate-400">
                 {whyChooseUs.description}
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               {whyChooseUs.items.map((item, index) => (
-                <div key={index} className="flex flex-1 gap-3 rounded-lg border border-spice-200 bg-white p-4 flex-col">
+                <div key={index} className="flex flex-1 gap-3 rounded-lg border border-spice-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 flex-col transition-colors">
                   <div className="text-primary-500">
                     {getIcon(item.icon)}
                   </div>
                   <div className="flex flex-col gap-1">
-                    <h2 className="text-base font-bold leading-tight">{item.title}</h2>
-                    <p className="text-spice-300 text-sm font-normal leading-normal">{item.description}</p>
+                    <h2 className="text-base font-bold leading-tight text-gray-900 dark:text-white">{item.title}</h2>
+                    <p className="text-spice-300 dark:text-slate-400 text-sm font-normal leading-normal">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -179,10 +179,10 @@ export const Home: React.FC = () => {
           {/* CTA Section */}
           <div className="flex flex-col justify-center gap-6 md:gap-8 px-4 md:px-10 py-10 md:py-20">
             <div className="flex flex-col gap-2 text-center">
-              <h1 className="tracking-light text-[32px] md:text-4xl font-bold md:font-black leading-tight md:tracking-[-0.033em] max-w-[720px]">
+              <h1 className="tracking-light text-[32px] md:text-4xl font-bold md:font-black leading-tight md:tracking-[-0.033em] max-w-[720px] text-gray-900 dark:text-white">
                 {cta.title}
               </h1>
-              <p className="text-base font-normal leading-normal max-w-[720px]">
+              <p className="text-base font-normal leading-normal max-w-[720px] text-gray-600 dark:text-slate-400">
                 {cta.description}
               </p>
             </div>

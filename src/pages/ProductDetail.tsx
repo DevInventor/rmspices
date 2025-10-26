@@ -82,8 +82,8 @@ export const ProductDetail: React.FC = () => {
     return (
       <div className="px-10 flex justify-center py-5">
         <div className="container-fluid flex flex-col max-w-[960px] items-center text-center py-16">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">{detailContent.productNotFound}</h1>
-          <p className="text-gray-600 mb-8">{detailContent.productNotFoundDescription}</p>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{detailContent.productNotFound}</h1>
+          <p className="text-gray-600 dark:text-slate-400 mb-8">{detailContent.productNotFoundDescription}</p>
           <Button href="/products">← {detailContent.backButton}</Button>
         </div>
       </div>
@@ -91,15 +91,15 @@ export const ProductDetail: React.FC = () => {
   }
   
   return (
-    <div className="min-h-screen bg-white py-8">
+    <div className="min-h-screen bg-white dark:bg-slate-950 py-8 transition-colors">
       <div className="container-fluid max-w-[1200px] mx-auto px-4">
         {/* Breadcrumb */}
         <div className="flex flex-wrap gap-2 mb-8">
-          <Link to="/products" className="text-spice-300 text-base font-medium hover:text-primary-500">
+          <Link to="/products" className="text-spice-300 dark:text-slate-400 text-base font-medium hover:text-primary-500">
             {detailContent.breadcrumb.products}
           </Link>
-          <span className="text-spice-300 text-base font-medium">/</span>
-          <span className="text-gray-900 text-base font-medium">{product.name}</span>
+          <span className="text-spice-300 dark:text-slate-400 text-base font-medium">/</span>
+          <span className="text-gray-900 dark:text-white text-base font-medium">{product.name}</span>
         </div>
 
         {/* Hero Section */}
@@ -136,12 +136,12 @@ export const ProductDetail: React.FC = () => {
 
         {/* Product Overview Card */}
         <div className="mb-16">
-          <div className="bg-spice-50 rounded-xl p-8 md:p-12">
+          <div className="bg-spice-50 dark:bg-slate-900 rounded-xl p-8 md:p-12 transition-colors">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Product Overview</h2>
-                <div className="space-y-3 text-base text-gray-700">
-                  <p className="font-semibold text-lg">{product.name}</p>
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Product Overview</h2>
+                <div className="space-y-3 text-base text-gray-700 dark:text-slate-400">
+                  <p className="font-semibold text-lg dark:text-white">{product.name}</p>
                   <p className="leading-relaxed">{product.shortDescription || product.description}</p>
                 </div>
               </div>
@@ -160,34 +160,34 @@ export const ProductDetail: React.FC = () => {
         <div className="mb-16 grid md:grid-cols-2 gap-6">
           {/* Key Details Card */}
           {product.details && (
-            <div className="bg-white border border-spice-200 rounded-xl p-8 space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900">
+            <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-8 space-y-6 transition-colors">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                 {language === 'eng' ? 'Product Details' : 'Produktdetails'}
               </h3>
               {product.details.appearance && (
                 <div className="flex items-start gap-4">
-                  <div className="bg-primary-500/10 p-3 rounded-lg">
+                  <div className="bg-primary-500/10 dark:bg-primary-500/20 p-3 rounded-lg">
                     <Eye className="h-6 w-6 text-primary-500" />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-lg font-bold text-gray-900 mb-2">
+                    <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                       {language === 'eng' ? 'Appearance' : 'Erscheinung'}
                     </h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">{product.details.appearance}</p>
+                    <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">{product.details.appearance}</p>
                   </div>
                 </div>
               )}
               
               {product.details.flavorAroma && (
                 <div className="flex items-start gap-4">
-                  <div className="bg-primary-500/10 p-3 rounded-lg">
+                  <div className="bg-primary-500/10 dark:bg-primary-500/20 p-3 rounded-lg">
                     <Sparkles className="h-6 w-6 text-primary-500" />
                   </div>
                   <div className="flex-1">
-                    <h4 className="text-lg font-bold text-gray-900 mb-2">
+                    <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                       {language === 'eng' ? 'Flavor & Aroma' : 'Geschmack & Aroma'}
                     </h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">{product.details.flavorAroma}</p>
+                    <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">{product.details.flavorAroma}</p>
                   </div>
                 </div>
               )}
@@ -195,19 +195,19 @@ export const ProductDetail: React.FC = () => {
           )}
 
           {/* Highlights Card */}
-          <div className="bg-white border border-spice-200 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-8 transition-colors">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               {language === 'eng' ? 'Highlights' : 'Highlights'}
             </h3>
             <div className="space-y-4">
-              <div className="flex justify-between py-3 border-b border-spice-100">
-                <span className="text-gray-600 font-medium">{language === 'eng' ? 'Origin' : 'Herkunft'}</span>
-                <span className="text-gray-900 font-semibold">{product.origin}</span>
+              <div className="flex justify-between py-3 border-b border-spice-100 dark:border-slate-800">
+                <span className="text-gray-600 dark:text-slate-400 font-medium">{language === 'eng' ? 'Origin' : 'Herkunft'}</span>
+                <span className="text-gray-900 dark:text-white font-semibold">{product.origin}</span>
               </div>
               {Object.entries(product.specifications).slice(0, 3).map(([key, value]) => (
-                <div key={key} className="flex justify-between py-3 border-b border-spice-100">
-                  <span className="text-gray-600 font-medium capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
-                  <span className="text-gray-900 font-semibold">{String(value)}</span>
+                <div key={key} className="flex justify-between py-3 border-b border-spice-100 dark:border-slate-800">
+                  <span className="text-gray-600 dark:text-slate-400 font-medium capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
+                  <span className="text-gray-900 dark:text-white font-semibold">{String(value)}</span>
                 </div>
               ))}
             </div>
@@ -219,8 +219,8 @@ export const ProductDetail: React.FC = () => {
           {/* Detailed Specifications */}
           {tabs.length > 0 && product.productCharacteristics && (
             <div className="lg:col-span-3">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Detailed Specifications</h2>
-              <div className="bg-white border border-spice-200 rounded-xl overflow-hidden">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Detailed Specifications</h2>
+              <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl overflow-hidden transition-colors">
                 <Tabs 
                   tabs={tabs}
                   activeTab={activeTab}
@@ -245,35 +245,35 @@ export const ProductDetail: React.FC = () => {
           {/* Usage & Benefits Cards */}
           {product.details && (
             <div className="lg:col-span-2">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Usage & Benefits</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Usage & Benefits</h2>
               <div className="space-y-6">
                 {product.details.culinaryUses && (
-                  <div className="bg-primary-500/5 border border-primary-500/20 rounded-xl p-6">
+                  <div className="bg-primary-500/5 dark:bg-primary-500/10 border border-primary-500/20 dark:border-primary-500/30 rounded-xl p-6 transition-colors">
                     <div className="flex items-start gap-4">
                       <div className="bg-primary-500 p-3 rounded-lg">
                         <ChefHat className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">
+                        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                           {language === 'eng' ? 'Culinary Uses' : 'Kulinarische Verwendung'}
                         </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">{product.details.culinaryUses}</p>
+                        <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">{product.details.culinaryUses}</p>
                       </div>
                     </div>
                   </div>
                 )}
                 
                 {product.details.healthBenefits && (
-                  <div className="bg-red-500/5 border border-red-500/20 rounded-xl p-6">
+                  <div className="bg-red-500/5 dark:bg-red-500/10 border border-red-500/20 dark:border-red-500/30 rounded-xl p-6 transition-colors">
                     <div className="flex items-start gap-4">
                       <div className="bg-red-500 p-3 rounded-lg">
                         <Heart className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">
+                        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                           {language === 'eng' ? 'Health Benefits' : 'Gesundheitsvorteile'}
                         </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">{product.details.healthBenefits}</p>
+                        <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">{product.details.healthBenefits}</p>
                       </div>
                     </div>
                   </div>
@@ -286,7 +286,7 @@ export const ProductDetail: React.FC = () => {
         {/* Packing Images & Brand Labels */}
         {(product.packingImages || product.brandLabels) && (
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               {language === 'eng' ? 'Packing Images & Brand Labels' : 'Verpackungsbilder & Markenetiketten'}
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
@@ -309,19 +309,19 @@ export const ProductDetail: React.FC = () => {
         {/* Packaging & Logistics */}
         {product.logistics && (
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Packaging & Logistics</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Packaging & Logistics</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {product.logistics.containerCapacity && product.logistics.containerCapacity.length > 0 && (
-                <div className="bg-white border border-spice-200 rounded-xl p-6">
+                <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-6 transition-colors">
                   <div className="flex items-start gap-4 mb-4">
                     <Truck className="h-6 w-6 text-primary-500" />
-                    <h3 className="text-lg font-bold text-gray-900">{language === 'eng' ? 'Container Capacity' : 'Containerkapazität'}</h3>
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Container Capacity' : 'Containerkapazität'}</h3>
                   </div>
                   <div className="space-y-2">
                     {product.logistics.containerCapacity.map((container, index) => (
                       <div key={index} className="flex justify-between">
-                        <span className="text-gray-600">{container.type}</span>
-                        <span className="font-semibold text-gray-900">{container.quantityMetricTons} MT</span>
+                        <span className="text-gray-600 dark:text-slate-400">{container.type}</span>
+                        <span className="font-semibold text-gray-900 dark:text-white">{container.quantityMetricTons} MT</span>
                       </div>
                     ))}
                   </div>
@@ -329,42 +329,42 @@ export const ProductDetail: React.FC = () => {
               )}
               
               {product.logistics.packing && (
-                <div className="bg-white border border-spice-200 rounded-xl p-6">
+                <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-6 transition-colors">
                   <div className="flex items-start gap-4 mb-4">
                     <Package className="h-6 w-6 text-primary-500" />
-                    <h3 className="text-lg font-bold text-gray-900">{language === 'eng' ? 'Packing' : 'Verpackung'}</h3>
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Packing' : 'Verpackung'}</h3>
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">{product.logistics.packing}</p>
+                  <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">{product.logistics.packing}</p>
                 </div>
               )}
               
               {product.logistics.shelfLife && (
-                <div className="bg-white border border-spice-200 rounded-xl p-6">
+                <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-6 transition-colors">
                   <div className="flex items-start gap-4 mb-4">
                     <Clock className="h-6 w-6 text-primary-500" />
-                    <h3 className="text-lg font-bold text-gray-900">{language === 'eng' ? 'Shelf Life' : 'Haltbarkeit'}</h3>
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Shelf Life' : 'Haltbarkeit'}</h3>
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">{product.logistics.shelfLife}</p>
+                  <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">{product.logistics.shelfLife}</p>
                 </div>
               )}
               
               {product.logistics.pesticides && (
-                <div className="bg-white border border-green-500/20 bg-green-500/5 rounded-xl p-6">
+                <div className="bg-white dark:bg-slate-900 border border-green-500/20 dark:border-green-500/30 bg-green-500/5 dark:bg-green-500/10 rounded-xl p-6 transition-colors">
                   <div className="flex items-start gap-4 mb-4">
                     <Shield className="h-6 w-6 text-green-600" />
-                    <h3 className="text-lg font-bold text-gray-900">{language === 'eng' ? 'Pesticides Compliance' : 'Pestizidkonformität'}</h3>
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Pesticides Compliance' : 'Pestizidkonformität'}</h3>
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">{product.logistics.pesticides}</p>
+                  <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">{product.logistics.pesticides}</p>
                 </div>
               )}
               
               {product.logistics.allergens && (
-                <div className="bg-white border border-green-500/20 bg-green-500/5 rounded-xl p-6">
+                <div className="bg-white dark:bg-slate-900 border border-green-500/20 dark:border-green-500/30 bg-green-500/5 dark:bg-green-500/10 rounded-xl p-6 transition-colors">
                   <div className="flex items-start gap-4 mb-4">
                     <AlertCircle className="h-6 w-6 text-green-600" />
-                    <h3 className="text-lg font-bold text-gray-900">{language === 'eng' ? 'Allergens' : 'Allergene'}</h3>
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Allergens' : 'Allergene'}</h3>
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">{product.logistics.allergens}</p>
+                  <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">{product.logistics.allergens}</p>
                 </div>
               )}
             </div>
@@ -372,9 +372,9 @@ export const ProductDetail: React.FC = () => {
         )}
 
         {/* CTA Section */}
-        <div className="mb-16 relative overflow-hidden rounded-xl bg-gradient-to-br from-primary-500/10 to-spice-50 p-12">
+        <div className="mb-16 relative overflow-hidden rounded-xl bg-gradient-to-br from-primary-500/10 to-spice-50 dark:from-primary-500/5 dark:to-slate-900 p-12 transition-colors">
           <div className="relative z-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               {language === 'eng' ? `Get a Quote for ${product.name}` : `Angebot für ${product.name} erhalten`}
             </h2>
             <button
@@ -392,6 +392,7 @@ export const ProductDetail: React.FC = () => {
           currentProductId={product.id}
           title={detailContent.relatedProducts.title}
           maxProducts={3}
+          language={language}
         />
       </div>
     </div>

@@ -91,10 +91,10 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
           <h3 className="text-primary-600 font-semibold text-sm uppercase tracking-wide mb-2">
             {language === 'eng' ? 'Contact' : 'Kontakt'}
           </h3>
-          <h2 className="text-gray-800 text-3xl font-bold">
+          <h2 className="text-gray-800 dark:text-white text-3xl font-bold">
             {title}
           </h2>
-          <p className="text-gray-600 mt-3">
+          <p className="text-gray-600 dark:text-slate-400 mt-3">
             {language === 'eng'
               ? "We're here to help and answer any question you might have. We look forward to hearing from you."
               : 'Wir sind hier, um zu helfen und alle Ihre Fragen zu beantworten. Wir freuen uns auf Ihre Nachricht.'}
@@ -104,20 +104,20 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
         <div className="space-y-4">
           {contactMethods.map((method, idx) => (
             <div key={idx} className="flex items-start gap-3 group">
-              <div className="flex-none w-12 h-12 rounded-full border border-gray-200 bg-white flex items-center justify-center text-primary-600 group-hover:bg-primary-50 transition-colors">
+              <div className="flex-none w-12 h-12 rounded-full border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-900 flex items-center justify-center text-primary-600 group-hover:bg-primary-50 dark:group-hover:bg-primary-900/30 transition-colors">
                 {method.icon}
               </div>
               <div>
-                <p className="font-semibold text-gray-800 mb-1">{method.title}</p>
+                <p className="font-semibold text-gray-800 dark:text-white mb-1">{method.title}</p>
                 {method.href ? (
                   <a
                     href={method.href}
-                    className="text-gray-600 hover:text-primary-600 transition-colors"
+                    className="text-gray-600 dark:text-slate-400 hover:text-primary-600 transition-colors"
                   >
                     {method.value}
                   </a>
                 ) : (
-                  <p className="text-gray-600">{method.value}</p>
+                  <p className="text-gray-600 dark:text-slate-400">{method.value}</p>
                 )}
               </div>
             </div>
@@ -127,20 +127,20 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
 
       {/* Right Column - Contact Form Card */}
       <div className="lg:col-span-3">
-        <div className="bg-white border-2 border-gray-100 rounded-2xl shadow-xl p-8 relative overflow-hidden">
+        <div className="bg-white dark:bg-slate-900 border-2 border-gray-100 dark:border-slate-800 rounded-2xl shadow-xl p-8 relative overflow-hidden transition-colors">
           {/* Decorative Corner Elements */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-primary-50 rounded-bl-full opacity-30" />
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary-50 rounded-tr-full opacity-20" />
 
           <div className="relative z-10">
-            <h3 className="text-gray-800 text-2xl font-bold mb-6">
+            <h3 className="text-gray-800 dark:text-white text-2xl font-bold mb-6">
               {language === 'eng' ? "Send us a message" : "Senden Sie uns eine Nachricht"}
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     {language === 'eng' ? 'Name' : 'Name'} <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -149,13 +149,13 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
                     value={formData.name}
                     onChange={handleChange}
                     placeholder={language === 'eng' ? 'Your name' : 'Ihr Name'}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-slate-700 dark:bg-slate-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-all"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     {language === 'eng' ? 'Email' : 'E-Mail'} <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -164,7 +164,7 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
                     value={formData.email}
                     onChange={handleChange}
                     placeholder={language === 'eng' ? 'your@email.com' : 'ihre@email.com'}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-slate-700 dark:bg-slate-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-all"
                     required
                   />
                 </div>
@@ -172,7 +172,7 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     {language === 'eng' ? 'Company' : 'Firma'}
                   </label>
                   <input
@@ -181,12 +181,12 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
                     value={formData.company}
                     onChange={handleChange}
                     placeholder={language === 'eng' ? 'Your company' : 'Ihre Firma'}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-slate-700 dark:bg-slate-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-all"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     {language === 'eng' ? 'Phone' : 'Telefon'} <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -195,21 +195,21 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder={language === 'eng' ? '+1 234 567 890' : '+49 123 456789'}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-slate-700 dark:bg-slate-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-all"
                     required
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   {language === 'eng' ? 'Product interest' : 'Produktinteresse'}
                 </label>
                 <select
                   name="product"
                   value={formData.product}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-all appearance-none bg-white cursor-pointer"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-slate-700 dark:bg-slate-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-all appearance-none cursor-pointer"
                 >
                   <option value="">{language === 'eng' ? 'Select a product' : 'Produkt auswählen'}</option>
                   {productOptions.map((option) => (
@@ -219,7 +219,7 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   {language === 'eng' ? 'Message' : 'Nachricht'}
                 </label>
                 <textarea
@@ -228,7 +228,7 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
                   onChange={handleChange}
                   placeholder={language === 'eng' ? 'Tell us about your project...' : 'Erzählen Sie uns von Ihrem Projekt...'}
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-slate-700 dark:bg-slate-800 dark:text-white rounded-lg focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none transition-all resize-none"
                 />
               </div>
 

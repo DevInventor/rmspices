@@ -41,7 +41,7 @@ export const TopbarBanner: React.FC = () => {
   const socialMediaArray = Object.values(socialMedia) as SocialMediaItem[];
 
   return (
-    <div className="bg-slate-900 text-white py-2 px-4 text-xs">
+    <div className="bg-slate-900 dark:bg-black text-white py-2 px-4 text-xs transition-colors">
       <div className="container-fluid">
         <div className="flex items-center justify-between gap-4">
           {/* Left: Social Media Icons */}

@@ -61,15 +61,15 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => 
 
   return (
     <>
-      <div className="bg-white border border-spice-200 rounded-xl p-8">
+      <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-8 transition-colors">
         {title && (
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">{title}</h3>
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{title}</h3>
         )}
         
         {/* Main Carousel */}
         <div className="relative">
           {/* Main Image */}
-          <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-100">
+          <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-100 dark:bg-slate-800">
             <img
               src={images[currentIndex].src}
               alt={images[currentIndex].alt}
@@ -78,7 +78,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => 
             />
             
             {/* Image Counter */}
-            <div className="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
+            <div className="absolute bottom-4 right-4 bg-black/70 dark:bg-slate-900/80 text-white px-3 py-1 rounded-full text-sm">
               {currentIndex + 1} / {images.length}
             </div>
           </div>
@@ -114,7 +114,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => 
                 className={`flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden border-2 transition-all ${
                   currentIndex === index
                     ? 'border-primary-500 ring-2 ring-primary-500/20'
-                    : 'border-gray-200 hover:border-gray-300'
+                    : 'border-gray-200 dark:border-slate-700 hover:border-gray-300 dark:hover:border-slate-600'
                 }`}
               >
                 <img
@@ -129,7 +129,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => 
 
         {/* Image Title */}
         {images[currentIndex].title && (
-          <p className="mt-4 text-center text-gray-600 text-sm font-medium">
+          <p className="mt-4 text-center text-gray-600 dark:text-slate-400 text-sm font-medium">
             {images[currentIndex].title}
           </p>
         )}

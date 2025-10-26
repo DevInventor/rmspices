@@ -21,9 +21,9 @@ export const FloatingCallButton: React.FC = () => {
       <Phone className="w-6 h-6" />
       
       {/* Tooltip */}
-      <div className="absolute bottom-full left-0 mb-2 px-3 py-1 bg-gray-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+      <div className="absolute bottom-full left-0 mb-2 px-3 py-1 bg-gray-800 dark:bg-slate-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
         Call us now
-        <div className="absolute top-full left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800"></div>
+        <div className="absolute top-full left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-800 dark:border-t-slate-900"></div>
       </div>
     </button>
   );

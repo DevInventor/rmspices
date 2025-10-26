@@ -3,6 +3,7 @@ import { useLanguage } from '../contexts/useLanguage';
 import { getPageTranslations } from '../utils/translations';
 import { Shield, Users, Leaf } from 'lucide-react';
 import { cn } from '../utils';
+import { ValueCard } from '../components/common/ValueCard';
 
 interface TimelineItem {
   year: string;
@@ -62,7 +63,7 @@ export const About: React.FC = () => {
       <div className="container-fluid flex flex-col max-w-[960px]">
         {/* Hero */}
         <div
-          className="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-white rounded-lg min-h-[218px]"
+          className="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-white dark:bg-slate-900 rounded-lg min-h-[218px] transition-colors"
           style={{
             backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 25%), url(${hero.backgroundImage})`,
           }}
@@ -75,15 +76,15 @@ export const About: React.FC = () => {
         </div>
         
         {/* Intro */}
-        <h2 className="tracking-light text-[28px] font-bold leading-tight px-4 text-left pb-3 pt-5">
+        <h2 className="tracking-light text-[28px] font-bold leading-tight px-4 text-left pb-3 pt-5 text-gray-900 dark:text-white">
           {intro.title}
         </h2>
-        <p className="text-base font-normal leading-normal pb-3 pt-1 px-4">
+        <p className="text-base font-normal leading-normal pb-3 pt-1 px-4 text-gray-600 dark:text-slate-400">
           {intro.description}
         </p>
         
         {/* Timeline */}
-        <h2 className="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+        <h2 className="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-gray-900 dark:text-white">
           {timeline.title}
         </h2>
         <div className="grid grid-cols-[40px_1fr] gap-x-2 px-4">
@@ -101,37 +102,34 @@ export const About: React.FC = () => {
                   }}
                 />
                 {index < timeline.items.length - 1 && (
-                  <div className="w-[1.5px] bg-spice-200 h-2 grow"></div>
+                  <div className="w-[1.5px] bg-spice-200 dark:bg-slate-800 h-2 grow transition-colors"></div>
                 )}
               </div>
               <div className={cn('flex flex-1 flex-col', index === 0 ? 'py-3' : index === timeline.items.length - 1 ? 'py-3' : 'py-3')}>
-                <p className="text-base font-medium leading-normal">{item.year}: {item.title}</p>
-                <p className="text-spice-300 text-base font-normal leading-normal">{item.description}</p>
+                <p className="text-base font-medium leading-normal text-gray-900 dark:text-white">{item.year}: {item.title}</p>
+                <p className="text-spice-300 dark:text-slate-400 text-base font-normal leading-normal">{item.description}</p>
               </div>
             </React.Fragment>
           ))}
         </div>
         
         {/* Values */}
-        <h2 className="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+        <h2 className="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-gray-900 dark:text-white">
           {values.title}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-4">
           {values.items.map((item, index: number) => (
-            <div key={index} className="flex flex-1 gap-3 rounded-lg border border-spice-200 bg-white p-4 flex-col">
-              <div className="text-primary-500">
-                {getIcon(item.icon)}
-              </div>
-              <div className="flex flex-col gap-1">
-                <h2 className="text-base font-bold leading-tight">{item.title}</h2>
-                <p className="text-spice-300 text-sm font-normal leading-normal">{item.description}</p>
-              </div>
-            </div>
+            <ValueCard
+              key={index}
+              icon={getIcon(item.icon)}
+              title={item.title}
+              description={item.description}
+            />
           ))}
         </div>
         
         {/* Team */}
-        <h2 className="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+        <h2 className="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-gray-900 dark:text-white">
           {team.title}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 p-4">
@@ -144,8 +142,8 @@ export const About: React.FC = () => {
                 />
               </div>
               <div>
-                <p className="text-base font-medium leading-normal">{member.name}</p>
-                <p className="text-spice-300 text-sm font-normal leading-normal">{member.role}</p>
+                <p className="text-base font-medium leading-normal text-gray-900 dark:text-white">{member.name}</p>
+                <p className="text-spice-300 dark:text-slate-400 text-sm font-normal leading-normal">{member.role}</p>
               </div>
             </div>
           ))}

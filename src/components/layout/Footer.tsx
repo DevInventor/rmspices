@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
   };
   
   return (
-    <footer className="bg-slate-50 border-t border-slate-200">
+    <footer className="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
@@ -51,11 +51,11 @@ export const Footer: React.FC = () => {
                   />
                 </svg>
               </div>
-              <span className="text-2xl font-bold text-slate-900">
+              <span className="text-2xl font-bold text-slate-900 dark:text-white">
                 {companyInfo.name}
               </span>
             </Link>
-            <p className="text-slate-600 text-sm leading-relaxed mb-6 max-w-md">
+            <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 max-w-md">
               {companyInfo.description}
             </p>
             
@@ -66,7 +66,7 @@ export const Footer: React.FC = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label={socialMedia.facebook.ariaLabel}
-                className="h-10 w-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary-500/10 hover:text-primary-500 transition-all duration-200 hover:scale-110"
+                className="h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary-500/10 hover:text-primary-500 transition-all duration-200 hover:scale-110"
               >
                 <Facebook className="h-5 w-5" />
               </a>
@@ -75,7 +75,7 @@ export const Footer: React.FC = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label={socialMedia.linkedin.ariaLabel}
-                className="h-10 w-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary-500/10 hover:text-primary-500 transition-all duration-200 hover:scale-110"
+                className="h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary-500/10 hover:text-primary-500 transition-all duration-200 hover:scale-110"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label={socialMedia.instagram.ariaLabel}
-                className="h-10 w-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-primary-500/10 hover:text-primary-500 transition-all duration-200 hover:scale-110"
+                className="h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary-500/10 hover:text-primary-500 transition-all duration-200 hover:scale-110"
               >
                 <Instagram className="h-5 w-5" />
               </a>
@@ -93,7 +93,7 @@ export const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-slate-900 mb-4">
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-4">
               {language === 'eng' ? 'Quick Links' : 'Schnellzugriff'}
             </h3>
             <ul className="space-y-3 text-sm">
@@ -101,7 +101,7 @@ export const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-slate-600 hover:text-primary-500 transition-colors duration-200"
+                    className="text-slate-600 dark:text-slate-400 hover:text-primary-500 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -112,7 +112,7 @@ export const Footer: React.FC = () => {
 
           {/* Support */}
           <div>
-            <h3 className="font-semibold text-slate-900 mb-4">
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-4">
               {language === 'eng' ? 'Support' : 'Support'}
             </h3>
             <ul className="space-y-3 text-sm">
@@ -120,7 +120,7 @@ export const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-slate-600 hover:text-primary-500 transition-colors duration-200"
+                    className="text-slate-600 dark:text-slate-400 hover:text-primary-500 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -131,7 +131,7 @@ export const Footer: React.FC = () => {
 
           {/* Contact Us */}
           <div>
-            <h3 className="font-semibold text-slate-900 mb-4">
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-4">
               {language === 'eng' ? 'Get in Touch' : 'Kontakt'}
             </h3>
             <div className="space-y-4">
@@ -143,7 +143,7 @@ export const Footer: React.FC = () => {
                 <MessageCircle className="h-5 w-5" />
                 <span>{language === 'eng' ? 'Chat on WhatsApp' : 'Bei WhatsApp kontaktieren'}</span>
               </button>
-              <div className="text-sm text-slate-600">
+              <div className="text-sm text-slate-600 dark:text-slate-400">
                 <p className="mb-1">
                   <span className="font-medium">Email:</span> {contact.email.primary}
                 </p>
@@ -156,8 +156,8 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-12 pt-8 border-t border-slate-200">
-          <div className="text-center text-sm text-slate-500">
+        <div className="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800">
+          <div className="text-center text-sm text-slate-500 dark:text-slate-400">
             <p>© {new Date().getFullYear()} {companyInfo.name}. All rights reserved.</p>
           </div>
         </div>

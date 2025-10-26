@@ -22,6 +22,26 @@
   --color-spice-500: #3f2d20;
   
   --font-family-sans: "Work Sans", "Noto Sans", sans-serif;
+  
+  /* Dark mode selector */
+  --dark-mode: class;
+}
+
+/* Dark mode color overrides */
+:root {
+  --background: #ffffff;
+  --foreground: #1e293b;
+  --card-bg: #ffffff;
+  --border: #e2e8f0;
+  --muted: #64748b;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card-bg: #1e293b;
+  --border: #334155;
+  --muted: #94a3b8;
 }
 
 * {
@@ -37,6 +57,9 @@ body {
   font-family: 'Work Sans', 'Noto Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -60,7 +83,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 8px;
+}
+
+::-webkit-scrollbar-track {
   background: #f1f5f9;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
 }
 
 ::-webkit-scrollbar-thumb {

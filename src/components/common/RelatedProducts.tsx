@@ -1,19 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import type { Product } from '../../utils/translations';
+import { ProductCard } from './ProductCard';
 
 interface RelatedProductsProps {
   products: Product[];
   currentProductId?: string;
   title?: string;
   maxProducts?: number;
+  language?: 'eng' | 'ger';
 }
 
 export const RelatedProducts: React.FC<RelatedProductsProps> = ({ 
   products, 
   currentProductId, 
   title = "Related Products",
-  maxProducts = 3 
+  maxProducts = 3,
+  language = 'eng'
 }) => {
   // Filter out current product and get random related products
   const relatedProducts = React.useMemo(() => {
@@ -33,29 +35,16 @@ export const RelatedProducts: React.FC<RelatedProductsProps> = ({
   return (
     <div>
       {title && (
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">{title}</h2>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">{title}</h2>
       )}
       <div className="grid md:grid-cols-3 gap-6">
         {relatedProducts.map((product) => (
-          <Link
+          <ProductCard
             key={product.id}
-            to={`/products/${product.id}`}
-            className="group bg-white border border-spice-200 rounded-xl overflow-hidden hover:shadow-lg transition-all hover:scale-105"
-          >
-            <div className="aspect-square bg-cover bg-center" 
-              style={{ 
-                backgroundImage: `url(${product.image || product.backgroundImage || product.productImage})` 
-              }} 
-            />
-            <div className="p-4">
-              <h4 className="font-bold text-gray-900 mb-2 group-hover:text-primary-500 transition-colors">
-                {product.name}
-              </h4>
-              <p className="text-sm text-gray-600 line-clamp-2">
-                {product.description}
-              </p>
-            </div>
-          </Link>
+            product={product}
+            language={language}
+            showDetails={false}
+          />
         ))}
       </div>
     </div>
