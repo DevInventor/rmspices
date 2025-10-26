@@ -1,0 +1,230 @@
+{
+  "title": "Our Products",
+  "description": "Explore our premium collection of Indian spices, carefully sourced and processed to ensure the highest quality.",
+  "topSellingLabel": "Top Selling Products",
+  "empty": {
+    "title": "Browse Our Products",
+    "description": "Select a category to view products"
+  },
+  "viewAll": "View All Products",
+  "loadMore": "Load More Products",
+  "products": [
+    {
+      "id": "cumin",
+      "topSelling": true,
+      "name": "Cumin Seeds (Jeera)",
+      "category": "Whole Spices",
+      "origin": "Rajasthan, India",
+      "description": "Premium cumin seeds from the arid regions of Rajasthan, known for their intense aroma and earthy flavor. These seeds are carefully harvested and processed to maintain their natural oils and essential compounds.",
+      "shortDescription": "Cumin seeds are the dried seeds of the Cuminum cyminum plant, widely used as a spice in cooking, especially in Indian, Middle Eastern, Latin American, and North African cuisines.",
+      "backgroundImage": "https://plus.unsplash.com/premium_photo-1723874683717-006f24c93975",
+      "productImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+      "specifications": {
+        "form": "Whole Seeds",
+        "moisture": "8-10%",
+        "packaging": "25kg / 50kg Bags",
+        "color": "Brown"
+      },
+      "details": {
+        "appearance": "Small, elongated seeds; Typically light brown to yellowish-brown; Ridged texture with longitudinal grooves.",
+        "flavorAroma": "Warm, earthy, and slightly nutty; Distinctively pungent with a hint of citrus; Intensifies when roasted or ground.",
+        "culinaryUses": "Used whole or ground; Common in spice blends like garam masala, curry powder, and chili powder; Enhances flavor in curries, soups, stews, rice dishes, and pickles.",
+        "healthBenefits": "Aids digestion; Contains antioxidants; May have anti-inflammatory and antimicrobial properties."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Whole",
+          "purity": ["99.5%", "99%", "95%"]
+        },
+        "chemicalParameters": {
+          "moisture": "9% Max",
+          "ashContent": "9.5% Max",
+          "acidInsolubleAsh": "1.5% Max",
+          "volatileOil_ml_per100g": "1.5-3.5% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Absent",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Feet", "quantityMetricTons": 13 },
+          { "type": "40 Feet", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/30/50 Kgs, PP Kraft bags with inner liner (customised packing available).",
+        "shelfLife": "12 Months under proper storage condition.",
+        "pesticides": "Complying with requirements for pesticide residue levels as per the regulations of the destination country.",
+        "allergens": "Free from Allergens"
+      },
+      "packingImages": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkBv7rfb9H2W8sRa2p2TgdXmnXBpYCJiiNbPexkhG4s7luBMjgeDn-rvg3ABDjjD6LrZgAzmmKdJvfwUlYzbbviwEjd-9BV-oUToWwAprBHXS1LjFr1lzYZCK2Tt4Bu8f0u1b3CttvbowycWK2fKlbdsX7YKUMtJQLO04sqm8H1ro1zBFWWEALIoc8_Z80_HO3Gusdwc5b7DK4Bc9dUUhr5abgkuVQbjcr2r-aPwQXkAMRGKsvSvX0r3-zedFnjLVO80dbrUGZt0E",
+          "alt": "Cumin Seeds Packing",
+          "title": "Premium Kraft Bag Packing"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxP1L7N_kEplgnxlS5uCFFQPuK3_B_z7zGqFCQafEylnoQHv-XF3IOZFWwmvoVsyiyUh4MXpRdb7zZAOc1qO82An8e3DKL-rKCZ69pQfMOvtX0jMhQGbcVKF6d6i4Oyo_R6oyu5PktBCjCf2nKwXIIUxW_Gf8z2gLBjQgTDaoNCcfXxdnc9b8OhcRNkPBySR4ux_PyGywMeQg1frJKaKckp4-qeGXrZgzFVULfZLg9zWK5LxJRyTiYKFAZMz257g2vGXtemiM3GMM",
+          "alt": "Cumin Seeds Container",
+          "title": "Export Container Loading"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAktrKiPZ8UxNJxU73KACMnwAJGykwMOUPhzCa0uzCeflWSzSewmePW18JkLwepp0MNNgQgSanFhahd7gmjt7vu0_CbOe4RxE0qLVhMVYws_2e6NgwidsGLBWp54yBJdUHVWzwuRvb66AePuUZk4ts40k_dzAsNk9tZazJgkUaL1eUf85wsu8gsBxJ5rPy-XOS8iy3dyLw3J5gexwAxbq1PzNurDrVD_zwfX02bc70Ei0eyBV0JHKUlqhyaqXysVKbbgbEdi58IscU",
+          "alt": "Cumin Seeds Quality Check",
+          "title": "Quality Inspection"
+        }
+      ],
+      "brandLabels": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+          "alt": "RM Spices Brand Label",
+          "title": "RM Spices Premium Label"
+        }
+      ]
+    },
+    {
+      "id": "fennel-seeds",
+      "topSelling": true,
+      "name": "Fennel Seeds (Saunf)",
+      "category": "Whole Spices",
+      "origin": "Gujarat, India",
+      "description": "Sweet and aromatic fennel seeds with a licorice-like flavor. Perfect for digestive purposes and adding a unique taste to dishes.",
+      "shortDescription": "Fennel seeds are aromatic dried fruits with a sweet, licorice-like flavor, commonly used in Indian, Mediterranean, and Middle Eastern cuisines.",
+      "backgroundImage": "https://images.unsplash.com/photo-1701189975842-591ebd1e26a2",
+      "productImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+      "specifications": {
+        "form": "Whole Seeds",
+        "flavor": "Sweet & Aromatic",
+        "packaging": "25kg / 50kg Bags",
+        "color": "Green"
+      },
+      "details": {
+        "appearance": "Oval-shaped, green to yellowish-green seeds; Small size; Smooth surface.",
+        "flavorAroma": "Sweet, licorice-like flavor; Aromatic and refreshing; Cooling sensation.",
+        "culinaryUses": "Commonly used as mouth freshener; Adds flavor to dishes and desserts; Used in teas and beverages.",
+        "healthBenefits": "Aids digestion and relieves bloating; Rich in fiber and antioxidants; May help with respiratory issues."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Whole",
+          "purity": ["99%", "98%", "95%"]
+        },
+        "chemicalParameters": {
+          "moisture": "8% Max",
+          "ashContent": "9% Max",
+          "acidInsolubleAsh": "1% Max",
+          "volatileOil_ml_per100g": "1% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Absent",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Feet", "quantityMetricTons": 12 },
+          { "type": "40 Feet", "quantityMetricTons": 24 }
+        ],
+        "packing": "20/25/30/50 Kgs, PP Kraft bags with inner liner (customised packing available).",
+        "shelfLife": "12 Months under proper storage condition.",
+        "pesticides": "Complying with requirements for pesticide residue levels as per the regulations of the destination country.",
+        "allergens": "Free from Allergens"
+      },
+      "packingImages": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkBv7rfb9H2W8sRa2p2TgdXmnXBpYCJiiNbPexkhG4s7luBMjgeDn-rvg3ABDjjD6LrZgAzmmKdJvfwUlYzbbviwEjd-9BV-oUToWwAprBHXS1LjFr1lzYZCK2Tt4Bu8f0u1b3CttvbowycWK2fKlbdsX7YKUMtJQLO04sqm8H1ro1zBFWWEALIoc8_Z80_HO3Gusdwc5b7DK4Bc9dUUhr5abgkuVQbjcr2r-aPwQXkAMRGKsvSvX0r3-zedFnjLVO80dbrUGZt0E",
+          "alt": "Fennel Seeds Packing",
+          "title": "Premium Kraft Bag Packing"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxP1L7N_kEplgnxlS5uCFFQPuK3_B_z7zGqFCQafEylnoQHv-XF3IOZFWwmvoVsyiyUh4MXpRdb7zZAOc1qO82An8e3DKL-rKCZ69pQfMOvtX0jMhQGbcVKF6d6i4Oyo_R6oyu5PktBCjCf2nKwXIIUxW_Gf8z2gLBjQgTDaoNCcfXxdnc9b8OhcRNkPBySR4ux_PyGywMeQg1frJKaKckp4-qeGXrZgzFVULfZLg9zWK5LxJRyTiYKFAZMz257g2vGXtemiM3GMM",
+          "alt": "Fennel Seeds Container",
+          "title": "Export Container Loading"
+        }
+      ],
+      "brandLabels": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+          "alt": "RM Spices Brand Label",
+          "title": "RM Spices Premium Label"
+        }
+      ]
+    },
+    {
+      "id": "coriander-seeds",
+      "topSelling": false,
+      "name": "Coriander Seeds (Dhaniya)",
+      "category": "Whole Spices",
+      "origin": "Rajasthan, India",
+      "description": "Mild and citrusy coriander seeds that enhance the flavor of any curry. Sourced from the finest coriander plants.",
+      "shortDescription": "Coriander seeds are the dried fruits of the coriander plant, known for their citrusy, slightly sweet flavor with a warm, spicy undertone.",
+      "image": "https://images.unsplash.com/photo-1608797179072-4268dd68eff2",
+      "specifications": {
+        "form": "Whole Seeds",
+        "aroma": "Citrusy",
+        "packaging": "25kg / 50kg Bags",
+        "color": "Light Brown"
+      },
+      "details": {
+        "appearance": "Round to oval-shaped; Light brown to yellowish-brown; Small size with ridges.",
+        "flavorAroma": "Citrusy and slightly sweet; Warm, spicy undertone; Fragrant when roasted.",
+        "culinaryUses": "Essential in curry powders and spice blends; Adds depth to pickles and chutneys; Used in baking and beverages.",
+        "healthBenefits": "Promotes digestive health; Rich in fiber and minerals; May help lower blood sugar levels."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Whole",
+          "purity": ["99%", "98%", "95%"]
+        },
+        "chemicalParameters": {
+          "moisture": "10% Max",
+          "ashContent": "8% Max",
+          "acidInsolubleAsh": "1.5% Max",
+          "volatileOil_ml_per100g": "0.2-0.5% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Absent",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Feet", "quantityMetricTons": 13 },
+          { "type": "40 Feet", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/30/50 Kgs, PP Kraft bags with inner liner (customised packing available).",
+        "shelfLife": "12 Months under proper storage condition.",
+        "pesticides": "Complying with requirements for pesticide residue levels as per the regulations of the destination country.",
+        "allergens": "Free from Allergens"
+      },
+      "packingImages": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkBv7rfb9H2W8sRa2p2TgdXmnXBpYCJiiNbPexkhG4s7luBMjgeDn-rvg3ABDjjD6LrZgAzmmKdJvfwUlYzbbviwEjd-9BV-oUToWwAprBHXS1LjFr1lzYZCK2Tt4Bu8f0u1b3CttvbowycWK2fKlbdsX7YKUMtJQLO04sqm8H1ro1zBFWWEALIoc8_Z80_HO3Gusdwc5b7DK4Bc9dUUhr5abgkuVQbjcr2r-aPwQXkAMRGKsvSvX0r3-zedFnjLVO80dbrUGZt0E",
+          "alt": "Coriander Seeds Packing",
+          "title": "Premium Kraft Bag Packing"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxP1L7N_kEplgnxlS5uCFFQPuK3_B_z7zGqFCQafEylnoQHv-XF3IOZFWwmvoVsyiyUh4MXpRdb7zZAOc1qO82An8e3DKL-rKCZ69pQfMOvtX0jMhQGbcVKF6d6i4Oyo_R6oyu5PktBCjCf2nKwXIIUxW_Gf8z2gLBjQgTDaoNCcfXxdnc9b8OhcRNkPBySR4ux_PyGywMeQg1frJKaKckp4-qeGXrZgzFVULfZLg9zWK5LxJRyTiYKFAZMz257g2vGXtemiM3GMM",
+          "alt": "Coriander Seeds Container",
+          "title": "Export Container Loading"
+        }
+      ],
+      "brandLabels": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+          "alt": "RM Spices Brand Label",
+          "title": "RM Spices Premium Label"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "breadcrumb": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "current": "Produktdetails"
+  },
+  "productNotFound": "Produkt nicht gefunden",
+  "productNotFoundDescription": "Das gesuchte Produkt existiert nicht.",
+  "backButton": "Zurück zu den Produkten",
+  "keySpecifications": "Wichtige Spezifikationen",
+  "productDescription": "Produktbeschreibung",
+  "productOverview": "Produktübersicht",
+  "highlights": "Highlights",
+  "detailedSpecifications": "Detaillierte Spezifikationen",
+  "usageAndBenefits": "Verwendung & Vorteile",
+  "packagingAndLogistics": "Verpackung & Logistik",
+  "form": {
+    "title": "Angebot anfordern",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Ihr Name"
+      },
+      "email": {
+        "label": "E-Mail",
+        "placeholder": "ihre@email.com"
+      },
+      "quantity": {
+        "label": "Menge",
+        "placeholder": "z.B. 100 kg"
+      },
+      "message": {
+        "label": "Zusätzliche Anforderungen",
+        "placeholder": "Spezifische Anforderungen oder Fragen..."
+      }
+    },
+    "submitText": "Angebotsanfrage über WhatsApp senden",
+    "successMessage": "Vielen Dank! Bitte prüfen Sie WhatsApp für eine Antwort."
+  },
+  "relatedProducts": {
+    "title": "Verwandte Produkte",
+    "subtitle": "Diese Gewürze könnten Sie auch interessieren"
+  }
+}

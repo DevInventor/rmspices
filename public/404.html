@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RM Spices - Premium Indian Spices</title>
+    <meta name="description" content="Premium Indian spices for global markets. Experience authentic flavors with our carefully sourced, high-quality spices.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/rmspices/vite.svg">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/rmspices/assets/index-CSS_HASH.css" as="style">
+    <link rel="preload" href="/rmspices/assets/index-JS_HASH.js" as="script">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/rmspices/assets/index-CSS_HASH.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #ec7513 0%, #ea580c 50%, #dc2626 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Animated background spice elements */
+        .spice-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .spice-element {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .spice-element:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .spice-element:nth-child(2) { top: 20%; right: 15%; animation-delay: 1s; }
+        .spice-element:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 2s; }
+        .spice-element:nth-child(4) { bottom: 20%; right: 25%; animation-delay: 3s; }
+        .spice-element:nth-child(5) { top: 50%; left: 5%; animation-delay: 4s; }
+        .spice-element:nth-child(6) { top: 60%; right: 10%; animation-delay: 5s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 700px;
+            padding: 3rem 2rem;
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo-container {
+            margin-bottom: 2rem;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ec7513;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .logo::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(135deg, #ec7513, #ea580c);
+            border-radius: 50%;
+            z-index: -1;
+        }
+        
+        .brand-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .status-container {
+            margin: 2rem 0;
+        }
+        
+        .status-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        .loading-container {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .loading-text {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .countdown-container {
+            margin-bottom: 1.5rem;
+        }
+        
+        .countdown-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .countdown-text span {
+            color: #fbbf24;
+            font-weight: 800;
+            font-size: 1.3rem;
+            text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+        }
+        
+        .action-buttons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary, .btn-secondary {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            color: #ec7513;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .spinner-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .spinner {
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .progress-bar {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 1rem auto 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ffffff 0%, #f1f5f9 100%);
+            border-radius: 2px;
+            width: 0%;
+            transition: width 1s ease-in-out;
+        }
+        
+        .features {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        
+        .feature {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-text {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 2rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated background spice elements -->
+    <div class="spice-bg">
+        <div class="spice-element">🌶️</div>
+        <div class="spice-element">🥄</div>
+        <div class="spice-element">🌿</div>
+        <div class="spice-element">🍃</div>
+        <div class="spice-element">🌶️</div>
+        <div class="spice-element">🥄</div>
+    </div>
+
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo">RM</div>
+            <div class="brand-text">RM Spices</div>
+        </div>
+        
+        <div class="status-container">
+            <div class="status-icon">🔍</div>
+            <h1>Page Not Found</h1>
+            <p class="subtitle">Oops! The page you're looking for doesn't exist, but our premium spices are still here!</p>
+        </div>
+        
+        <div class="loading-container">
+            <div class="loading-text">Page not found, but we'll help you get back on track!</div>
+            <div class="countdown-container">
+                <div class="countdown-text">Auto-redirect in <span id="countdown">5</span> seconds</div>
+            </div>
+            <div class="spinner-container">
+                <div class="spinner"></div>
+                <span>Loading...</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="action-buttons">
+                <button id="goHomeBtn" class="btn-primary">Go to Home Page</button>
+                <button id="goBackBtn" class="btn-secondary">Go Back</button>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🌶️</div>
+                <div class="feature-text">Premium Spices</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌍</div>
+                <div class="feature-text">Global Delivery</div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">✅</div>
+                <div class="feature-text">Quality Assured</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Single Page Apps for GitHub Pages
+        // MIT License
+        // https://github.com/rafgraph/spa-github-pages
+        // This script checks to see if a redirect is already in place
+        // If so, it removes the redirect and sets the path to the route we want to go to
+        // If not, it creates a redirect to the 404.html page, which will then redirect back to the route we want to go to
+        (function(){
+            var redirect = sessionStorage.getItem('redirect');
+            if (redirect) {
+                sessionStorage.removeItem('redirect');
+                history.replaceState(null, null, redirect);
+            } else {
+                // Show 404 page with countdown and manual buttons
+                var countdown = 5;
+                var countdownElement = document.getElementById('countdown');
+                var progressFill = document.getElementById('progressFill');
+                var goHomeBtn = document.getElementById('goHomeBtn');
+                var goBackBtn = document.getElementById('goBackBtn');
+                var countdownInterval;
+                
+                // Function to redirect to home
+                function redirectToHome() {
+                    var base = '/rmspices';
+                    window.location.href = base + '/';
+                }
+                
+                // Function to go back
+                function goBack() {
+                    if (window.history.length > 1) {
+                        window.history.back();
+                    } else {
+                        redirectToHome();
+                    }
+                }
+                
+                // Button event listeners
+                goHomeBtn.addEventListener('click', function() {
+                    clearInterval(countdownInterval);
+                    redirectToHome();
+                });
+                
+                goBackBtn.addEventListener('click', function() {
+                    clearInterval(countdownInterval);
+                    goBack();
+                });
+                
+                // Start countdown and auto-redirect after 5 seconds
+                countdownInterval = setInterval(function() {
+                    countdown--;
+                    countdownElement.textContent = countdown;
+                    
+                    // Update progress bar (0% to 100% over 5 seconds)
+                    var progress = ((5 - countdown) / 5) * 100;
+                    progressFill.style.width = progress + '%';
+                    
+                    if (countdown <= 0) {
+                        clearInterval(countdownInterval);
+                        redirectToHome();
+                    }
+                }, 1000);
+            }
+        })();
+    </script>
+</body>
+</html>
+

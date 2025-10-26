@@ -1,0 +1,46 @@
+{
+  "app": {
+    "name": "RM Gewürze",
+    "description": "Premium Indische Gewürze — Seit Generationen vertraut"
+  },
+  "company": {
+    "name": "RM Gewürze",
+    "tagline": "Premium Indische Gewürze — Seit Generationen vertraut"
+  },
+  "navigation": {
+    "items": [
+      { "name": "Startseite", "href": "/" },
+      { "name": "Produkte", "href": "/products" },
+      { "name": "Über uns", "href": "/about" },
+      { "name": "Zertifizierungen", "href": "/certifications" },
+      { "name": "Kontakt", "href": "/contact" }
+    ]
+  },
+  "contact": {
+    "address": "RM Spices, Unjha, Gujarat, Indien",
+    "phone": "+91 9157908873",
+    "email": "info@rmspices.com",
+    "whatsapp": "+91 9157908873"
+  },
+  "socialMedia": [
+    {
+      "name": "Facebook",
+      "icon": "facebook",
+      "href": "https://facebook.com/rmspices",
+      "ariaLabel": "Folgen Sie uns auf Facebook"
+    },
+    {
+      "name": "Instagram",
+      "icon": "instagram",
+      "href": "https://instagram.com/rmspices",
+      "ariaLabel": "Folgen Sie uns auf Instagram"
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "linkedin",
+      "href": "https://linkedin.com/company/rmspices",
+      "ariaLabel": "Verbinden Sie sich mit uns auf LinkedIn"
+    }
+  ]
+}
+

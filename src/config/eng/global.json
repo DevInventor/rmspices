@@ -1,0 +1,46 @@
+{
+  "app": {
+    "name": "RM Spices",
+    "description": "Premium Indian Spices — Trusted for Generations"
+  },
+  "company": {
+    "name": "RM Spices",
+    "tagline": "Premium Indian Spices — Trusted for Generations"
+  },
+  "navigation": {
+    "items": [
+      { "name": "Home", "href": "/" },
+      { "name": "Products", "href": "/products" },
+      { "name": "About", "href": "/about" },
+      { "name": "Certifications", "href": "/certifications" },
+      { "name": "Contact", "href": "/contact" }
+    ]
+  },
+  "contact": {
+    "address": "RM Spices, Unjha, Gujarat, India",
+    "phone": "+91 9157908873",
+    "email": "info@rmspices.com",
+    "whatsapp": "+91 9157908873"
+  },
+  "socialMedia": [
+    {
+      "name": "Facebook",
+      "icon": "facebook",
+      "href": "https://facebook.com/rmspices",
+      "ariaLabel": "Follow us on Facebook"
+    },
+    {
+      "name": "Instagram",
+      "icon": "instagram",
+      "href": "https://instagram.com/rmspices",
+      "ariaLabel": "Follow us on Instagram"
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "linkedin",
+      "href": "https://linkedin.com/company/rmspices",
+      "ariaLabel": "Connect with us on LinkedIn"
+    }
+  ]
+}
+

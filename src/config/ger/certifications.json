@@ -1,0 +1,51 @@
+{
+  "title": "Zertifizierungen",
+  "description": "RM Gewürze ist verpflichtet, Gewürze höchster Qualität zu liefern. Unsere Zertifizierungen spiegeln unser Engagement für Lebensmittelsicherheit, Qualität und ethische Praktiken wider. Wir halten strenge Standards ein, um sicherzustellen, dass unsere Produkte den globalen Anforderungen und Kundenerwartungen entsprechen.",
+  "exportCertifications": {
+    "title": "Exportzertifizierungen",
+    "items": [
+      {
+        "name": "FSSAI",
+        "description": "Lebensmittelsicherheits- und Standardsbehörde von Indien",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuByqo_nLrDk6l0aT6C3X50IEQ0fF0GdO2isD6eEVXE1wTRUa4MQY4kxAf4euiQO5QkjTolMkUG8jClL_TfWVzS5RgsfAMJYOK3P8RGz9NJ47W3mftEHBwRzSJdudait29cijhZidkjAS6mVmnmkjV937A8rQGuDkYQJxAoOKI8I31Y-CaOfx1ccdK6h8AO5JA5WYknuymVNM0ymUhbNom2QIGpIHjh11rtGe6Ll3771BQYx2vP7W3f-_lZbpBZgiCau8dOBleS8BUc"
+      },
+      {
+        "name": "ISO 22000",
+        "description": "Internationale Organisation für Normung",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-WHi_G1MVJUIBPr_CTybjrzuj2YDUoGYaMDoEop32sao7lD95zRYJdsLHl-79qsI_K1aWhWe9ETsOZ9_zcOpvj-8cp6kEjmDH_aZTcC7ORcRBuFr80i-zZEwNqfdIlHPLA90c2z0bVG5uBNSYmAsU_KPny6gmdD_u1xqjrOt3qJXG9iMNq6iKv_CbeLOBiqWz9pI71jKsaGcyon271Am_A1hqknHf3uxv5MRaVMjsnnliJIjxT3N9ezRRcNFqX_cGNp-6vlRAvYQ"
+      },
+      {
+        "name": "APEDA",
+        "description": "Behörde für Exportentwicklung landwirtschaftlicher und verarbeiteter Lebensmittelprodukte",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDgLBoe9BxkryBUcpZkYwoi0kGh0ObDitVThZvKUHZ1F5XmiL9gZCTPP-21RdmRhTZS7djQuWBp706p7NTrfF4o5LQIBSOjmZAMaz7WrDv4PlHujozu3vTBTtXIE1hVFMmERHBhDqwHSGvV1L0mDg5inxeqCQLXd9odYQt6E1wFs0Y3pnZ3cjyguGwsYGjyFq8TrQpAWa9Kb2f-3WhZOChflu_glySyWDMWcbZMjasrixc-d4MbdAHn7tEjWnmAi5FJc2nSeoSBmYo"
+      },
+      {
+        "name": "Gewürzrat",
+        "description": "Gewürzrat von Indien",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBiQ4QurmfZkGz8dQVrqbsCvMNfdaz0IbYrJN1R_xtzQDyeWdScdkfkMi7E_SfP98V-o-qaJ51g5iN8ShlIYb8rQmc0mk91dL18CQJWKnitaX5pBAmbzvo7_BxBnju5BtB-qAndlpG02CMNhMqitBcwZ130ggafa1dDYgjUTr-uD7_2qmB-_5V_SCKdtTot_vH7RNsQ4ID1NQpIhq1CH6UDmH4dxA8ykeImxdOkA3n5IAVTAyZql08mKg0bzU8q9SAU_joo_VwRB8w"
+      }
+    ]
+  },
+  "qualityAssurance": {
+    "title": "Qualitätssicherung",
+    "description": "Unser Qualitätssicherungsprozess beginnt mit der Beschaffung von vertrauenswürdigen Landwirten und setzt sich durch strenge Tests und Inspektionen in jeder Produktionsstufe fort. Wir setzen fortgeschrittene Techniken ein, um Reinheit, Frische und Einhaltung unserer strengen Qualitätsstandards zu gewährleisten.",
+    "items": [
+      {
+        "icon": "Plant",
+        "title": "Beschaffung",
+        "description": "Wir beziehen unsere Gewürze von vertrauenswürdigen Landwirten, die nachhaltige und ethische Praktiken befolgen."
+      },
+      {
+        "icon": "Flask",
+        "title": "Prüfung",
+        "description": "Unsere Gewürze durchlaufen strenge Tests auf Reinheit, Qualität und Sicherheit in jeder Produktionsstufe."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Qualitätskontrolle",
+        "description": "Wir halten strenge Qualitätskontrollmaßnahmen ein, um sicherzustellen, dass unsere Produkte die höchsten Standards erfüllen."
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "title": "Unsere Wachstumsgeschichte",
+    "backgroundImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBsI972Hyk1KRlt9XezECWDlulmdR02Mzs4pFg1ghvMtQBX0wNHD8X5P8PpFTYe372EQzvuHhwW96uMMPU67ZCUNeOhmQsgJGxlCEyLlvqj6mP5mZNFCKqaSF6MsOuKXZjgq9IjqZyF39zIZ0wUNzRSyh6KBT1-Qf9-BVe8xj8kcWTd23OCeOEwQf5_ijaQop4Xiu72BlnGaFt65QJCoHK6wlo_BEeHCk3PBAk3TANzUO3iw8MackKrE3BGSMKZmStetXHnmmcb4Us"
+  },
+  "intro": {
+    "title": "Ein Vermächtnis von Qualität und Tradition",
+    "description": "RM Gewürze wurde 1950 von Herrn Rajesh Sharma gegründet, einem visionären Unternehmer mit einer Leidenschaft für Gewürze. Als kleines Familienunternehmen begann das Unternehmen auf den geschäftigen Gewürzmärkten von Mumbai und erwarb schnell den Ruf, die feinsten Qualitätsgewürze zu beziehen und zu liefern. Heute ist RM Gewürze ein führender Name in der indischen Gewürzbranche, bekannt für sein Engagement für Qualität, Authentizität und Kundenzufriedenheit."
+  },
+  "timeline": {
+    "title": "Unsere Wachstumszeitlinie",
+    "items": [
+      {
+        "year": "1950",
+        "title": "Der Anfang",
+        "description": "Herr Rajesh Sharma gründet RM Gewürze in Mumbai."
+      },
+      {
+        "year": "1980",
+        "title": "Expansion und Wachstum",
+        "description": "Das Unternehmen erweitert seine Aktivitäten um Verarbeitung und Verpackung."
+      },
+      {
+        "year": "2000",
+        "title": "Modernisierung und Technologie",
+        "description": "RM Gewürze übernimmt moderne Technologie zur Verbesserung der Effizienz und Qualitätskontrolle."
+      },
+      {
+        "year": "Gegenwart",
+        "title": "Ein globaler Marktführer",
+        "description": "RM Gewürze wird zu einem vertrauenswürdigen Lieferanten für große Lebensmittelhersteller und Einzelhändler weltweit."
+      }
+    ]
+  },
+  "values": {
+    "title": "Unsere Werte",
+    "items": [
+      {
+        "icon": "ShieldCheck",
+        "title": "Qualität",
+        "description": "Wir sind verpflichtet, die höchste Qualität der Gewürze zu beziehen und zu liefern und Reinheit und Authentizität zu gewährleisten."
+      },
+      {
+        "icon": "Users",
+        "title": "Kundenvertrauen",
+        "description": "Wir bauen langfristige Beziehungen zu unseren Kunden auf der Grundlage von Vertrauen, Zuverlässigkeit und außergewöhnlichem Service auf."
+      },
+      {
+        "icon": "Leaf",
+        "title": "Nachhaltigkeit",
+        "description": "Wir sind nachhaltigen Praktiken verpflichtet, unterstützen lokale Bauern und minimieren unsere Umweltauswirkungen."
+      }
+    ]
+  },
+  "team": {
+    "title": "Lernen Sie das Team kennen",
+    "members": [
+      {
+        "name": "Anika Sharma",
+        "role": "CEO",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCCu5qInMEM1npwfwn9XdM4WxypG5E6xhMBIBGed-BZNOjuA7YC9Q61gkQ6qEe0lZU6nWTaQuhRiiaARmnr8SbLvTECNu0eqTR626RwKd5KRtgVlD9H-1Ym_707ppTThOS6eB680-k6m1d9cj9OuJwHOXz0wpOT0rJ0xVMOXN0YFyaQ0IRk74QM8VBx8n43lIFWrP7XIgRIf2o93n30S0UPF2_cSbrCUsE22LfvO40W0HYkJFo5pUF5enqhqlbDaz51q1nwCDLVkjU"
+      },
+      {
+        "name": "Vikram Sharma",
+        "role": "Leiter der Abteilung",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDP4vnmaZv1rIYdfC9N_xWXXXpm9mAwgmxPfHai_cjGenp3-1OY-NXleICwTreTdWKsKqYG-AIJlIpXPFyren0C_lHWDIlZussGBniB3nfbY-DdP7zj3QZEX_kPT0ktRdjkt_KYFpHnYiOiPd1004CLWXPMMxsMUva0OgraV5YOcvqvQNzhFuKo5td_sma4XL5ExrX4fp7qjAH5ddhgN5SrgVsWZEK6rKyPr27s06zUVL4T6HNhX7X8rFrW-WBYmhG5q9n9rq8uayM"
+      },
+      {
+        "name": "Priya Verma",
+        "role": "Leiterin des Vertriebs",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBF5ZPXtkDIGHZyKuAqGhvqlgJzgnfl4ShS3QyJP74S8qnwENZdBKIPmtVm89l40RMmVA3Z9nOgvc7Epjm12aULR18byfnPhVNDcBv4FhWVzrHCzTYO93d8tgAH0Cfr9SKiiEmGXL854sPQiTDoaFaSuC75vRNmo2cZiplBbGnrQmX2OVY_VNcfXzqSqZRKje-4Cris87cF3x3rMJraFkuUAhooI50nFVOD4n7GSiSLYaqp_-vkKYJPzG5sTNHbKUHvm-RKVu6H-Fs"
+      }
+    ]
+  }
+}
+

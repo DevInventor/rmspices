@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "title": "Get in Touch",
+    "subtitle": "We're here to help with any questions or inquiries. Reach out to us today!",
+    "backgroundImage": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+  },
+  "form": {
+    "title": "Send us a Message",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your Name"
+      },
+      "company": {
+        "label": "Company",
+        "placeholder": "Your Company"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "you@example.com"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "Your Phone Number"
+      },
+      "product": {
+        "label": "Product",
+        "placeholder": "Select a product"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "How can we help you?"
+      }
+    },
+    "submitText": "Send Message",
+    "whatsappText": "Chat on WhatsApp",
+    "defaultWhatsAppMessage": "Hello! I'm interested in your spice products. Please provide me with more information. Thank you!"
+  },
+  "contactInfo": {
+    "title": "Our Location",
+    "address": {
+      "title": "Address",
+      "value": "D-295, New Ganj Bajar, APMC Market, Unjha, Gujarat, India"
+    },
+    "email": {
+      "title": "Email",
+      "value": "info.rmspices@gmail.com"
+    },
+    "phone": {
+      "title": "Phone",
+      "value": "+91 9725151605"
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "value": "+91 9725151605"
+    }
+  },
+  "productOptions": [
+    "Whole Spices",
+    "Ground Spices",
+    "Spice Blends",
+    "Organic Spices",
+    "Processed Spices",
+    "Other"
+  ],
+  "map": {
+    "backgroundImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCprj-Gw7l11htaaPVRWBoyhsZYK1ASNBGKjcEYivZn3-nw5kJ3yBW9GbsT9ADP0bciVQFd7IvgGwsP0FbM52ruWIcYSJaSk86WcEHWX6Gi8OqsY3ScZYyl0pQA5tqHZp1fM84vQ5Eis8BB8raC7Oi7KYfyXOrPU_QGnk-xQTxjhn_C3Yo3iWFCOglDMPNvik6gV2uCluWCDebj-Nx74vWnjVB11rcjU9KyQ04VXrPzDVrTB0z9kZhysw91lKJrvWwZLIKLHsnzrN8"
+  }
+}
+

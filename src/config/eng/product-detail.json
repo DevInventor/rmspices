@@ -1,0 +1,44 @@
+{
+  "breadcrumb": {
+    "home": "Home",
+    "products": "Products",
+    "current": "Product Details"
+  },
+  "productNotFound": "Product Not Found",
+  "productNotFoundDescription": "The product you're looking for doesn't exist.",
+  "backButton": "Back to Products",
+  "keySpecifications": "Key Specifications",
+  "productDescription": "Product Description",
+  "productOverview": "Product Overview",
+  "highlights": "Highlights",
+  "detailedSpecifications": "Detailed Specifications",
+  "usageAndBenefits": "Usage & Benefits",
+  "packagingAndLogistics": "Packaging & Logistics",
+  "form": {
+    "title": "Request a Quote",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your Name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "your@email.com"
+      },
+      "quantity": {
+        "label": "Quantity",
+        "placeholder": "e.g., 100 kg"
+      },
+      "message": {
+        "label": "Additional Requirements",
+        "placeholder": "Any specific requirements or questions..."
+      }
+    },
+    "submitText": "Send Quote Request via WhatsApp",
+    "successMessage": "Thank you! Please check WhatsApp for a response."
+  },
+  "relatedProducts": {
+    "title": "Related Products",
+    "subtitle": "You might also be interested in these spices"
+  }
+}

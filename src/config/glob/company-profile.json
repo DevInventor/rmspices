@@ -1,0 +1,123 @@
+{
+  "company": {
+    "name": "RM Spices",
+    "tagline": "Premium Indian Spices — Trusted for Generations",
+    "description": "Your trusted partner in the global spice trade. Delivering quality and flavor worldwide with premium Indian spices.",
+    "founded": "1969",
+    "founder": "Mr. Ranchoodbhai Mulchandani Patel",
+    "location": {
+      "address": "RM Spices, Unjha, Gujarat, India",
+      "street": "D-295, New Ganj Bajar, APMC Market",
+      "city": "Unjha",
+      "state": "Gujarat",
+      "country": "India",
+      "postalCode": "384170",
+      "latitude": 23.7983,
+      "longitude": 72.3912
+    },
+    "businessHours": {
+      "monday": "9:00 AM - 6:00 PM",
+      "tuesday": "9:00 AM - 6:00 PM",
+      "wednesday": "9:00 AM - 6:00 PM",
+      "thursday": "9:00 AM - 6:00 PM",
+      "friday": "9:00 AM - 6:00 PM",
+      "saturday": "9:00 AM - 4:00 PM",
+      "sunday": "Closed",
+      "display": "Mon–Sat 9:00 – 18:00",
+      "timezone": "Asia/Kolkata"
+    },
+    "contact": {
+      "phone": {
+        "primary": "+91 9725151605",
+        "formatted": "+91 972 515 1605",
+        "international": "+919725151605"
+      },
+      "email": {
+        "primary": "info.rmspices@gmail.com",
+        "sales": "info.rmspices@gmail.com",
+        "support": "info.rmspices@gmail.com"
+      },
+      "whatsapp": {
+        "number": "+91 9725151605",
+        "international": "919725151605",
+        "url": "https://wa.me/919725151605"
+      }
+    },
+    "socialMedia": {
+      "facebook": {
+        "name": "RM Spices",
+        "url": "https://facebook.com/rmspices",
+        "icon": "facebook",
+        "ariaLabel": "Follow us on Facebook"
+      },
+      "instagram": {
+        "name": "RM Spices",
+        "url": "https://instagram.com/rmspices",
+        "icon": "instagram",
+        "ariaLabel": "Follow us on Instagram"
+      },
+      "linkedin": {
+        "name": "RM Spices",
+        "url": "https://linkedin.com/company/rmspices",
+        "icon": "linkedin",
+        "ariaLabel": "Connect with us on LinkedIn"
+      }
+    },
+    "certifications": [
+      {
+        "name": "FSSAI",
+        "fullName": "Food Safety and Standards Authority of India",
+        "license": "FSSAI-License-XXXXXX",
+        "validFrom": "2020-01-01",
+        "validUntil": "2025-12-31"
+      },
+      {
+        "name": "ISO 22000",
+        "fullName": "International Organization for Standardization - Food Safety Management",
+        "license": "ISO-22000-XXXXXX",
+        "validFrom": "2021-06-15",
+        "validUntil": "2026-06-15"
+      },
+      {
+        "name": "APEDA",
+        "fullName": "Agricultural and Processed Food Products Export Development Authority",
+        "license": "APEDA-XXXXXX",
+        "validFrom": "2022-03-01",
+        "validUntil": "2027-03-01"
+      },
+      {
+        "name": "Spice Board",
+        "fullName": "Spice Board of India",
+        "license": "SB-XXXXXX",
+        "validFrom": "2023-01-15",
+        "validUntil": "2028-01-15"
+      }
+    ],
+    "statistics": {
+      "yearsOfExperience": 75,
+      "countriesServed": 40,
+      "productsRange": 150,
+      "happyCustomers": 5000,
+      "exportsPerMonth": "500+ Tons",
+      "productionCapacity": "1000+ Tons per month"
+    },
+    "coreValues": [
+      {
+        "icon": "shield-check",
+        "title": "Quality",
+        "description": "We are committed to sourcing and supplying the highest quality spices, ensuring purity and authenticity."
+      },
+      {
+        "icon": "users",
+        "title": "Customer Trust",
+        "description": "We build long-term relationships with our clients based on trust, reliability, and exceptional service."
+      },
+      {
+        "icon": "leaf",
+        "title": "Sustainability",
+        "description": "We are dedicated to sustainable practices, supporting local farmers and minimizing our environmental impact."
+      }
+    ]
+  }
+}
+

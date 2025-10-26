@@ -1,0 +1,232 @@
+{
+  "title": "Unsere Produkte",
+  "description": "Entdecken Sie unsere Premium-Sammlung indischer Gewürze, sorgfältig bezogen und verarbeitet, um höchste Qualität zu gewährleisten.",
+  "topSellingLabel": "Bestseller Produkte",
+  "empty": {
+    "title": "Durchsuchen Sie unsere Produkte",
+    "description": "Wählen Sie eine Kategorie aus, um Produkte anzuzeigen"
+  },
+  "viewAll": "Alle Produkte anzeigen",
+  "loadMore": "Mehr Produkte laden",
+  "products": [
+    {
+      "id": "cumin",
+      "topSelling": true,
+      "name": "Kreuzkümmel (Jeera)",
+      "category": "Ganze Gewürze",
+      "origin": "Rajasthan, Indien",
+      "description": "Premium-Kreuzkümmelsamen aus den trockenen Regionen von Rajasthan, bekannt für ihren intensiven Duft und erdigen Geschmack. Diese Samen werden sorgfältig geerntet und verarbeitet, um ihre natürlichen Öle und essentiellen Verbindungen zu erhalten.",
+      "shortDescription": "Kreuzkümmelsamen sind die getrockneten Samen der Cuminum cyminum Pflanze, weit verbreitet als Gewürz, besonders in der indischen, nahöstlichen, lateinamerikanischen und nordafrikanischen Küche.",
+      "backgroundImage": "https://plus.unsplash.com/premium_photo-1723874683717-006f24c93975",
+      "productImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+      "specifications": {
+        "form": "Ganze Samen",
+        "moisture": "8-10%",
+        "packaging": "25kg / 50kg Säcke",
+        "color": "Braun"
+      },
+      "details": {
+        "appearance": "Kleine, längliche Samen; Typisch hellbraun bis gelblich-braun; Gerippte Textur mit Längsrillen.",
+        "flavorAroma": "Warm, erdig und leicht nussig; Besonders scharf mit einem Hauch von Zitrus; Wird intensiver beim Rösten oder Mahlen.",
+        "culinaryUses": "Ganz oder gemahlen verwendet; Häufig in Gewürzmischungen wie Garam Masala, Currypulver und Chilipulver; Verstärkt den Geschmack in Currys, Suppen, Eintöpfen, Reisgerichten und Pickles.",
+        "healthBenefits": "Fördert die Verdauung; Enthält Antioxidantien; Kann entzündungshemmende und antimikrobielle Eigenschaften haben."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Ganz",
+          "purity": ["99,5%", "99%", "95%"]
+        },
+        "chemicalParameters": {
+          "moisture": "9% Max",
+          "ashContent": "9,5% Max",
+          "acidInsolubleAsh": "1,5% Max",
+          "volatileOil_ml_per100g": "1,5-3,5% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Nicht vorhanden",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Fuß", "quantityMetricTons": 13 },
+          { "type": "40 Fuß", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/30/50 kg, PP Krafttaschen mit Innenfolie (individualisierte Verpackung verfügbar).",
+        "shelfLife": "12 Monate unter ordnungsgemäßen Lagerbedingungen.",
+        "pesticides": "Einhaltung der Anforderungen für Pestizidrückstände gemäß den Bestimmungen des Ziellandes.",
+        "allergens": "Frei von Allergenen"
+      },
+      "packingImages": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkBv7rfb9H2W8sRa2p2TgdXmnXBpYCJiiNbPexkhG4s7luBMjgeDn-rvg3ABDjjD6LrZgAzmmKdJvfwUlYzbbviwEjd-9BV-oUToWwAprBHXS1LjFr1lzYZCK2Tt4Bu8f0u1b3CttvbowycWK2fKlbdsX7YKUMtJQLO04sqm8H1ro1zBFWWEALIoc8_Z80_HO3Gusdwc5b7DK4Bc9dUUhr5abgkuVQbjcr2r-aPwQXkAMRGKsvSvX0r3-zedFnjLVO80dbrUGZt0E",
+          "alt": "Kreuzkümmel-Verpackung",
+          "title": "Premium Kraftsack-Verpackung"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxP1L7N_kEplgnxlS5uCFFQPuK3_B_z7zGqFCQafEylnoQHv-XF3IOZFWwmvoVsyiyUh4MXpRdb7zZAOc1qO82An8e3DKL-rKCZ69pQfMOvtX0jMhQGbcVKF6d6i4Oyo_R6oyu5PktBCjCf2nKwXIIUxW_Gf8z2gLBjQgTDaoNCcfXxdnc9b8OhcRNkPBySR4ux_PyGywMeQg1frJKaKckp4-qeGXrZgzFVULfZLg9zWK5LxJRyTiYKFAZMz257g2vGXtemiM3GMM",
+          "alt": "Kreuzkümmel-Container",
+          "title": "Export-Container-Beladung"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAktrKiPZ8UxNJxU73KACMnwAJGykwMOUPhzCa0uzCeflWSzSewmePW18JkLwepp0MNNgQgSanFhahd7gmjt7vu0_CbOe4RxE0qLVhMVYws_2e6NgwidsGLBWp54yBJdUHVWzwuRvb66AePuUZk4ts40k_dzAsNk9tZazJgkUaL1eUf85wsu8gsBxJ5rPy-XOS8iy3dyLw3J5gexwAxbq1PzNurDrVD_zwfX02bc70Ei0eyBV0JHKUlqhyaqXysVKbbgbEdi58IscU",
+          "alt": "Kreuzkümmel-Qualitätskontrolle",
+          "title": "Qualitätsinspektion"
+        }
+      ],
+      "brandLabels": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+          "alt": "RM Gewürze Markenlabel",
+          "title": "RM Gewürze Premium-Label"
+        }
+      ]
+    },
+    {
+      "id": "fennel-seeds",
+      "topSelling": false,
+      "name": "Fenchelsamen (Saunf)",
+      "category": "Ganze Gewürze",
+      "origin": "Gujarat, Indien",
+      "description": "Süße und aromatische Fenchelsamen mit einem Lakritz-ähnlichen Geschmack. Perfekt für Verdauungszwecke und um Gerichten einen einzigartigen Geschmack zu verleihen.",
+      "shortDescription": "Fenchelsamen sind aromatische getrocknete Früchte mit einem süßen, lakritzähnlichen Geschmack, häufig in der indischen, mediterranen und nahöstlichen Küche verwendet.",
+      "backgroundImage": "https://images.unsplash.com/photo-1701189975842-591ebd1e26a2",
+      "productImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+      "specifications": {
+        "form": "Ganze Samen",
+        "flavor": "Süß & Aromatisch",
+        "packaging": "25kg / 50kg Säcke",
+        "color": "Grün"
+      },
+      "details": {
+        "appearance": "Ovale, grüne bis gelblich-grüne Samen; Kleine Größe; Glatte Oberfläche.",
+        "flavorAroma": "Süßer, lakritzähnlicher Geschmack; Aromatisch und erfrischend; Kühles Gefühl.",
+        "culinaryUses": "Häufig als Mundfrescher verwendet; Fügt Gerichten und Desserts Geschmack hinzu; Wird in Tees und Getränken verwendet.",
+        "healthBenefits": "Fördert die Verdauung und lindert Blähungen; Reich an Ballaststoffen und Antioxidantien; Kann bei Atemproblemen helfen."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Ganz",
+          "purity": ["99%", "98%", "95%"]
+        },
+        "chemicalParameters": {
+          "moisture": "8% Max",
+          "ashContent": "9% Max",
+          "acidInsolubleAsh": "1% Max",
+          "volatileOil_ml_per100g": "1% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Nicht vorhanden",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Fuß", "quantityMetricTons": 12 },
+          { "type": "40 Fuß", "quantityMetricTons": 24 }
+        ],
+        "packing": "20/25/30/50 kg, PP Krafttaschen mit Innenfolie (individualisierte Verpackung verfügbar).",
+        "shelfLife": "12 Monate unter ordnungsgemäßen Lagerbedingungen.",
+        "pesticides": "Einhaltung der Anforderungen für Pestizidrückstände gemäß den Bestimmungen des Ziellandes.",
+        "allergens": "Frei von Allergenen"
+      },
+      "packingImages": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkBv7rfb9H2W8sRa2p2TgdXmnXBpYCJiiNbPexkhG4s7luBMjgeDn-rvg3ABDjjD6LrZgAzmmKdJvfwUlYzbbviwEjd-9BV-oUToWwAprBHXS1LjFr1lzYZCK2Tt4Bu8f0u1b3CttvbowycWK2fKlbdsX7YKUMtJQLO04sqm8H1ro1zBFWWEALIoc8_Z80_HO3Gusdwc5b7DK4Bc9dUUhr5abgkuVQbjcr2r-aPwQXkAMRGKsvSvX0r3-zedFnjLVO80dbrUGZt0E",
+          "alt": "Fenchelsamen-Verpackung",
+          "title": "Premium Kraftsack-Verpackung"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxP1L7N_kEplgnxlS5uCFFQPuK3_B_z7zGqFCQafEylnoQHv-XF3IOZFWwmvoVsyiyUh4MXpRdb7zZAOc1qO82An8e3DKL-rKCZ69pQfMOvtX0jMhQGbcVKF6d6i4Oyo_R6oyu5PktBCjCf2nKwXIIUxW_Gf8z2gLBjQgTDaoNCcfXxdnc9b8OhcRNkPBySR4ux_PyGywMeQg1frJKaKckp4-qeGXrZgzFVULfZLg9zWK5LxJRyTiYKFAZMz257g2vGXtemiM3GMM",
+          "alt": "Fenchelsamen-Container",
+          "title": "Export-Container-Beladung"
+        }
+      ],
+      "brandLabels": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+          "alt": "RM Gewürze Markenlabel",
+          "title": "RM Gewürze Premium-Label"
+        }
+      ]
+    },
+    {
+      "id": "coriander-seeds",
+      "topSelling": false,
+      "name": "Koriandersamen (Dhaniya)",
+      "category": "Ganze Gewürze",
+      "origin": "Rajasthan, Indien",
+      "description": "Milde und zitrusartige Koriandersamen, die den Geschmack jedes Currys verbessern. Bezogen von den feinsten Korianderpflanzen.",
+      "shortDescription": "Koriandersamen sind die getrockneten Früchte der Korianderpflanze, bekannt für ihren zitrusartigen, leicht süßen Geschmack mit einem warmen, würzigen Unterton.",
+      "backgroundImage": "https://plus.unsplash.com/premium_photo-1723874683717-006f24c93975",
+      "productImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+      "image": "https://images.unsplash.com/photo-1608797179072-4268dd68eff2",
+      "specifications": {
+        "form": "Ganze Samen",
+        "aroma": "Zitrusartig",
+        "packaging": "25kg / 50kg Säcke",
+        "color": "Hellbraun"
+      },
+      "details": {
+        "appearance": "Rund bis oval; Hellbraun bis gelblich-braun; Kleine Größe mit Rillen.",
+        "flavorAroma": "Zitrusartig und leicht süß; Warmes, würziges Aroma; Wohlriechend beim Rösten.",
+        "culinaryUses": "Essentiell in Currypulver und Gewürzmischungen; Fügt Tiefe zu Pickles und Chutneys hinzu; Wird beim Backen und in Getränken verwendet.",
+        "healthBenefits": "Fördert die Verdauungsgesundheit; Reich an Ballaststoffen und Mineralien; Kann helfen, den Blutzuckerspiegel zu senken."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Ganz",
+          "purity": ["99%", "98%", "95%"]
+        },
+        "chemicalParameters": {
+          "moisture": "10% Max",
+          "ashContent": "8% Max",
+          "acidInsolubleAsh": "1,5% Max",
+          "volatileOil_ml_per100g": "0,2-0,5% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Nicht vorhanden",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Fuß", "quantityMetricTons": 13 },
+          { "type": "40 Fuß", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/30/50 kg, PP Krafttaschen mit Innenfolie (individualisierte Verpackung verfügbar).",
+        "shelfLife": "12 Monate unter ordnungsgemäßen Lagerbedingungen.",
+        "pesticides": "Einhaltung der Anforderungen für Pestizidrückstände gemäß den Bestimmungen des Ziellandes.",
+        "allergens": "Frei von Allergenen"
+      },
+      "packingImages": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkBv7rfb9H2W8sRa2p2TgdXmnXBpYCJiiNbPexkhG4s7luBMjgeDn-rvg3ABDjjD6LrZgAzmmKdJvfwUlYzbbviwEjd-9BV-oUToWwAprBHXS1LjFr1lzYZCK2Tt4Bu8f0u1b3CttvbowycWK2fKlbdsX7YKUMtJQLO04sqm8H1ro1zBFWWEALIoc8_Z80_HO3Gusdwc5b7DK4Bc9dUUhr5abgkuVQbjcr2r-aPwQXkAMRGKsvSvX0r3-zedFnjLVO80dbrUGZt0E",
+          "alt": "Koriandersamen-Verpackung",
+          "title": "Premium Kraftsack-Verpackung"
+        },
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxP1L7N_kEplgnxlS5uCFFQPuK3_B_z7zGqFCQafEylnoQHv-XF3IOZFWwmvoVsyiyUh4MXpRdb7zZAOc1qO82An8e3DKL-rKCZ69pQfMOvtX0jMhQGbcVKF6d6i4Oyo_R6oyu5PktBCjCf2nKwXIIUxW_Gf8z2gLBjQgTDaoNCcfXxdnc9b8OhcRNkPBySR4ux_PyGywMeQg1frJKaKckp4-qeGXrZgzFVULfZLg9zWK5LxJRyTiYKFAZMz257g2vGXtemiM3GMM",
+          "alt": "Koriandersamen-Container",
+          "title": "Export-Container-Beladung"
+        }
+      ],
+      "brandLabels": [
+        {
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+          "alt": "RM Gewürze Markenlabel",
+          "title": "RM Gewürze Premium-Label"
+        }
+      ]
+    }
+  ]
+}

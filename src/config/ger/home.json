@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Premium Indische Gewürze — Seit Generationen vertraut",
+    "subtitle": "Mit jahrzehntelanger Tradition liefern wir weltweit die feinsten Qualitätsgewürze. Unsere Expertise garantiert rechtzeitige Exporte und marktführende Produkte.",
+    "ctaPrimary": "Produkte erkunden",
+    "ctaSecondary": "Angebot anfordern",
+    "backgroundImages": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuA35wX3DHbLGIiQciMr67lbBPwj19T623oP577X62R5F_At96MwMKAhLdIZg3NDvD46J9GKiCJ3WUfkZ9c465AdW_ZuIvqqKeo4qtIH4CgZt5jUneDuT3dXd2Bh1G2g3C8s57V0EklTDk2pe07bN2pRPjtHntJJ8DpHjysmIvhYwXy4dt-lAvwkQP5PvRYE8wR0Fgny6WmEf6oKDvwsis0V21dbZuJPLCFpW3uzP4WsCH-fjF_cBsmZk735lQydwmOrEiQfq7KPV3k",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBX7h12kDcIyf4Ca69rgllvebEXI6xtjtowK6VwqDjCTki4tShTpklzSPDgcLAWQiaKESFblepPmAwoqOYcuMZ-ZAnElpBYno-bNc2mTrcdoWtbrZmI8Io9fqIg_67STbP8kNxDEyazjkIcMHPJJyvaN03VePapOplix5VPEkYvBS8H8zyrl_YqMUIj1H2bygLZYMWuI3I3hEdhGL9N2OUpNNJYM-cqbVI5_fDrNYC8Y4IMcBii6qISz4cYe67hcwgyQxi4-SX0-PM",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuANPjzFRfWCTQ_t3JDIpktZzjmcnhoDMFjm_0bW6GYZmq7mgcaaUkPow_1yYGPrOzVVBMldDj5v4EY5sCD9aBV9aZSDYMv2ZPEMAFJ6vowcCr31NyyDZn237DB3O7eqUxz4cdPXnEt8EhCjt2Xn-K20PZGd4US6V0Fn75WE34fkWbnIggHwio4cP1qQ0eoeKbIVJ7mOlgQBRnceN2BQoAs1DfNhCobsAWgl8uMHv4CsixMR94UGy9gWhpP5TYcJqolI-U7hKnOqqCM",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuC35dh7HXmY-cVjad5DQMoY3x7bGkGwMqAfdMFn5ARMDNpA-lK6CbkhL_yiJkKOtfVtsbWJZuQX4SLoeX8Kyy_PIxmqmsDjbZZUqXiyEjWHTb-nrP_0uGyGSziv8uB941yXuE-CwhBvSBNj_d8gEkiIMQ-zBtyU7DPniq6Deue6ZACX8rjMn5efE5g1MPVFJZ2o1xRlD3-aFBgyFVTQSD59HkLkslrGly-fEpCfUy7-XdM5oMLAS6Rikg1SCbs_Y1X-28FVY7Ry8vQ"
+    ]
+  },
+  "productRange": {
+    "title": "Unsere Premium Gewürzkollektion",
+    "viewAll": "Alle Produkte erkunden",
+    "items": [
+      {
+        "id": "cumin",
+        "name": "Kreuzkümmel",
+        "description": "Erdig und aromatisch, perfekt für herzhafte Gerichte.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAE4B28Z-ota7v8Hir-wvqOo0Xm-nUuOmPR1v60Y99C6YCefMKt-PIhnHaeU8w0YN5kEfO2hUzZnNSCUeBANM7FDczsMQJs-9yHBkOTvjgCSiT2GHFIA5ueTGaY4YqcEFZecQa87tDCxvPlOdHk0SuoOy42_1lIXnBFvAE0Qt2mqdMABLLS_w1SIfFueqKskvJDrg7h3KKypOVbc_N_IaP_5n-F0-igchSGCRTVqfJV6WhUBe5sWTzgqVNjY7jK3HNQ_UH2cfoG5Nk"
+      },
+      {
+        "id": "turmeric",
+        "name": "Kurkuma",
+        "description": "Lebendig und erdig, bekannt für seine gesundheitlichen Vorteile.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBX7h12kDcIyf4Ca69rgllvebEXI6xtjtowK6VwqDjCTki4tShTpklzSPDgcLAWQiaKESFblepPmAwoqOYcuMZ-ZAnElpBYno-bNc2mTrcdoWtbrZmI8Io9fqIg_67STbP8kNxDEyazjkIcMHPJJyvaN03VePapOplix5VPEkYvBS8H8zyrl_YqMUIj1H2bygLZYMWuI3I3hEdhGL9N2OUpNNJYM-cqbVI5_fDrNYC8Y4IMcBii6qISz4cYe67hcwgyQxi4-SX0-PM"
+      },
+      {
+        "id": "coriander",
+        "name": "Koriander",
+        "description": "Zitronig und mild, unerlässlich für die indische Küche.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuANPjzFRfWCTQ_t3JDIpktZzjmcnhoDMFjm_0bW6GYZmq7mgcaaUkPow_1yYGPrOzVVBMldDj5v4EY5sCD9aBV9aZSDYMv2ZPEMAFJ6vowcCr31NyyDZn237DB3O7eqUxz4cdPXnEt8EhCjt2Xn-K20PZGd4US6V0Fn75WE34fkWbnIggHwio4cP1qQ0eoeKbIVJ7mOlgQBRnceN2BQoAs1DfNhCobsAWgl8uMHv4CsixMR94UGy9gWhpP5TYcJqolI-U7hKnOqqCM"
+      },
+      {
+        "id": "red-chili",
+        "name": "Roter Chili",
+        "description": "Feurig und intensiv, verleiht Würze und Farbe.",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC35dh7HXmY-cVjad5DQMoY3x7bGkGwMqAfdMFn5ARMDNpA-lK6CbkhL_yiJkKOtfVtsbWJZuQX4SLoeX8Kyy_PIxmqmsDjbZZUqXiyEjWHTb-nrP_0uGyGSziv8uB941yXuE-CwhBvSBNj_d8gEkiIMQ-zBtyU7DPniq6Deue6ZACX8rjMn5efE5g1MPVFJZ2o1xRlD3-aFBgyFVTQSD59HkLkslrGly-fEpCfUy7-XdM5oMLAS6Rikg1SCbs_Y1X-28FVY7Ry8vQ"
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "title": "Warum RM Gewürze wählen?",
+    "subtitle": "Unser Engagement für Exzellenz",
+    "description": "Wir gewährleisten höchste Qualität, Marktexpertise und rechtzeitige Exporte.",
+    "items": [
+      {
+        "icon": "ShieldCheck",
+        "title": "Kompromisslose Qualität",
+        "description": "Wir beziehen die feinsten Gewürze und gewährleisten Reinheit und Frische."
+      },
+      {
+        "icon": "ChartLine",
+        "title": "Marktexpertise",
+        "description": "Unser tiefes Marktwissen garantiert wettbewerbsfähige Preise und Trends."
+      },
+      {
+        "icon": "Truck",
+        "title": "Zuverlässige Exporte",
+        "description": "Wir bieten weltweit effiziente und rechtzeitige Exportservices."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihr Geschäft zu würzen?",
+    "description": "Kontaktieren Sie uns noch heute, um Ihre Gewürzbedürfnisse zu besprechen.",
+    "button": "Mit uns verbinden"
+  }
+}
+

@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "title": "Our Growth Story",
+    "backgroundImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBsI972Hyk1KRlt9XezECWDlulmdR02Mzs4pFg1ghvMtQBX0wNHD8X5P8PpFTYe372EQzvuHhwW96uMMPU67ZCUNeOhmQsgJGxlCEyLlvqj6mP5mZNFCKqaSF6MsOuKXZjgq9IjqZyF39zIZ0wUNzRSyh6KBT1-Qf9-BVe8xj8kcWTd23OCeOEwQf5_ijaQop4Xiu72BlnGaFt65QJCoHK6wlo_BEeHCk3PBAk3TANzUO3iw8MackKrE3BGSMKZmStetXHnmmcb4Us"
+  },
+  "intro": {
+    "title": "A Legacy of Quality and Tradition",
+    "description": "RM Spices was founded in 1969 by Mr. Ranchoodbhai Mulchandani Patel, a visionary entrepreneur with a passion for spices. Starting as a small family business in the bustling spice markets of Unjha, the company quickly gained a reputation for sourcing and supplying the finest quality spices. Today, RM Spices is a leading name in the Indian spice industry, known for its commitment to quality, authenticity, and customer satisfaction."
+  },
+  "timeline": {
+    "title": "Our Growth Timeline",
+    "items": [
+      {
+        "year": "1969",
+        "title": "The Beginning",
+        "description": "Mr. Ranchoodbhai Mulchandani Patel establishes RM Spices in Unjha."
+      },
+      {
+        "year": "1980",
+        "title": "Expansion and Growth",
+        "description": "The company expands its operations to include processing and packaging."
+      },
+      {
+        "year": "2015",
+        "title": "Modernization and Technology",
+        "description": "RM Spices adopts modern technology to enhance efficiency and quality control."
+      },
+      {
+        "year": "Present",
+        "title": "A Global Leader",
+        "description": "RM Spices becomes a trusted supplier to major food manufacturers and retailers worldwide."
+      }
+    ]
+  },
+  "values": {
+    "title": "Our Values",
+    "items": [
+      {
+        "icon": "ShieldCheck",
+        "title": "Quality",
+        "description": "We are committed to sourcing and supplying the highest quality spices, ensuring purity and authenticity."
+      },
+      {
+        "icon": "Users",
+        "title": "Customer Trust",
+        "description": "We build long-term relationships with our clients based on trust, reliability, and exceptional service."
+      },
+      {
+        "icon": "Leaf",
+        "title": "Sustainability",
+        "description": "We are dedicated to sustainable practices, supporting local farmers and minimizing our environmental impact."
+      }
+    ]
+  },
+  "team": {
+    "title": "Meet the Team",
+    "members": [
+      {
+        "name": "Bhavik Patel",
+        "role": "Director",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCCu5qInMEM1npwfwn9XdM4WxypG5E6xhMBIBGed-BZNOjuA7YC9Q61gkQ6qEe0lZU6nWTaQuhRiiaARmnr8SbLvTECNu0eqTR626RwKd5KRtgVlD9H-1Ym_707ppTThOS6eB680-k6m1d9cj9OuJwHOXz0wpOT0rJ0xVMOXN0YFyaQ0IRk74QM8VBx8n43lIFWrP7XIgRIf2o93n30S0UPF2_cSbrCUsE22LfvO40W0HYkJFo5pUF5enqhqlbDaz51q1nwCDLVkjU"
+      },
+      {
+        "name": "Prachit Patel",
+        "role": "Director",
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDP4vnmaZv1rIYdfC9N_xWXXXpm9mAwgmxPfHai_cjGenp3-1OY-NXleICwTreTdWKsKqYG-AIJlIpXPFyren0C_lHWDIlZussGBniB3nfbY-DdP7zj3QZEX_kPT0ktRdjkt_KYFpHnYiOiPd1004CLWXPMMxsMUva0OgraV5YOcvqvQNzhFuKo5td_sma4XL5ExrX4fp7qjAH5ddhgN5SrgVsWZEK6rKyPr27s06zUVL4T6HNhX7X8rFrW-WBYmhG5q9n9rq8uayM"
+      }
+    ]
+  }
+}
+
