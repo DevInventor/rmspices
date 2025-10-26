@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ChefHat, Heart, Package, MapPin } from 'lucide-react';
+import { ChefHat, Heart, MapPin } from 'lucide-react';
 import type { Product } from '../../utils/translations';
 
 interface TopSellingProductsProps {

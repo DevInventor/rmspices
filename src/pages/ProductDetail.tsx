@@ -225,7 +225,6 @@ export const ProductDetail: React.FC = () => {
                   tabs={tabs}
                   activeTab={activeTab}
                   onTabChange={setActiveTab}
-                  language={language}
                 />
                 <SpecificationTable
                   data={

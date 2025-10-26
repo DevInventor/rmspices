@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { Button } from '../common/Button';
+
+interface NavigationItem {
+  name: string;
+  href: string;
+}
 
 export const Header: React.FC = () => {
   const { language, setLanguage, translations } = useLanguage();
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  const navigationItems = translations?.navigation?.items || [];
+  const navigationItems = (translations?.navigation?.items || []) as NavigationItem[];
   
   const isActiveRoute = (href: string) => {
     return location.pathname === href;
@@ -21,7 +26,10 @@ export const Header: React.FC = () => {
   }, [location.pathname]);
   
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-spice-100">
+    <header 
+      className="sticky top-0 z-50 bg-white shadow-sm border-b border-spice-100"
+      style={{ position: 'sticky', top: 0, zIndex: 50 }}
+    >
       <div className="container-fluid">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -43,7 +51,7 @@ export const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navigationItems.map((item: any) => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
@@ -65,8 +73,9 @@ export const Header: React.FC = () => {
               onClick={() => setLanguage(language === 'eng' ? 'ger' : 'eng')} 
               variant="outline" 
               size="sm"
-              className="hidden sm:flex"
+              className="hidden sm:flex items-center gap-2"
             >
+              <Globe className="w-4 h-4" />
               {language === 'eng' ? 'DE' : 'EN'}
             </Button>
             
@@ -95,7 +104,7 @@ export const Header: React.FC = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-spice-100">
             <div className="flex flex-col space-y-4">
-              {navigationItems.map((item: any) => (
+              {navigationItems.map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
@@ -122,7 +131,9 @@ export const Header: React.FC = () => {
                   onClick={() => setLanguage(language === 'eng' ? 'ger' : 'eng')}
                   variant="outline"
                   size="sm"
+                  className="flex items-center gap-2"
                 >
+                  <Globe className="w-4 h-4" />
                   {language === 'eng' ? 'DE' : 'EN'}
                 </Button>
               </div>

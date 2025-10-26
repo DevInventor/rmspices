@@ -1,12 +1,20 @@
 import React from 'react';
 import { Mail, MessageCircle, Clock } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import { 
   getCompanyInfo, 
   getCompanyContact, 
   getCompanyBusinessHours, 
   getCompanySocialMedia 
 } from '../../config/glob';
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Linkedin } from 'lucide-react';
+
+interface SocialMediaItem {
+  name: string;
+  url: string;
+  icon: string;
+  ariaLabel: string;
+}
 
 export const TopbarBanner: React.FC = () => {
   const companyInfo = getCompanyInfo();
@@ -15,12 +23,10 @@ export const TopbarBanner: React.FC = () => {
   const socialMedia = getCompanySocialMedia();
 
   // Icon mapping for dynamic icon rendering
-  const iconMap: Record<string, any> = {
+  const iconMap: Record<string, LucideIcon> = {
     facebook: Facebook,
     instagram: Instagram,
     linkedin: Linkedin,
-    twitter: Twitter,
-    youtube: Youtube,
   };
 
   const handleEmailClick = () => {
@@ -32,7 +38,7 @@ export const TopbarBanner: React.FC = () => {
     window.open(`${contact.whatsapp.url}?text=${message}`, '_blank');
   };
 
-  const socialMediaArray = Object.values(socialMedia);
+  const socialMediaArray = Object.values(socialMedia) as SocialMediaItem[];
 
   return (
     <div className="bg-slate-900 text-white py-2 px-4 text-xs">
@@ -40,7 +46,7 @@ export const TopbarBanner: React.FC = () => {
         <div className="flex items-center justify-between gap-4">
           {/* Left: Social Media Icons */}
           <div className="flex items-center gap-3">
-            {socialMediaArray.map((social: any) => {
+            {socialMediaArray.map((social) => {
               const IconComponent = iconMap[social.icon];
               if (!IconComponent) return null;
               

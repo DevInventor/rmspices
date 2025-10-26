@@ -9,10 +9,9 @@ interface TabsProps {
   tabs: Tab[];
   activeTab: string;
   onTabChange: (tabId: string) => void;
-  language?: 'eng' | 'ger';
 }
 
-export const Tabs: React.FC<TabsProps> = ({ tabs, activeTab, onTabChange, language = 'eng' }) => {
+export const Tabs: React.FC<TabsProps> = ({ tabs, activeTab, onTabChange }) => {
   return (
     <div className="border-b-2 border-spice-200 bg-gray-50">
       <div className="flex gap-2 px-4 overflow-x-auto">
@@ -33,4 +32,3 @@ export const Tabs: React.FC<TabsProps> = ({ tabs, activeTab, onTabChange, langua
     </div>
   );
 };
-
