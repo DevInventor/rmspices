@@ -45,12 +45,12 @@ export const Products: React.FC = () => {
   };
   
   return (
-    <div className="px-10 flex justify-center py-5">
+    <div className="px-4 sm:px-6 md:px-10 flex justify-center py-5">
       <div className="container-fluid flex flex-col max-w-[960px]">
         {/* Header */}
         <div className="flex flex-wrap justify-between gap-3 p-4">
-          <div className="flex min-w-72 flex-col gap-3">
-            <p className="tracking-light text-[32px] font-bold leading-tight text-gray-900 dark:text-white">{title}</p>
+          <div className="flex w-full sm:min-w-72 flex-col gap-2 sm:gap-3">
+            <p className="tracking-light text-2xl sm:text-3xl md:text-[32px] font-bold leading-tight text-gray-900 dark:text-white">{title}</p>
             <p className="text-spice-300 dark:text-slate-400 text-sm font-normal leading-normal">{description}</p>
           </div>
         </div>
@@ -58,7 +58,7 @@ export const Products: React.FC = () => {
         {/* Products Grid */}
         {displayedProducts.length > 0 ? (
           <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 p-2 sm:p-4">
               {displayedProducts.map((product) => (
                 <ProductCard
                   key={product.id}
@@ -83,14 +83,14 @@ export const Products: React.FC = () => {
             )}
             
             {/* Results Count */}
-            <div className="text-center py-4 text-spice-300 dark:text-slate-400 text-sm">
+            <div className="text-center py-4 text-spice-300 dark:text-slate-400 text-xs sm:text-sm px-4">
               {language === 'eng' ? 'Showing' : 'Anzeigen'} {displayedProducts.length} {language === 'eng' ? 'of' : 'von'} {products.length} {language === 'eng' ? 'products' : 'Produkte'}
             </div>
           </>
         ) : (
           /* Empty State */
-          <div className="flex flex-col items-center justify-center py-20">
-            <p className="text-lg font-semibold text-spice-300 dark:text-slate-400 mb-2">
+          <div className="flex flex-col items-center justify-center py-12 sm:py-20 px-4">
+            <p className="text-base sm:text-lg font-semibold text-spice-300 dark:text-slate-400 mb-2 text-center">
               {language === 'eng' ? 'No products available' : 'Keine Produkte verfügbar'}
             </p>
           </div>

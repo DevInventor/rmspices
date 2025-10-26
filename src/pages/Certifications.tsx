@@ -44,18 +44,18 @@ export const Certifications: React.FC = () => {
   };
   
   return (
-    <div className="px-10 flex justify-center py-5">
+    <div className="px-4 sm:px-6 md:px-10 flex justify-center py-5">
       <div className="container-fluid flex flex-col max-w-[960px]">
         <div className="flex flex-wrap justify-between gap-3 p-4">
-          <p className="tracking-light text-[32px] font-bold leading-tight min-w-72 text-gray-900 dark:text-white">{title}</p>
+          <p className="tracking-light text-2xl sm:text-3xl md:text-[32px] font-bold leading-tight w-full sm:min-w-72 text-gray-900 dark:text-white">{title}</p>
         </div>
-        <p className="text-base font-normal leading-normal pb-3 pt-1 px-4 text-gray-600 dark:text-slate-400">{description}</p>
+        <p className="text-sm sm:text-base font-normal leading-normal pb-3 pt-1 px-4 text-gray-600 dark:text-slate-400">{description}</p>
         
         {/* Export Certifications */}
-        <h2 className="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-gray-900 dark:text-white">
+        <h2 className="text-lg sm:text-xl md:text-[22px] font-bold leading-tight tracking-tight px-4 pb-3 pt-5 text-gray-900 dark:text-white">
           {exportCertifications.title}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 p-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 p-2 sm:p-4">
           {exportCertifications.items.map((item, index: number) => (
             <div key={index} className="flex flex-col gap-3 pb-3">
               <div
@@ -72,20 +72,20 @@ export const Certifications: React.FC = () => {
         
         <div className="flex justify-center">
           <div className="flex flex-1 gap-3 flex-wrap px-4 py-3 max-w-[480px] justify-center">
-            <Button variant="secondary">
+            <Button variant="secondary" size="sm" className="w-full sm:w-auto">
               Download
             </Button>
-            <Button variant="primary">
+            <Button variant="primary" size="sm" className="w-full sm:w-auto">
               View
             </Button>
           </div>
         </div>
         
         {/* Quality Assurance */}
-        <h2 className="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-gray-900 dark:text-white">
+        <h2 className="text-lg sm:text-xl md:text-[22px] font-bold leading-tight tracking-tight px-4 pb-3 pt-5 text-gray-900 dark:text-white">
           {qualityAssurance.title}
         </h2>
-        <p className="text-base font-normal leading-normal pb-3 pt-1 px-4 text-gray-600 dark:text-slate-400">
+        <p className="text-sm sm:text-base font-normal leading-normal pb-3 pt-1 px-4 text-gray-600 dark:text-slate-400">
           {qualityAssurance.description}
         </p>
         

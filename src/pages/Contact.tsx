@@ -41,8 +41,8 @@ export const Contact: React.FC = () => {
   const { hero, contactInfo } = content;
 
   return (
-    <div className="py-14">
-      <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+    <div className="py-8 sm:py-12 md:py-14">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 text-gray-600 md:px-8">
         <ReachOutForm
           title={hero.title}
           email={contactInfo.email.value}

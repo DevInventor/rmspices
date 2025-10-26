@@ -80,10 +80,10 @@ export const ProductDetail: React.FC = () => {
   
   if (!product) {
     return (
-      <div className="px-10 flex justify-center py-5">
-        <div className="container-fluid flex flex-col max-w-[960px] items-center text-center py-16">
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{detailContent.productNotFound}</h1>
-          <p className="text-gray-600 dark:text-slate-400 mb-8">{detailContent.productNotFoundDescription}</p>
+      <div className="px-4 sm:px-6 md:px-10 flex justify-center py-5">
+        <div className="container-fluid flex flex-col max-w-[960px] items-center text-center py-8 sm:py-12 md:py-16 px-4">
+          <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">{detailContent.productNotFound}</h1>
+          <p className="text-sm sm:text-base text-gray-600 dark:text-slate-400 mb-6 sm:mb-8">{detailContent.productNotFoundDescription}</p>
           <Button href="/products">← {detailContent.backButton}</Button>
         </div>
       </div>
@@ -91,43 +91,44 @@ export const ProductDetail: React.FC = () => {
   }
   
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 py-8 transition-colors">
-      <div className="container-fluid max-w-[1200px] mx-auto px-4">
+    <div className="min-h-screen bg-white dark:bg-slate-950 py-4 sm:py-6 md:py-8 transition-colors">
+      <div className="container-fluid max-w-[1200px] mx-auto px-2 sm:px-4 md:px-6">
         {/* Breadcrumb */}
-        <div className="flex flex-wrap gap-2 mb-8">
-          <Link to="/products" className="text-spice-300 dark:text-slate-400 text-base font-medium hover:text-primary-500">
+        <div className="flex flex-wrap gap-1 sm:gap-2 mb-4 sm:mb-6 md:mb-8 text-sm sm:text-base">
+          <Link to="/products" className="text-spice-300 dark:text-slate-400 font-medium hover:text-primary-500">
             {detailContent.breadcrumb.products}
           </Link>
-          <span className="text-spice-300 dark:text-slate-400 text-base font-medium">/</span>
-          <span className="text-gray-900 dark:text-white text-base font-medium">{product.name}</span>
+          <span className="text-spice-300 dark:text-slate-400 font-medium">/</span>
+          <span className="text-gray-900 dark:text-white font-medium truncate">{product.name}</span>
         </div>
 
         {/* Hero Section */}
-        <div className="mb-16">
+        <div className="mb-8 sm:mb-12 md:mb-16">
           <div
-            className="relative h-[400px] rounded-xl bg-cover bg-center flex items-end p-8 md:p-12"
+            className="relative h-[250px] sm:h-[300px] md:h-[400px] rounded-xl bg-cover bg-center flex items-end p-4 sm:p-6 md:p-8 lg:p-12"
             style={{
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%), url("${product.backgroundImage || product.image}")`
             }}
           >
             <div className="w-full z-10">
-              <div className="mb-6">
-                <p className="text-sm font-medium text-white/90 mb-2">{product.category}</p>
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">{product.name}</h1>
-                <p className="text-base text-white/90 max-w-2xl">
+              <div className="mb-3 sm:mb-4 md:mb-6">
+                <p className="text-xs sm:text-sm font-medium text-white/90 mb-1 sm:mb-2">{product.category}</p>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-3">{product.name}</h1>
+                <p className="text-xs sm:text-sm md:text-base text-white/90 max-w-2xl">
                   Premium Indian {product.name.split('(')[0].trim()} - Export Grade
                 </p>
               </div>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3">
                 <button
                   onClick={handleWhatsAppSubmit}
-                  className="px-6 py-3 bg-primary-500 text-gray-900 font-bold rounded-lg hover:bg-primary-600 transition-colors"
+                  className="px-4 py-2 sm:px-6 sm:py-3 bg-primary-500 text-gray-900 font-bold rounded-lg hover:bg-primary-600 transition-colors text-sm sm:text-base"
                 >
                   Request Quote
                 </button>
-                <button className="flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg hover:bg-white/20 transition-colors border border-white/20">
-                  <Download className="h-4 w-4" />
-                  Download Spec Sheet
+                <button className="flex items-center justify-center gap-2 px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg hover:bg-white/20 transition-colors border border-white/20 text-sm sm:text-base">
+                  <Download className="h-3 w-3 sm:h-4 sm:w-4" />
+                  <span className="hidden sm:inline">Download Spec Sheet</span>
+                  <span className="sm:hidden">Download</span>
                 </button>
               </div>
             </div>
@@ -135,17 +136,17 @@ export const ProductDetail: React.FC = () => {
         </div>
 
         {/* Product Overview Card */}
-        <div className="mb-16">
-          <div className="bg-spice-50 dark:bg-slate-900 rounded-xl p-8 md:p-12 transition-colors">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="mb-8 sm:mb-12 md:mb-16">
+          <div className="bg-spice-50 dark:bg-slate-900 rounded-xl p-4 sm:p-6 md:p-8 lg:p-12 transition-colors">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 items-center">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Product Overview</h2>
-                <div className="space-y-3 text-base text-gray-700 dark:text-slate-400">
-                  <p className="font-semibold text-lg dark:text-white">{product.name}</p>
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">Product Overview</h2>
+                <div className="space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-700 dark:text-slate-400">
+                  <p className="font-semibold text-base sm:text-lg dark:text-white">{product.name}</p>
                   <p className="leading-relaxed">{product.shortDescription || product.description}</p>
                 </div>
               </div>
-              <div className="relative h-[300px] rounded-lg overflow-hidden">
+              <div className="relative h-[200px] sm:h-[250px] md:h-[300px] rounded-lg overflow-hidden">
                 <img
                   src={product.productImage || product.image}
                   alt={product.name}
@@ -157,11 +158,11 @@ export const ProductDetail: React.FC = () => {
         </div>
 
         {/* Product Details and Highlights Side by Side */}
-        <div className="mb-16 grid md:grid-cols-2 gap-6">
+        <div className="mb-8 sm:mb-12 md:mb-16 grid md:grid-cols-2 gap-4 sm:gap-6">
           {/* Key Details Card */}
           {product.details && (
-            <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-8 space-y-6 transition-colors">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+            <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6 transition-colors">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
                 {language === 'eng' ? 'Product Details' : 'Produktdetails'}
               </h3>
               {product.details.appearance && (
@@ -195,8 +196,8 @@ export const ProductDetail: React.FC = () => {
           )}
 
           {/* Highlights Card */}
-          <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-8 transition-colors">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-4 sm:p-6 md:p-8 transition-colors">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
               {language === 'eng' ? 'Highlights' : 'Highlights'}
             </h3>
             <div className="space-y-4">
@@ -215,11 +216,11 @@ export const ProductDetail: React.FC = () => {
         </div>
 
         {/* Detailed Specifications & Usage & Benefits Side by Side */}
-        <div className="mb-16 grid lg:grid-cols-5 gap-6">
+        <div className="mb-8 sm:mb-12 md:mb-16 grid lg:grid-cols-5 gap-4 sm:gap-6">
           {/* Detailed Specifications */}
           {tabs.length > 0 && product.productCharacteristics && (
             <div className="lg:col-span-3">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Detailed Specifications</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Detailed Specifications</h2>
               <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl overflow-hidden transition-colors">
                 <Tabs 
                   tabs={tabs}
@@ -244,8 +245,8 @@ export const ProductDetail: React.FC = () => {
 
           {/* Usage & Benefits Cards */}
           {product.details && (
-            <div className="lg:col-span-2">
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Usage & Benefits</h2>
+            <div className="lg:col-span-2 mt-4 sm:mt-0">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Usage & Benefits</h2>
               <div className="space-y-6">
                 {product.details.culinaryUses && (
                   <div className="bg-primary-500/5 dark:bg-primary-500/10 border border-primary-500/20 dark:border-primary-500/30 rounded-xl p-6 transition-colors">
@@ -285,11 +286,11 @@ export const ProductDetail: React.FC = () => {
 
         {/* Packing Images & Brand Labels */}
         {(product.packingImages || product.brandLabels) && (
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          <div className="mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
               {language === 'eng' ? 'Packing Images & Brand Labels' : 'Verpackungsbilder & Markenetiketten'}
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               {product.packingImages && product.packingImages.length > 0 && (
                 <ImageGallery
                   images={product.packingImages}
@@ -308,20 +309,20 @@ export const ProductDetail: React.FC = () => {
 
         {/* Packaging & Logistics */}
         {product.logistics && (
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Packaging & Logistics</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Packaging & Logistics</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {product.logistics.containerCapacity && product.logistics.containerCapacity.length > 0 && (
-                <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-6 transition-colors">
-                  <div className="flex items-start gap-4 mb-4">
-                    <Truck className="h-6 w-6 text-primary-500" />
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Container Capacity' : 'Containerkapazität'}</h3>
+                <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-4 sm:p-6 transition-colors">
+                  <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    <Truck className="h-5 w-5 sm:h-6 sm:w-6 text-primary-500" />
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Container Capacity' : 'Containerkapazität'}</h3>
                   </div>
                   <div className="space-y-2">
                     {product.logistics.containerCapacity.map((container, index) => (
-                      <div key={index} className="flex justify-between">
-                        <span className="text-gray-600 dark:text-slate-400">{container.type}</span>
-                        <span className="font-semibold text-gray-900 dark:text-white">{container.quantityMetricTons} MT</span>
+                      <div key={index} className="flex justify-between text-sm sm:text-base">
+                        <span className="text-gray-600 dark:text-slate-400 truncate pr-2">{container.type}</span>
+                        <span className="font-semibold text-gray-900 dark:text-white whitespace-nowrap">{container.quantityMetricTons} MT</span>
                       </div>
                     ))}
                   </div>
@@ -329,40 +330,40 @@ export const ProductDetail: React.FC = () => {
               )}
               
               {product.logistics.packing && (
-                <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-6 transition-colors">
-                  <div className="flex items-start gap-4 mb-4">
-                    <Package className="h-6 w-6 text-primary-500" />
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Packing' : 'Verpackung'}</h3>
+                <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-4 sm:p-6 transition-colors">
+                  <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    <Package className="h-5 w-5 sm:h-6 sm:w-6 text-primary-500" />
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Packing' : 'Verpackung'}</h3>
                   </div>
                   <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">{product.logistics.packing}</p>
                 </div>
               )}
               
               {product.logistics.shelfLife && (
-                <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-6 transition-colors">
-                  <div className="flex items-start gap-4 mb-4">
-                    <Clock className="h-6 w-6 text-primary-500" />
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Shelf Life' : 'Haltbarkeit'}</h3>
+                <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-4 sm:p-6 transition-colors">
+                  <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-primary-500" />
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Shelf Life' : 'Haltbarkeit'}</h3>
                   </div>
                   <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">{product.logistics.shelfLife}</p>
                 </div>
               )}
               
               {product.logistics.pesticides && (
-                <div className="bg-white dark:bg-slate-900 border border-green-500/20 dark:border-green-500/30 bg-green-500/5 dark:bg-green-500/10 rounded-xl p-6 transition-colors">
-                  <div className="flex items-start gap-4 mb-4">
-                    <Shield className="h-6 w-6 text-green-600" />
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Pesticides Compliance' : 'Pestizidkonformität'}</h3>
+                <div className="bg-white dark:bg-slate-900 border border-green-500/20 dark:border-green-500/30 bg-green-500/5 dark:bg-green-500/10 rounded-xl p-4 sm:p-6 transition-colors">
+                  <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-green-600" />
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Pesticides Compliance' : 'Pestizidkonformität'}</h3>
                   </div>
                   <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">{product.logistics.pesticides}</p>
                 </div>
               )}
               
               {product.logistics.allergens && (
-                <div className="bg-white dark:bg-slate-900 border border-green-500/20 dark:border-green-500/30 bg-green-500/5 dark:bg-green-500/10 rounded-xl p-6 transition-colors">
-                  <div className="flex items-start gap-4 mb-4">
-                    <AlertCircle className="h-6 w-6 text-green-600" />
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Allergens' : 'Allergene'}</h3>
+                <div className="bg-white dark:bg-slate-900 border border-green-500/20 dark:border-green-500/30 bg-green-500/5 dark:bg-green-500/10 rounded-xl p-4 sm:p-6 transition-colors">
+                  <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    <AlertCircle className="h-5 w-5 sm:h-6 sm:w-6 text-green-600" />
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">{language === 'eng' ? 'Allergens' : 'Allergene'}</h3>
                   </div>
                   <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">{product.logistics.allergens}</p>
                 </div>
@@ -372,14 +373,14 @@ export const ProductDetail: React.FC = () => {
         )}
 
         {/* CTA Section */}
-        <div className="mb-16 relative overflow-hidden rounded-xl bg-gradient-to-br from-primary-500/10 to-spice-50 dark:from-primary-500/5 dark:to-slate-900 p-12 transition-colors">
+        <div className="mb-8 sm:mb-12 md:mb-16 relative overflow-hidden rounded-xl bg-gradient-to-br from-primary-500/10 to-spice-50 dark:from-primary-500/5 dark:to-slate-900 p-6 sm:p-8 md:p-12 transition-colors">
           <div className="relative z-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
               {language === 'eng' ? `Get a Quote for ${product.name}` : `Angebot für ${product.name} erhalten`}
             </h2>
             <button
               onClick={handleWhatsAppSubmit}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-primary-500 text-gray-900 font-bold rounded-lg hover:bg-primary-600 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 bg-primary-500 text-gray-900 font-bold rounded-lg hover:bg-primary-600 transition-colors text-sm sm:text-base"
             >
               Request Quote via WhatsApp
             </button>

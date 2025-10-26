@@ -82,9 +82,9 @@ export const Home: React.FC = () => {
   return (
     <div className="flex-1">
       {/* Hero Section */}
-      <div className="px-10 flex justify-center py-5">
+      <div className="px-4 sm:px-6 md:px-10 flex justify-center py-5">
         <div className="container-fluid flex flex-col max-w-[960px]">
-          <div className="relative flex min-h-[480px] flex-col gap-6 rounded-lg items-center justify-center p-4 overflow-hidden">
+          <div className="relative flex min-h-[280px] sm:min-h-[350px] md:min-h-[480px] flex-col gap-4 md:gap-6 rounded-lg items-center justify-center p-4 sm:p-6 overflow-hidden">
             {/* Banner Images with Sliding Animation */}
             <div className="absolute inset-0 w-full h-full">
               {hero.backgroundImages.map((image, index) => (
@@ -101,19 +101,19 @@ export const Home: React.FC = () => {
             </div>
             
             {/* Content Overlay */}
-            <div className="relative z-10 flex flex-col gap-2 text-center max-w-4xl">
-              <h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
+            <div className="relative z-10 flex flex-col gap-2 text-center max-w-4xl px-4">
+              <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
                 {hero.title}
               </h1>
-              <p className="text-white text-sm md:text-base font-normal leading-normal">
+              <p className="text-white text-xs sm:text-sm md:text-base font-normal leading-normal px-4">
                 {hero.subtitle}
               </p>
             </div>
-            <div className="relative z-10 flex flex-wrap gap-3 justify-center">
-              <Button variant="primary" size="lg" href="/products">
+            <div className="relative z-10 flex flex-col sm:flex-row flex-wrap gap-3 justify-center px-4">
+              <Button variant="primary" size="lg" href="/products" className="w-full sm:w-auto">
                 {hero.ctaPrimary}
               </Button>
-              <Button variant="secondary" size="lg" href="/contact">
+              <Button variant="secondary" size="lg" href="/contact" className="w-full sm:w-auto">
                 {hero.ctaSecondary}
               </Button>
             </div>
@@ -143,25 +143,25 @@ export const Home: React.FC = () => {
           </div>
           
           <div className="flex px-4 py-3 justify-center">
-            <Button variant="primary" href="/products">
+            <Button variant="primary" href="/products" size="md" className="w-full sm:w-auto">
               {productRange.viewAll}
             </Button>
           </div>
           
           {/* Why Choose Us Section */}
-          <h2 className="text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-gray-900 dark:text-white">
+          <h2 className="text-lg sm:text-xl md:text-[22px] font-bold leading-tight tracking-tight px-4 pb-3 pt-5 text-gray-900 dark:text-white">
             {whyChooseUs.title}
           </h2>
-          <div className="flex flex-col gap-10 px-4 py-10">
-            <div className="flex flex-col gap-4">
-              <h1 className="tracking-light text-[32px] md:text-4xl font-bold md:font-black leading-tight md:tracking-[-0.033em] max-w-[720px] text-gray-900 dark:text-white">
+          <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 px-4 py-6 sm:py-8 md:py-10">
+            <div className="flex flex-col gap-3 sm:gap-4">
+              <h1 className="tracking-light text-2xl sm:text-3xl md:text-4xl font-bold md:font-black leading-tight md:tracking-[-0.033em] max-w-[720px] text-gray-900 dark:text-white">
                 {whyChooseUs.subtitle}
               </h1>
-              <p className="text-base font-normal leading-normal max-w-[720px] text-gray-600 dark:text-slate-400">
+              <p className="text-sm sm:text-base font-normal leading-normal max-w-[720px] text-gray-600 dark:text-slate-400">
                 {whyChooseUs.description}
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
               {whyChooseUs.items.map((item, index) => (
                 <div key={index} className="flex flex-1 gap-3 rounded-lg border border-spice-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 flex-col transition-colors">
                   <div className="text-primary-500">
@@ -177,17 +177,17 @@ export const Home: React.FC = () => {
           </div>
           
           {/* CTA Section */}
-          <div className="flex flex-col justify-center gap-6 md:gap-8 px-4 md:px-10 py-10 md:py-20">
+          <div className="flex flex-col justify-center gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-10 py-8 sm:py-10 md:py-20">
             <div className="flex flex-col gap-2 text-center">
-              <h1 className="tracking-light text-[32px] md:text-4xl font-bold md:font-black leading-tight md:tracking-[-0.033em] max-w-[720px] text-gray-900 dark:text-white">
+              <h1 className="tracking-light text-2xl sm:text-3xl md:text-4xl font-bold md:font-black leading-tight md:tracking-[-0.033em] max-w-[720px] mx-auto text-gray-900 dark:text-white">
                 {cta.title}
               </h1>
-              <p className="text-base font-normal leading-normal max-w-[720px] text-gray-600 dark:text-slate-400">
+              <p className="text-sm sm:text-base font-normal leading-normal max-w-[720px] mx-auto text-gray-600 dark:text-slate-400">
                 {cta.description}
               </p>
             </div>
-            <div className="flex justify-center">
-              <Button variant="primary" size="lg" href="/contact">
+            <div className="flex justify-center px-4">
+              <Button variant="primary" size="lg" href="/contact" className="w-full sm:w-auto">
                 {cta.button}
               </Button>
             </div>

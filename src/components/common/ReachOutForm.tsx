@@ -84,17 +84,17 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
   ];
 
   return (
-    <div className="grid lg:grid-cols-5 gap-8">
+    <div className="grid lg:grid-cols-5 gap-6 sm:gap-8">
       {/* Left Column - Contact Info */}
-      <div className="lg:col-span-2 space-y-6">
+      <div className="lg:col-span-2 space-y-4 sm:space-y-6">
         <div>
           <h3 className="text-primary-600 font-semibold text-sm uppercase tracking-wide mb-2">
             {language === 'eng' ? 'Contact' : 'Kontakt'}
           </h3>
-          <h2 className="text-gray-800 dark:text-white text-3xl font-bold">
+          <h2 className="text-gray-800 dark:text-white text-2xl sm:text-3xl font-bold">
             {title}
           </h2>
-          <p className="text-gray-600 dark:text-slate-400 mt-3">
+          <p className="text-gray-600 dark:text-slate-400 mt-2 sm:mt-3 text-sm sm:text-base">
             {language === 'eng'
               ? "We're here to help and answer any question you might have. We look forward to hearing from you."
               : 'Wir sind hier, um zu helfen und alle Ihre Fragen zu beantworten. Wir freuen uns auf Ihre Nachricht.'}
@@ -127,17 +127,17 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
 
       {/* Right Column - Contact Form Card */}
       <div className="lg:col-span-3">
-        <div className="bg-white dark:bg-slate-900 border-2 border-gray-100 dark:border-slate-800 rounded-2xl shadow-xl p-8 relative overflow-hidden transition-colors">
+        <div className="bg-white dark:bg-slate-900 border-2 border-gray-100 dark:border-slate-800 rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 relative overflow-hidden transition-colors">
           {/* Decorative Corner Elements */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-primary-50 rounded-bl-full opacity-30" />
           <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary-50 rounded-tr-full opacity-20" />
 
           <div className="relative z-10">
-            <h3 className="text-gray-800 dark:text-white text-2xl font-bold mb-6">
+            <h3 className="text-gray-800 dark:text-white text-xl sm:text-2xl font-bold mb-4 sm:mb-6">
               {language === 'eng' ? "Send us a message" : "Senden Sie uns eine Nachricht"}
             </h3>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">

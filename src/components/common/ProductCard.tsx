@@ -27,7 +27,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   return (
     <Link
       to={`/products/${product.id}`}
-      className={`flex flex-col gap-4 rounded-lg border border-spice-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 hover:shadow-lg transition-all duration-300 hover:scale-105 group ${className}`}
+      className={`flex flex-col gap-3 sm:gap-4 rounded-lg border border-spice-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3 sm:p-4 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 group ${className}`}
     >
       {/* Product Image */}
       <div

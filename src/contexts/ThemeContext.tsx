@@ -16,11 +16,12 @@ export { ThemeContext };
 const ThemeProviderComponent = ({ children }: { children: ReactNode }) => {
   const [theme, setThemeState] = useState<Theme>(() => {
     const saved = localStorage.getItem('rmspices-theme');
-    // Check system preference if no saved theme
+    // Return saved theme, otherwise default to 'light' mode
     if (saved) {
       return saved as Theme;
     }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    // Default to light mode if no saved preference
+    return 'light';
   });
 
   // Apply theme to document on mount and when theme changes
@@ -48,21 +49,8 @@ const ThemeProviderComponent = ({ children }: { children: ReactNode }) => {
     setThemeState((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
 
-  // Listen to system preference changes
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = (e: MediaQueryListEvent) => {
-      // Only auto-switch if user hasn't manually set a preference
-      const saved = localStorage.getItem('rmspices-theme');
-      if (!saved) {
-        setThemeState(e.matches ? 'dark' : 'light');
-      }
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // Note: We no longer listen to system preference changes
+  // User must manually toggle theme through the UI
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>

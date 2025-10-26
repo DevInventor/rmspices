@@ -37,8 +37,8 @@ export const Footer: React.FC = () => {
   
   return (
     <footer className="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-6">
@@ -135,14 +135,14 @@ export const Footer: React.FC = () => {
               {language === 'eng' ? 'Get in Touch' : 'Kontakt'}
             </h3>
             <div className="space-y-4">
-              <button
-                onClick={handleWhatsAppClick}
-                aria-label="Chat with us on WhatsApp"
-                className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[#25D366] text-white font-semibold hover:bg-[#20BA5A] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                <MessageCircle className="h-5 w-5" />
-                <span>{language === 'eng' ? 'Chat on WhatsApp' : 'Bei WhatsApp kontaktieren'}</span>
-              </button>
+          <button
+            onClick={handleWhatsAppClick}
+            aria-label="Chat with us on WhatsApp"
+            className="inline-flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 rounded-full bg-[#25D366] text-white font-semibold hover:bg-[#20BA5A] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base w-full sm:w-auto"
+          >
+            <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5" />
+            <span>{language === 'eng' ? 'Chat on WhatsApp' : 'Bei WhatsApp kontaktieren'}</span>
+          </button>
               <div className="text-sm text-slate-600 dark:text-slate-400">
                 <p className="mb-1">
                   <span className="font-medium">Email:</span> {contact.email.primary}
