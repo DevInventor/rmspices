@@ -10,9 +10,12 @@ import { ProductDetail } from './pages/ProductDetail';
 import './App.css';
 
 function App() {
+  // Use basename for GitHub Pages production deployment
+  const basename = import.meta.env.PROD ? '/rmspices' : '/';
+  
   return (
     <LanguageProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <MainLayout>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -21,6 +24,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/certifications" element={<Certifications />} />
             <Route path="/contact" element={<Contact />} />
+            {/* Catch all route */}
+            <Route path="*" element={<Home />} />
           </Routes>
         </MainLayout>
       </BrowserRouter>

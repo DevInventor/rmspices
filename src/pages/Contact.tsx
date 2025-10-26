@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getPageTranslations } from '../utils/translations';
-import { MapPin, Mail, Phone, MessageCircle } from 'lucide-react';
+import { MapPin, Mail, Phone, MessageCircle, ChevronDown } from 'lucide-react';
 
 interface ContactContent {
   hero: {
@@ -55,6 +55,9 @@ export const Contact: React.FC = () => {
 
   // Validation state
   const [errors, setErrors] = useState<Record<string, string>>({});
+  
+  // Dropdown state for product field
+  const [isProductFocused, setIsProductFocused] = useState(false);
 
   // Validation functions
   const validateEmail = (email: string): boolean => {
@@ -141,215 +144,212 @@ Please contact me for more information. Thank you!`;
   };
 
   return (
-    <div className="px-10 flex justify-center py-5">
-      <div className="container-fluid flex flex-col max-w-[960px]">
-        {/* Hero */}
-        <div
-          className="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-white rounded-lg min-h-[218px]"
-          style={{
-            backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 25%), url(${hero.backgroundImage})`,
-          }}
-        >
-          <div className="flex flex-col gap-1 p-4">
-            <p className="text-white tracking-light text-[28px] font-bold leading-tight">
+    <div className="py-14">
+      <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+        <div className="max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none">
+          {/* Left Column - Contact Info */}
+          <div className="max-w-lg space-y-3">
+            <h3 className="text-primary-600 font-semibold">
+              {language === 'eng' ? 'Contact' : 'Kontakt'}
+            </h3>
+            <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
               {hero.title}
-            </p>
-            <p className="text-white/90 text-sm font-normal leading-normal max-w-2xl">
+            </h3>
+            <p>
               {hero.subtitle}
             </p>
-          </div>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-8 py-5">
-          {/* Contact Form */}
-          <div className="flex flex-col gap-4">
-            <h2 className="tracking-light text-[28px] font-bold leading-tight px-4 text-left">{form.title}</h2>
             
-            <form onSubmit={(e) => { e.preventDefault(); handleWhatsAppClick(); }} className="flex flex-col gap-4 px-4">
-              {/* Name */}
-              <label className="flex flex-col gap-2">
-                <p className="text-base font-medium leading-normal">
+            {/* Contact Methods */}
+            <div className="mt-6 space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="flex-none text-primary-500 mt-1">
+                  <Mail className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="font-medium text-gray-800">{contactInfo.email.title}</p>
+                  <a
+                    href={`mailto:${contactInfo.email.value}`}
+                    className="text-gray-600 hover:text-primary-600 transition-colors"
+                  >
+                    {contactInfo.email.value}
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="flex-none text-primary-500 mt-1">
+                  <Phone className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="font-medium text-gray-800">{contactInfo.phone.title}</p>
+                  <a
+                    href={`tel:${contactInfo.phone.value}`}
+                    className="text-gray-600 hover:text-primary-600 transition-colors"
+                  >
+                    {contactInfo.phone.value}
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="flex-none text-primary-500 mt-1">
+                  <MessageCircle className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="font-medium text-gray-800">{contactInfo.whatsapp.title}</p>
+                  <button
+                    onClick={handleWhatsAppClick}
+                    className="text-gray-600 hover:text-primary-600 transition-colors text-left"
+                  >
+                    {contactInfo.whatsapp.value}
+                  </button>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <div className="flex-none text-primary-500 mt-1">
+                  <MapPin className="h-6 w-6" />
+                </div>
+                <div>
+                  <p className="font-medium text-gray-800">{contactInfo.address.title}</p>
+                  <p className="text-gray-600">{contactInfo.address.value}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Map */}
+            <div className="mt-8">
+              <div
+                className="w-full bg-center bg-no-repeat rounded-lg bg-cover h-[200px] shadow-md"
+                style={{ backgroundImage: `url(${map.backgroundImage})` }}
+              />
+            </div>
+          </div>
+
+          {/* Right Column - Contact Form */}
+          <div className="flex-1 mt-12 sm:max-w-lg lg:max-w-md">
+            <div className="bg-white border border-gray-200 rounded-xl shadow-lg p-8">
+              <h2 className="text-gray-800 text-2xl font-semibold mb-6">{form.title}</h2>
+              
+              <form onSubmit={(e) => { e.preventDefault(); handleWhatsAppClick(); }} className="space-y-5">
+              <div>
+                <label className="font-medium text-gray-700">
                   {form.fields.name.label} <span className="text-red-500">*</span>
-                </p>
+                </label>
                 <input
                   name="name"
                   type="text"
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder={form.fields.name.placeholder}
-                  className="flex w-full rounded-lg text-spice-500 focus:outline-0 focus:ring-0 border border-spice-200 bg-white focus:border-spice-500 h-12 placeholder:text-spice-300 p-[15px] text-base font-normal leading-normal"
+                  className="w-full mt-2 px-4 py-3 text-gray-600 bg-transparent outline-none border border-gray-300 focus:border-primary-600 shadow-sm rounded-lg transition-colors"
                   required
                 />
                 {errors.name && (
-                  <p className="text-red-500 text-sm">{errors.name}</p>
+                  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
                 )}
-              </label>
+              </div>
 
-              {/* Company */}
-              <label className="flex flex-col gap-2">
-                <p className="text-base font-medium leading-normal">{form.fields.company.label}</p>
-                <input
-                  name="company"
-                  type="text"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  placeholder={form.fields.company.placeholder}
-                  className="flex w-full rounded-lg text-spice-500 focus:outline-0 focus:ring-0 border border-spice-200 bg-white focus:border-spice-500 h-12 placeholder:text-spice-300 p-[15px] text-base font-normal leading-normal"
-                />
-              </label>
-
-              {/* Email */}
-              <label className="flex flex-col gap-2">
-                <p className="text-base font-medium leading-normal">
+              <div>
+                <label className="font-medium text-gray-700">
                   {form.fields.email.label} <span className="text-red-500">*</span>
-                </p>
+                </label>
                 <input
                   name="email"
                   type="email"
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder={form.fields.email.placeholder}
-                  className="flex w-full rounded-lg text-spice-500 focus:outline-0 focus:ring-0 border border-spice-200 bg-white focus:border-spice-500 h-12 placeholder:text-spice-300 p-[15px] text-base font-normal leading-normal"
+                  className="w-full mt-2 px-4 py-3 text-gray-600 bg-transparent outline-none border border-gray-300 focus:border-primary-600 shadow-sm rounded-lg transition-colors"
                   required
                 />
                 {errors.email && (
-                  <p className="text-red-500 text-sm">{errors.email}</p>
+                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
                 )}
-              </label>
+              </div>
 
-              {/* Phone */}
-              <label className="flex flex-col gap-2">
-                <p className="text-base font-medium leading-normal">
+              <div>
+                <label className="font-medium text-gray-700">
+                  {form.fields.company.label}
+                </label>
+                <input
+                  name="company"
+                  type="text"
+                  value={formData.company}
+                  onChange={handleInputChange}
+                  placeholder={form.fields.company.placeholder}
+                  className="w-full mt-2 px-4 py-3 text-gray-600 bg-transparent outline-none border border-gray-300 focus:border-primary-600 shadow-sm rounded-lg transition-colors"
+                />
+              </div>
+
+              <div>
+                <label className="font-medium text-gray-700">
                   {form.fields.phone.label} <span className="text-red-500">*</span>
-                </p>
+                </label>
                 <input
                   name="phone"
                   type="tel"
                   value={formData.phone}
                   onChange={handleInputChange}
                   placeholder={form.fields.phone.placeholder}
-                  className="flex w-full rounded-lg text-spice-500 focus:outline-0 focus:ring-0 border border-spice-200 bg-white focus:border-spice-500 h-12 placeholder:text-spice-300 p-[15px] text-base font-normal leading-normal"
+                  className="w-full mt-2 px-4 py-3 text-gray-600 bg-transparent outline-none border border-gray-300 focus:border-primary-600 shadow-sm rounded-lg transition-colors"
                   required
                 />
                 {errors.phone && (
-                  <p className="text-red-500 text-sm">{errors.phone}</p>
+                  <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
                 )}
-              </label>
+              </div>
 
               {/* Product */}
-              <label className="flex flex-col gap-2">
-                <p className="text-base font-medium leading-normal">{form.fields.product.label}</p>
-                <select
-                  name="product"
-                  value={formData.product}
-                  onChange={handleInputChange}
-                  className="flex w-full rounded-lg text-spice-500 focus:outline-0 focus:ring-0 border border-spice-200 bg-white focus:border-spice-500 h-12 p-[15px] text-base font-normal leading-normal"
-                >
-                  <option value="">{form.fields.product.placeholder}</option>
-                  {productOptions.map((option: string) => (
-                    <option key={option} value={option}>{option}</option>
-                  ))}
-                </select>
-              </label>
+              <div>
+                <label className="font-medium text-gray-700">
+                  {form.fields.product.label}
+                </label>
+                <div className="relative mt-2">
+                  <select
+                    name="product"
+                    value={formData.product}
+                    onChange={handleInputChange}
+                    onFocus={() => setIsProductFocused(true)}
+                    onBlur={() => setIsProductFocused(false)}
+                    className="appearance-none w-full px-4 py-3 text-gray-600 bg-transparent outline-none border border-gray-300 focus:border-primary-600 shadow-sm rounded-lg cursor-pointer"
+                  >
+                    <option value="">{form.fields.product.placeholder}</option>
+                    {productOptions.map((option: string) => (
+                      <option key={option} value={option}>{option}</option>
+                    ))}
+                  </select>
+                  <ChevronDown 
+                    className={`absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400 pointer-events-none transition-all duration-300 ${
+                      isProductFocused ? 'text-primary-600 rotate-180' : ''
+                    }`} 
+                  />
+                </div>
+              </div>
 
               {/* Message */}
-              <label className="flex flex-col gap-2">
-                <p className="text-base font-medium leading-normal">{form.fields.message.label}</p>
+              <div>
+                <label className="font-medium text-gray-700">
+                  {form.fields.message.label}
+                </label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder={form.fields.message.placeholder}
                   rows={6}
-                  className="flex w-full rounded-lg text-spice-500 focus:outline-0 focus:ring-0 border border-spice-200 bg-white focus:border-spice-500 placeholder:text-spice-300 p-[15px] text-base font-normal leading-normal resize-none"
+                  className="w-full mt-2 px-4 py-3 text-gray-600 bg-transparent outline-none border border-gray-300 focus:border-primary-600 shadow-sm rounded-lg resize-none appearance-none"
                 />
-              </label>
+              </div>
 
               {/* Submit Button */}
-              <div className="flex px-0 py-3 justify-start">
-                <button
-                  type="submit"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-lg bg-spice-500 text-white font-medium hover:bg-spice-600 transition-colors"
-                >
-                  <svg fill="currentColor" height="20" viewBox="0 0 256 256" width="20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"></path>
-                  </svg>
-                  {form.whatsappText}
-                </button>
-              </div>
-            </form>
-          </div>
-
-          {/* Contact Information */}
-          <div className="flex flex-col gap-6">
-            <h2 className="tracking-light text-[28px] font-bold leading-tight px-4 text-left">
-              {contactInfo.title}
-            </h2>
-
-            {/* Map */}
-            <div className="px-4">
-              <div
-                className="w-full bg-center bg-no-repeat rounded-lg bg-cover h-[200px]"
-                style={{ backgroundImage: `url(${map.backgroundImage})` }}
-              />
-            </div>
-
-            {/* Contact Details */}
-            <div className="space-y-4 px-4">
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 mt-1">
-                  <MapPin className="text-spice-500" size={24} />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <p className="text-base font-medium leading-normal">{contactInfo.address.title}</p>
-                  <p className="text-spice-300 text-sm font-normal leading-normal">{contactInfo.address.value}</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 mt-1">
-                  <Mail className="text-spice-500" size={24} />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <p className="text-base font-medium leading-normal">{contactInfo.email.title}</p>
-                  <a
-                    href={`mailto:${contactInfo.email.value}`}
-                    className="text-spice-300 hover:text-spice-500 transition-colors text-sm font-normal leading-normal"
-                  >
-                    {contactInfo.email.value}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 mt-1">
-                  <Phone className="text-spice-500" size={24} />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <p className="text-base font-medium leading-normal">{contactInfo.phone.title}</p>
-                  <a
-                    href={`tel:${contactInfo.phone.value}`}
-                    className="text-spice-300 hover:text-spice-500 transition-colors text-sm font-normal leading-normal"
-                  >
-                    {contactInfo.phone.value}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <div className="flex-shrink-0 mt-1">
-                  <MessageCircle className="text-spice-500" size={24} />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <p className="text-base font-medium leading-normal">{contactInfo.whatsapp.title}</p>
-                  <button
-                    onClick={handleWhatsAppClick}
-                    className="text-spice-300 hover:text-spice-500 transition-colors text-sm font-normal leading-normal text-left"
-                  >
-                    {contactInfo.whatsapp.value}
-                  </button>
-                </div>
-              </div>
+              <button
+                type="submit"
+                className="w-full px-4 py-3 text-white font-medium bg-primary-600 hover:bg-primary-500 active:bg-primary-600 rounded-lg duration-150"
+              >
+                {form.whatsappText}
+              </button>
+              </form>
             </div>
           </div>
         </div>
