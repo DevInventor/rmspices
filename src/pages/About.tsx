@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../contexts/useLanguage';
 import { getPageTranslations } from '../utils/translations';
 import { Shield, Users, Leaf } from 'lucide-react';
 import { cn } from '../utils';

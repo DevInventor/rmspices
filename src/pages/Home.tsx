@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../contexts/useLanguage';
 import { getPageTranslations } from '../utils/translations';
 import { Button } from '../components/common/Button';
 import { TopSellingProducts } from '../components/common/TopSellingProducts';

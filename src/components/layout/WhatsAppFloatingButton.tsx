@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { getCompanyContact } from '../../config/glob';
 import { WhatsAppDialog } from './WhatsAppDialog';
-import { useLanguage } from '../../contexts/LanguageContext';
+import { useLanguage } from '../../contexts/useLanguage';
 
 export const WhatsAppFloatingButton: React.FC = () => {
   const { language } = useLanguage();

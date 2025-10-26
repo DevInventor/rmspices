@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import type globalEngType from '../config/eng/global.json';
 import globalEng from '../config/eng/global.json';
@@ -16,7 +16,10 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+// Export context separately for useLanguage hook
+export { LanguageContext };
+
+const LanguageProviderComponent = ({ children }: { children: ReactNode }) => {
   const [language, setLanguageState] = useState<Language>(() => {
     const saved = localStorage.getItem('rmspices-language');
     return (saved as Language) || 'eng';
@@ -57,12 +60,9 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
   );
 };
 
-function useLanguageContext() {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
-}
+// Export the provider as default to support Fast Refresh
+export default LanguageProviderComponent;
 
-export { useLanguageContext as useLanguage };
+// Named export for convenience
+export const LanguageProvider = LanguageProviderComponent;
+

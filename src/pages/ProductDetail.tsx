@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { useLanguage } from '../contexts/LanguageContext';
+import { useLanguage } from '../contexts/useLanguage';
 import { getPageTranslations } from '../utils/translations';
 import { Button } from '../components/common/Button';
 import { Tabs, type Tab } from '../components/common/Tabs';
