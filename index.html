@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/rmspices/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Apply theme immediately to prevent flash
+      (function() {
+        const saved = localStorage.getItem('rmspices-theme');
+        // Default to 'light' mode if no saved preference
+        const theme = saved || 'light';
+        // Remove any existing classes and add the appropriate one
+        document.documentElement.classList.remove('light', 'dark');
+        document.documentElement.classList.add(theme);
+      })();
+    </script>
     <meta name="description" content="RM Spices - Premium Indian spices for global markets. Experience authentic flavors with our carefully sourced, high-quality spices." />
     <meta name="keywords" content="RM Spices, Indian spices, premium spices, global spice trade, cumin, turmeric, cardamom, fennel, coriander, black pepper, spice export, spice import, authentic Indian flavors" />
     <meta name="author" content="RM Spices" />
@@ -20,10 +31,10 @@
     <link rel="canonical" href="https://devinventor.github.io/rmspices/" />
     
     <title>RM Spices - Premium Indian Spices for Global Markets</title>
-    <script type="module" crossorigin src="/rmspices/assets/index-D9dkBxfe.js"></script>
+    <script type="module" crossorigin src="/rmspices/assets/index-sNX9GOwW.js"></script>
     <link rel="modulepreload" crossorigin href="/rmspices/assets/vendor-B36zi3bX.js">
-    <link rel="modulepreload" crossorigin href="/rmspices/assets/ui-B5rm0jPH.js">
-    <link rel="stylesheet" crossorigin href="/rmspices/assets/index-DdunjNAW.css">
+    <link rel="modulepreload" crossorigin href="/rmspices/assets/ui-BYQKwBg9.js">
+    <link rel="stylesheet" crossorigin href="/rmspices/assets/index-vYqsuhb-.css">
   </head>
   <body>
     <div id="root"></div>
