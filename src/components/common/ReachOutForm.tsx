@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MessageCircle, MapPin } from 'lucide-react';
 
+interface FormData {
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  product: string;
+  message: string;
+}
+
 interface ReachOutFormProps {
   title?: string;
   email: string;
