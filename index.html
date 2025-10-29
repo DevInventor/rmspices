@@ -5,14 +5,22 @@
     <link rel="icon" type="image/svg+xml" href="/rmspices/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
-      // Apply theme immediately to prevent flash
+      // Apply theme immediately to prevent flash of unstyled content (FOUC)
       (function() {
-        const saved = localStorage.getItem('rmspices-theme');
-        // Default to 'light' mode if no saved preference
-        const theme = saved || 'light';
-        // Remove any existing classes and add the appropriate one
-        document.documentElement.classList.remove('light', 'dark');
-        document.documentElement.classList.add(theme);
+        try {
+          const saved = localStorage.getItem('rmspices-theme');
+          const theme = (saved === 'dark' || saved === 'light') ? saved : 'light';
+          
+          // For Tailwind CSS dark mode (class strategy), we only add/remove 'dark' class
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {
+          // Fallback to light mode if localStorage is not available
+          document.documentElement.classList.remove('dark');
+        }
       })();
     </script>
     <meta name="description" content="RM Spices - Premium Indian spices for global markets. Experience authentic flavors with our carefully sourced, high-quality spices." />
@@ -31,12 +39,12 @@
     <link rel="canonical" href="https://devinventor.github.io/rmspices/" />
     
     <title>RM Spices - Premium Indian Spices for Global Markets</title>
-    <script type="module" crossorigin src="/rmspices/assets/index-sNX9GOwW.js"></script>
+    <script type="module" crossorigin src="/rmspices/assets/index-zBoFnRwD.js"></script>
     <link rel="modulepreload" crossorigin href="/rmspices/assets/vendor-B36zi3bX.js">
     <link rel="modulepreload" crossorigin href="/rmspices/assets/ui-BYQKwBg9.js">
-    <link rel="stylesheet" crossorigin href="/rmspices/assets/index-vYqsuhb-.css">
+    <link rel="stylesheet" crossorigin href="/rmspices/assets/index-CxT-7R5i.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
