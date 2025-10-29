@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { useLanguage } from '../contexts/useLanguage';
 import { getPageTranslations } from '../utils/translations';
 import { Button } from '../components/common/Button';
@@ -70,20 +70,30 @@ export const Home: React.FC = () => {
     }
   }, [hero.backgroundImages]);
   
-  const getIcon = (iconName: string) => {
-    const icons: Record<string, React.ReactNode> = {
-      ShieldCheck: <Shield size={24} />,
-      ChartLine: <TrendingUp size={24} />,
-      Truck: <Truck size={24} />,
-    };
-    return icons[iconName] || <Shield size={24} />;
-  };
+  // Memoize icon mapping to avoid recreation
+  const iconMap = useMemo(() => ({
+    ShieldCheck: <Shield size={24} />,
+    ChartLine: <TrendingUp size={24} />,
+    Truck: <Truck size={24} />,
+  }), []);
+
+  const getIcon = useCallback((iconName: string) => {
+    return iconMap[iconName as keyof typeof iconMap] || iconMap.ShieldCheck;
+  }, [iconMap]);
+
+  // Memoize background image styles
+  const backgroundStyles = useMemo(() => {
+    return hero.backgroundImages.map((image) => ({
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url(${image})`,
+    }));
+  }, [hero.backgroundImages]);
   
   return (
     <div className="flex-1">
       {/* Hero Section */}
       <div className="px-4 sm:px-6 md:px-10 flex justify-center py-5">
         <div className="container-fluid flex flex-col max-w-[960px]">
+          
           <div className="relative flex min-h-[280px] sm:min-h-[350px] md:min-h-[480px] flex-col gap-4 md:gap-6 rounded-lg items-center justify-center p-4 sm:p-6 overflow-hidden">
             {/* Banner Images with Sliding Animation */}
             <div className="absolute inset-0 w-full h-full">
@@ -93,9 +103,7 @@ export const Home: React.FC = () => {
                   className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
                     index === currentSlide ? 'opacity-100' : 'opacity-0'
                   }`}
-                  style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url(${image})`,
-                  }}
+                  style={backgroundStyles[index]}
                 />
               ))}
             </div>
@@ -132,7 +140,6 @@ export const Home: React.FC = () => {
               ))}
             </div>
           </div>
-          
           {/* Top Selling Products Section */}
           <div className="px-4 pb-3 pt-5">
             <TopSellingProducts 

@@ -13,7 +13,7 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-export const Button: React.FC<ButtonProps> = ({
+const ButtonComponent: React.FC<ButtonProps> = ({
   variant = 'primary',
   size = 'md',
   children,
@@ -65,4 +65,7 @@ export const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
+
+// Memoize component for performance
+export const Button = React.memo(ButtonComponent);
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useLanguage } from '../contexts/useLanguage';
 import { getPageTranslations } from '../utils/translations';
 import { Button } from '../components/common/Button';
@@ -36,9 +36,14 @@ export const Products: React.FC = () => {
   
   const [productsToShow, setProductsToShow] = useState<number>(8);
   
-  // Paginate products
-  const displayedProducts = (products as DetailedProduct[]).slice(0, productsToShow);
-  const hasMore = products.length > productsToShow;
+  // Memoize paginated products to avoid recalculation
+  const displayedProducts = useMemo(() => {
+    return (products as DetailedProduct[]).slice(0, productsToShow);
+  }, [products, productsToShow]);
+  
+  const hasMore = useMemo(() => {
+    return products.length > productsToShow;
+  }, [products.length, productsToShow]);
   
   const handleLoadMore = () => {
     setProductsToShow(prev => prev + 8);

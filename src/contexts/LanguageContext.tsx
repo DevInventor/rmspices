@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect, useMemo, useCallback } from 'react';
 import type { ReactNode } from 'react';
 import type globalEngType from '../config/eng/global.json';
 import globalEng from '../config/eng/global.json';
@@ -22,21 +22,30 @@ export { LanguageContext };
 const LanguageProviderComponent = ({ children }: { children: ReactNode }) => {
   const [language, setLanguageState] = useState<Language>(() => {
     const saved = localStorage.getItem('rmspices-language');
-    return (saved as Language) || 'eng';
+    return (saved === 'eng' || saved === 'ger') ? saved : 'eng';
   });
-  const [translations, setTranslations] = useState(globalEng);
 
-  useEffect(() => {
-    localStorage.setItem('rmspices-language', language);
-    // Update global translations based on language
-    setTranslations(language === 'eng' ? globalEng : globalGer);
+  // Memoize translations to avoid unnecessary re-renders
+  const translations = useMemo(() => {
+    return language === 'eng' ? globalEng : globalGer;
   }, [language]);
 
-  const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
-  };
+  useEffect(() => {
+    try {
+      localStorage.setItem('rmspices-language', language);
+    } catch (error) {
+      console.warn('Failed to save language to localStorage:', error);
+    }
+  }, [language]);
 
-  const t = (key: TranslationKey): unknown => {
+  const setLanguage = useCallback((lang: Language) => {
+    if (lang === 'eng' || lang === 'ger') {
+      setLanguageState(lang);
+    }
+  }, []);
+
+  // Memoize translation function
+  const t = useCallback((key: TranslationKey): unknown => {
     // Simple translation lookup
     const keys = key.split('.');
     let value: unknown = translations;
@@ -51,10 +60,18 @@ const LanguageProviderComponent = ({ children }: { children: ReactNode }) => {
     }
     
     return value !== undefined ? value : key;
-  };
+  }, [translations]);
+
+  // Memoize context value to prevent unnecessary re-renders
+  const contextValue = useMemo(() => ({
+    language,
+    setLanguage,
+    t,
+    translations
+  }), [language, setLanguage, t, translations]);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t, translations }}>
+    <LanguageContext.Provider value={contextValue}>
       {children}
     </LanguageContext.Provider>
   );

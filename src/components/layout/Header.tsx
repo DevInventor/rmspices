@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe, Sun, Moon } from 'lucide-react';
 import { useLanguage } from '../../contexts/useLanguage';
@@ -16,21 +16,38 @@ export const Header: React.FC = () => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
-  const navigationItems = (translations?.navigation?.items || []) as NavigationItem[];
+  // Memoize navigation items to avoid recalculation
+  const navigationItems = useMemo(() => {
+    return (translations?.navigation?.items || []) as NavigationItem[];
+  }, [translations?.navigation?.items]);
   
-  const isActiveRoute = (href: string) => {
+  // Memoize active route check
+  const isActiveRoute = useCallback((href: string) => {
     return location.pathname === href;
-  };
+  }, [location.pathname]);
+
+  // Memoize language toggle handler
+  const handleLanguageToggle = useCallback(() => {
+    setLanguage(language === 'eng' ? 'ger' : 'eng');
+  }, [language, setLanguage]);
+
+  // Memoize mobile menu toggle
+  const handleMobileMenuToggle = useCallback(() => {
+    setIsMobileMenuOpen(prev => !prev);
+  }, []);
+
+  const handleCloseMobileMenu = useCallback(() => {
+    setIsMobileMenuOpen(false);
+  }, []);
 
   // Close mobile menu when route changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
-  
+
   return (
     <header 
       className="sticky top-0 z-50 bg-white dark:bg-slate-900 shadow-sm border-b border-spice-100 dark:border-slate-800"
-      style={{ position: 'sticky', top: 0, zIndex: 50 }}
     >
       <div className="container-fluid">
         <div className="flex items-center justify-between h-16">
@@ -81,7 +98,7 @@ export const Header: React.FC = () => {
 
             {/* Language Toggle */}
             <Button 
-              onClick={() => setLanguage(language === 'eng' ? 'ger' : 'eng')} 
+              onClick={handleLanguageToggle} 
               variant="outline" 
               size="sm"
               className="hidden sm:flex items-center gap-2"
@@ -102,7 +119,7 @@ export const Header: React.FC = () => {
 
             {/* Mobile Menu Button */}
             <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={handleMobileMenuToggle}
               className="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-spice-100 dark:hover:bg-slate-800"
               aria-label="Toggle mobile menu"
             >
@@ -119,7 +136,7 @@ export const Header: React.FC = () => {
                 <Link
                   key={item.href}
                   to={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={handleCloseMobileMenu}
                   className={`text-lg font-medium px-3 py-2 rounded-lg transition-colors hover:scale-105 transform transition-all duration-200 ${
                     isActiveRoute(item.href)
                       ? 'text-primary-500 bg-primary-500/10 font-semibold'
@@ -147,7 +164,7 @@ export const Header: React.FC = () => {
                   {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
                 </button>
                 <Button
-                  onClick={() => setLanguage(language === 'eng' ? 'ger' : 'eng')}
+                  onClick={handleLanguageToggle}
                   variant="outline"
                   size="sm"
                   className="flex items-center gap-2"

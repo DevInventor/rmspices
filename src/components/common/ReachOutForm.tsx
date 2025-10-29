@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import { Mail, Phone, MessageCircle, MapPin } from 'lucide-react';
 
 interface FormData {
@@ -20,7 +20,7 @@ interface ReachOutFormProps {
   language?: 'eng' | 'ger';
 }
 
-export const ReachOutForm: React.FC<ReachOutFormProps> = ({
+const ReachOutFormComponent: React.FC<ReachOutFormProps> = ({
   title = "Let's connect",
   email,
   phone,
@@ -38,26 +38,28 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
     message: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
     onSubmit?.(formData);
-  };
+  }, [formData, onSubmit]);
 
-  const productOptions = [
+  // Memoize product options to avoid recreation
+  const productOptions = useMemo(() => [
     'Whole Spices',
     'Ground Spices',
     'Spice Blends',
     'Organic Spices',
     'Processed Spices',
     'Other',
-  ];
+  ], []);
 
-  const contactMethods = [
+  // Memoize contact methods to avoid recreation
+  const contactMethods = useMemo(() => [
     {
       icon: <Mail className="h-6 w-6" />,
       title: language === 'eng' ? 'Email' : 'E-Mail',
@@ -81,7 +83,7 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
       title: language === 'eng' ? 'Address' : 'Adresse',
       value: address,
     },
-  ];
+  ], [language, email, phone, whatsapp, address]);
 
   return (
     <div className="grid lg:grid-cols-5 gap-6 sm:gap-8">
@@ -246,3 +248,5 @@ export const ReachOutForm: React.FC<ReachOutFormProps> = ({
   );
 };
 
+// Memoize component
+export const ReachOutForm = React.memo(ReachOutFormComponent);

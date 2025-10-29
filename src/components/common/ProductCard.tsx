@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { ChefHat, Heart, Package } from 'lucide-react';
 import type { Product } from '../../utils/translations';
@@ -10,7 +10,7 @@ interface ProductCardProps {
   className?: string;
 }
 
-export const ProductCard: React.FC<ProductCardProps> = ({
+const ProductCardComponent: React.FC<ProductCardProps> = ({
   product,
   language = 'eng',
   showDetails = true,
@@ -24,6 +24,21 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     };
   };
 
+  // Memoize image URL to avoid recreating style object
+  const imageUrl = useMemo(() => {
+    return product.image || product.backgroundImage || product.productImage;
+  }, [product.image, product.backgroundImage, product.productImage]);
+
+  // Memoize image style to avoid recreation
+  const imageStyle = useMemo(() => ({
+    backgroundImage: `url(${imageUrl})`
+  }), [imageUrl]);
+
+  // Memoize specifications entries
+  const specEntries = useMemo(() => {
+    return Object.entries(product.specifications).slice(0, 2);
+  }, [product.specifications]);
+
   return (
     <Link
       to={`/products/${product.id}`}
@@ -32,7 +47,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       {/* Product Image */}
       <div
         className="w-full aspect-square bg-cover bg-center rounded-lg"
-        style={{ backgroundImage: `url(${product.image || product.backgroundImage || product.productImage})` }}
+        style={imageStyle}
       />
         
       {/* Product Info */}
@@ -73,7 +88,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
         {/* Quick Specs */}
         {showDetails && (
           <div className="flex flex-wrap gap-2 mt-2">
-            {Object.entries(product.specifications).slice(0, 2).map(([key, value]) => (
+            {specEntries.map(([key, value]) => (
               <span
                 key={key}
                 className="text-xs px-2 py-1 rounded bg-spice-100 dark:bg-slate-800 text-spice-300 dark:text-slate-400"
@@ -110,3 +125,5 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   );
 };
 
+// Memoize component to prevent unnecessary re-renders
+export const ProductCard = React.memo(ProductCardComponent);

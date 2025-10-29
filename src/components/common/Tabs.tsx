@@ -11,7 +11,7 @@ interface TabsProps {
   onTabChange: (tabId: string) => void;
 }
 
-export const Tabs: React.FC<TabsProps> = ({ tabs, activeTab, onTabChange }) => {
+const TabsComponent: React.FC<TabsProps> = ({ tabs, activeTab, onTabChange }) => {
   return (
     <div className="border-b-2 border-spice-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-900 transition-colors">
       <div className="flex gap-2 px-4 overflow-x-auto">
@@ -32,3 +32,6 @@ export const Tabs: React.FC<TabsProps> = ({ tabs, activeTab, onTabChange }) => {
     </div>
   );
 };
+
+// Memoize component
+export const Tabs = React.memo(TabsComponent);

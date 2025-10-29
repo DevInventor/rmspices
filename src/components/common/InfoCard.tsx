@@ -8,7 +8,7 @@ interface InfoCardProps {
   className?: string;
 }
 
-export const InfoCard: React.FC<InfoCardProps> = ({
+const InfoCardComponent: React.FC<InfoCardProps> = ({
   icon,
   title,
   content,
@@ -30,4 +30,7 @@ export const InfoCard: React.FC<InfoCardProps> = ({
     </div>
   );
 };
+
+// Memoize component
+export const InfoCard = React.memo(InfoCardComponent);
 

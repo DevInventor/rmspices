@@ -1,12 +1,40 @@
-import React from 'react';
+import React, { useMemo, useCallback } from 'react';
 
 interface SpecificationTableProps {
   data: Record<string, unknown>;
   language?: 'eng' | 'ger';
 }
 
-export const SpecificationTable: React.FC<SpecificationTableProps> = ({ data, language = 'eng' }) => {
-  if (!data || Object.keys(data).length === 0) {
+const SpecificationTableComponent: React.FC<SpecificationTableProps> = ({ data, language = 'eng' }) => {
+  // Memoize helper functions
+  const renderValue = useCallback((value: unknown): string => {
+    if (Array.isArray(value)) {
+      return value.join(', ');
+    }
+    if (typeof value === 'object' && value !== null) {
+      return JSON.stringify(value);
+    }
+    return String(value || '');
+  }, []);
+
+  const formatKey = useCallback((key: string): string => {
+    // Replace underscores with spaces, convert camelCase to Title Case
+    return key
+      .replace(/_/g, ' ')  // Replace underscores with spaces
+      .replace(/([A-Z])/g, ' $1')  // Add space before capital letters
+      .replace(/\s+/g, ' ')  // Replace multiple spaces with single space
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(' ');
+  }, []);
+
+  // Memoize entries to avoid recalculation
+  const entries = useMemo(() => {
+    if (!data || Object.keys(data).length === 0) return [];
+    return Object.entries(data);
+  }, [data]);
+
+  if (entries.length === 0) {
     return (
       <div className="px-4 py-3">
         <div className="flex items-center justify-center p-8 border border-spice-100 dark:border-slate-800 rounded-lg bg-white dark:bg-slate-900">
@@ -17,27 +45,6 @@ export const SpecificationTable: React.FC<SpecificationTableProps> = ({ data, la
       </div>
     );
   }
-
-  const renderValue = (value: unknown): string => {
-    if (Array.isArray(value)) {
-      return value.join(', ');
-    }
-    if (typeof value === 'object' && value !== null) {
-      return JSON.stringify(value);
-    }
-    return String(value || '');
-  };
-
-  const formatKey = (key: string): string => {
-    // Replace underscores with spaces, convert camelCase to Title Case
-    return key
-      .replace(/_/g, ' ')  // Replace underscores with spaces
-      .replace(/([A-Z])/g, ' $1')  // Add space before capital letters
-      .replace(/\s+/g, ' ')  // Replace multiple spaces with single space
-      .split(' ')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(' ');
-  };
 
   return (
     <div className="px-4 py-3">
@@ -55,7 +62,7 @@ export const SpecificationTable: React.FC<SpecificationTableProps> = ({ data, la
               </tr>
             </thead>
             <tbody className="divide-y divide-spice-100 dark:divide-slate-700">
-              {Object.entries(data).map(([key, value]) => (
+              {entries.map(([key, value]) => (
                 <tr key={key} className="hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors">
                   <td className="px-6 py-4 text-gray-700 dark:text-slate-300 text-sm font-medium whitespace-nowrap">
                     {formatKey(key)}
@@ -73,3 +80,5 @@ export const SpecificationTable: React.FC<SpecificationTableProps> = ({ data, la
   );
 };
 
+// Memoize component
+export const SpecificationTable = React.memo(SpecificationTableComponent);

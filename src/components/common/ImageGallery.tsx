@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 interface ImageGalleryProps {
@@ -10,35 +10,36 @@ interface ImageGalleryProps {
   title?: string;
 }
 
-export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => {
+const ImageGalleryComponent: React.FC<ImageGalleryProps> = ({ images, title }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
-  const nextImage = () => {
+  // Memoize callbacks to prevent recreation
+  const nextImage = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
-  };
+  }, [images.length]);
 
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
+  }, [images.length]);
 
-  const openLightbox = (index: number) => {
+  const openLightbox = useCallback((index: number) => {
     setLightboxIndex(index);
     setIsLightboxOpen(true);
-  };
+  }, []);
 
-  const closeLightbox = () => {
+  const closeLightbox = useCallback(() => {
     setIsLightboxOpen(false);
-  };
+  }, []);
 
-  const nextLightboxImage = () => {
+  const nextLightboxImage = useCallback(() => {
     setLightboxIndex((prev) => (prev + 1) % images.length);
-  };
+  }, [images.length]);
 
-  const prevLightboxImage = () => {
+  const prevLightboxImage = useCallback(() => {
     setLightboxIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
+  }, [images.length]);
 
   // Handle keyboard navigation
   useEffect(() => {
@@ -52,8 +53,11 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => 
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLightboxOpen]);
+  }, [isLightboxOpen, prevLightboxImage, nextLightboxImage, closeLightbox]);
+
+  // Memoize current image data
+  const currentImage = useMemo(() => images[currentIndex], [images, currentIndex]);
+  const lightboxImage = useMemo(() => images[lightboxIndex], [images, lightboxIndex]);
 
   if (!images || images.length === 0) {
     return null;
@@ -71,8 +75,8 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => 
           {/* Main Image */}
           <div className="relative aspect-video rounded-lg overflow-hidden bg-gray-100 dark:bg-slate-800">
             <img
-              src={images[currentIndex].src}
-              alt={images[currentIndex].alt}
+              src={currentImage.src}
+              alt={currentImage.alt}
               className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
               onClick={() => openLightbox(currentIndex)}
             />
@@ -109,7 +113,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => 
           <div className="mt-4 flex gap-3 overflow-x-auto pb-2">
             {images.map((image, index) => (
               <button
-                key={index}
+                key={`${image.src}-${index}`}
                 onClick={() => setCurrentIndex(index)}
                 className={`flex-shrink-0 w-24 h-24 rounded-lg overflow-hidden border-2 transition-all ${
                   currentIndex === index
@@ -121,6 +125,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => 
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </button>
             ))}
@@ -128,9 +133,9 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => 
         )}
 
         {/* Image Title */}
-        {images[currentIndex].title && (
+        {currentImage.title && (
           <p className="mt-4 text-center text-gray-600 dark:text-slate-400 text-sm font-medium">
-            {images[currentIndex].title}
+            {currentImage.title}
           </p>
         )}
       </div>
@@ -153,8 +158,8 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => 
           {/* Lightbox Image */}
           <div className="relative max-w-7xl max-h-full">
             <img
-              src={images[lightboxIndex].src}
-              alt={images[lightboxIndex].alt}
+              src={lightboxImage.src}
+              alt={lightboxImage.alt}
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />
@@ -187,9 +192,9 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => 
           </div>
 
           {/* Lightbox Image Info */}
-          {images[lightboxIndex].title && (
+          {lightboxImage.title && (
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-full text-sm">
-              {images[lightboxIndex].title}
+              {lightboxImage.title}
             </div>
           )}
 
@@ -202,3 +207,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title }) => 
     </>
   );
 };
+
+// Memoize component
+export const ImageGallery = React.memo(ImageGalleryComponent);

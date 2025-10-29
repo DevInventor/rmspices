@@ -17,15 +17,15 @@ export const RelatedProducts: React.FC<RelatedProductsProps> = ({
   maxProducts = 3,
   language = 'eng'
 }) => {
-  // Filter out current product and get random related products
+  // Filter out current product and get related products
+  // Use deterministic selection instead of random to avoid re-renders
   const relatedProducts = React.useMemo(() => {
     const filtered = currentProductId 
       ? products.filter(p => p.id !== currentProductId)
       : products;
     
-    // Shuffle and take first N products
-    const shuffled = [...filtered].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, maxProducts);
+    // Take first N products deterministically (random causes re-renders)
+    return filtered.slice(0, maxProducts);
   }, [products, currentProductId, maxProducts]);
 
   if (relatedProducts.length === 0) {

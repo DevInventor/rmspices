@@ -8,7 +8,7 @@ interface FeatureCardProps {
   iconColor?: 'primary' | 'red' | 'green';
 }
 
-export const FeatureCard: React.FC<FeatureCardProps> = ({
+const FeatureCardComponent: React.FC<FeatureCardProps> = ({
   icon,
   title,
   description,
@@ -40,4 +40,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
     </div>
   );
 };
+
+// Memoize component
+export const FeatureCard = React.memo(FeatureCardComponent);
 
