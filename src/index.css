@@ -1,31 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap');
-@import "tailwindcss";
 
-@theme {
-  --color-primary-50: #fff7ed;
-  --color-primary-100: #ffedd5;
-  --color-primary-200: #fed7aa;
-  --color-primary-300: #fdba74;
-  --color-primary-400: #fb923c;
-  --color-primary-500: #ec7513;
-  --color-primary-600: #ea580c;
-  --color-primary-700: #c2410c;
-  --color-primary-800: #9a3412;
-  --color-primary-900: #7c2d12;
-  --color-primary-950: #431407;
-  
-  --color-spice-50: #faf9f7;
-  --color-spice-100: #f4f2f0;
-  --color-spice-200: #e6e0db;
-  --color-spice-300: #897361;
-  --color-spice-400: #695446;
-  --color-spice-500: #3f2d20;
-  
-  --font-family-sans: "Work Sans", "Noto Sans", sans-serif;
-  
-  /* Dark mode selector */
-  --dark-mode: class;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Dark mode color overrides */
 :root {

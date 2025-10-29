@@ -13,44 +13,72 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 // Export context separately for useTheme hook
 export { ThemeContext };
 
-const ThemeProviderComponent = ({ children }: { children: ReactNode }) => {
-  const [theme, setThemeState] = useState<Theme>(() => {
-    const saved = localStorage.getItem('rmspices-theme');
-    // Return saved theme, otherwise default to 'light' mode
-    if (saved) {
+const THEME_STORAGE_KEY = 'rmspices-theme';
+const VALID_THEMES: Theme[] = ['light', 'dark'];
+
+const getInitialTheme = (): Theme => {
+  // Check if we're in a browser environment
+  if (typeof window === 'undefined') {
+    return 'light';
+  }
+
+  try {
+    const saved = localStorage.getItem(THEME_STORAGE_KEY);
+    // Validate the saved theme
+    if (saved && VALID_THEMES.includes(saved as Theme)) {
       return saved as Theme;
     }
-    // Default to light mode if no saved preference
-    return 'light';
-  });
+  } catch (error) {
+    // localStorage might not be available (e.g., in incognito mode)
+    console.warn('Failed to read theme from localStorage:', error);
+  }
 
-  // Apply theme to document on mount and when theme changes
+  return 'light';
+};
+
+const ThemeProviderComponent = ({ children }: { children: ReactNode }) => {
+  const [theme, setThemeState] = useState<Theme>(getInitialTheme);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Mark component as mounted
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // Apply theme to document when theme changes or component mounts
+  useEffect(() => {
+    if (!isMounted) return;
+
     const root = document.documentElement;
-    
-    // Remove any existing theme classes
-    root.classList.remove('light', 'dark');
-    
-    // Apply theme class
-    root.classList.add(theme);
-    
+
+    // For Tailwind CSS dark mode with 'class' strategy:
+    // Only add/remove 'dark' class on the root element
+    if (theme === 'dark') {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+
     // Save to localStorage
-    localStorage.setItem('rmspices-theme', theme);
-    
-    // Debug log
-    console.log(`Theme switched to: ${theme}`);
-  }, [theme]);
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch (error) {
+      console.warn('Failed to save theme to localStorage:', error);
+    }
+  }, [theme, isMounted]);
 
   const setTheme = (newTheme: Theme) => {
-    setThemeState(newTheme);
+    if (VALID_THEMES.includes(newTheme)) {
+      setThemeState(newTheme);
+    } else {
+      console.warn(`Invalid theme: ${newTheme}. Using 'light' instead.`);
+      setThemeState('light');
+    }
   };
 
   const toggleTheme = () => {
     setThemeState((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
-
-  // Note: We no longer listen to system preference changes
-  // User must manually toggle theme through the UI
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>
@@ -64,4 +92,3 @@ export default ThemeProviderComponent;
 
 // Named export for convenience
 export const ThemeProvider = ThemeProviderComponent;
-
