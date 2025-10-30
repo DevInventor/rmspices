@@ -125,11 +125,29 @@ export const ProductDetail: React.FC = () => {
                 >
                   Request Quote
                 </button>
-                <button className="flex items-center justify-center gap-2 px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg hover:bg-white/20 transition-colors border border-white/20 text-sm sm:text-base">
-                  <Download className="h-3 w-3 sm:h-4 sm:w-4" />
-                  <span className="hidden sm:inline">Download Spec Sheet</span>
-                  <span className="sm:hidden">Download</span>
-                </button>
+                {product.specSheetUrl ? (
+                  <a
+                    href={product.specSheetUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                    className="flex items-center justify-center gap-2 px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg hover:bg-white/20 transition-colors border border-white/20 text-sm sm:text-base"
+                  >
+                    <Download className="h-3 w-3 sm:h-4 sm:w-4" />
+                    <span className="hidden sm:inline">Download Spec Sheet</span>
+                    <span className="sm:hidden">Download</span>
+                  </a>
+                ) : (
+                  <button
+                    className="flex items-center justify-center gap-2 px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-white/20 text-sm sm:text-base opacity-60 cursor-not-allowed"
+                    disabled
+                    title={language === 'eng' ? 'Specification sheet not available' : 'Datenblatt nicht verfügbar'}
+                  >
+                    <Download className="h-3 w-3 sm:h-4 sm:w-4" />
+                    <span className="hidden sm:inline">Download Spec Sheet</span>
+                    <span className="sm:hidden">Download</span>
+                  </button>
+                )}
               </div>
             </div>
           </div>
@@ -200,11 +218,7 @@ export const ProductDetail: React.FC = () => {
             <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
               {language === 'eng' ? 'Highlights' : 'Highlights'}
             </h3>
-            <div className="space-y-4">
-              <div className="flex justify-between py-3 border-b border-spice-100 dark:border-slate-800">
-                <span className="text-gray-600 dark:text-slate-400 font-medium">{language === 'eng' ? 'Origin' : 'Herkunft'}</span>
-                <span className="text-gray-900 dark:text-white font-semibold">{product.origin}</span>
-              </div>
+              <div className="space-y-4">
               {Object.entries(product.specifications).slice(0, 3).map(([key, value]) => (
                 <div key={key} className="flex justify-between py-3 border-b border-spice-100 dark:border-slate-800">
                   <span className="text-gray-600 dark:text-slate-400 font-medium capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
@@ -393,7 +407,6 @@ export const ProductDetail: React.FC = () => {
           currentProductId={product.id}
           title={detailContent.relatedProducts.title}
           maxProducts={3}
-          language={language}
         />
       </div>
     </div>

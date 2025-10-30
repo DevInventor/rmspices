@@ -2,7 +2,7 @@ import React from 'react';
 import { useLanguage } from '../contexts/useLanguage';
 import { getPageTranslations } from '../utils/translations';
 import { Button } from '../components/common/Button';
-import { Shield } from 'lucide-react';
+import { Shield, X } from 'lucide-react';
 import { QualityAssuranceCard } from '../components/common/QualityAssuranceCard';
 
 interface CertificationItem {
@@ -33,6 +33,7 @@ export const Certifications: React.FC = () => {
   const { language } = useLanguage();
   const content = getPageTranslations('certifications', language) as unknown as CertificationsContent;
   const { title, description, exportCertifications, qualityAssurance } = content;
+  const [previewImageUrl, setPreviewImageUrl] = React.useState<string | null>(null);
   
   const getIcon = (iconName: string): React.ReactNode => {
     const icons: Record<string, React.ReactNode> = {
@@ -41,6 +42,14 @@ export const Certifications: React.FC = () => {
       Plant: <Shield size={24} />,
     };
     return icons[iconName] || <Shield size={24} />;
+  };
+  
+  const openPreview = (imageUrl: string) => {
+    setPreviewImageUrl(imageUrl);
+  };
+
+  const closePreview = () => {
+    setPreviewImageUrl(null);
   };
   
   return (
@@ -57,16 +66,22 @@ export const Certifications: React.FC = () => {
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 p-2 sm:p-4">
           {exportCertifications.items.map((item, index: number) => (
-            <div key={index} className="flex flex-col gap-3 pb-3">
+            <button
+              key={index}
+              type="button"
+              onClick={() => openPreview(item.image)}
+              className="flex flex-col gap-3 pb-3 text-left focus:outline-none focus:ring-2 focus:ring-spice-400 rounded-lg"
+              aria-label={`Open ${item.name} preview`}
+            >
               <div
-                className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+                className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg transition-transform duration-200 hover:scale-[1.02]"
                 style={{ backgroundImage: `url(${item.image})` }}
               />
               <div>
                 <p className="text-base font-medium leading-normal text-gray-900 dark:text-white">{item.name}</p>
                 <p className="text-spice-300 dark:text-slate-400 text-sm font-normal leading-normal">{item.description}</p>
               </div>
-            </div>
+            </button>
           ))}
         </div>
         
@@ -100,6 +115,34 @@ export const Certifications: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {previewImageUrl && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+          role="dialog"
+          aria-modal="true"
+          onClick={closePreview}
+        >
+          <div
+            className="relative max-w-5xl w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={closePreview}
+              className="absolute -top-3 -right-3 md:top-0 md:right-0 m-2 rounded-full bg-white/90 hover:bg-white text-gray-900 p-2 shadow focus:outline-none focus:ring-2 focus:ring-white"
+              aria-label="Close preview"
+            >
+              <X size={20} />
+            </button>
+            <img
+              src={previewImageUrl}
+              alt="Certification preview"
+              className="w-full h-auto max-h-[80vh] object-contain rounded-lg shadow-lg bg-white"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

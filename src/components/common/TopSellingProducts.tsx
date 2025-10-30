@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { ChefHat, Heart, MapPin } from 'lucide-react';
+import { ChefHat, Heart } from 'lucide-react';
 import type { Product } from '../../utils/translations';
 
 interface TopSellingProductsProps {
@@ -84,11 +84,7 @@ const TopSellingProductCard: React.FC<{ product: Product }> = React.memo(({ prod
           </div>
         )}
 
-        {/* Origin */}
-        <div className="flex items-center gap-2 text-xs text-spice-300 dark:text-slate-400 border-t border-spice-100 dark:border-slate-800 pt-3">
-          <MapPin className="h-3.5 w-3.5 text-primary-500" />
-          <span>{product.origin}</span>
-        </div>
+        {/* Removed origin */}
 
         {/* Quick Specs */}
         {specEntries.length > 0 && (

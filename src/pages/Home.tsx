@@ -89,6 +89,7 @@ export const Home: React.FC = () => {
   }, [hero.backgroundImages]);
   
   return (
+    
     <div className="flex-1">
       {/* Hero Section */}
       <div className="px-4 sm:px-6 md:px-10 flex justify-center py-5">

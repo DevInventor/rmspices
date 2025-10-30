@@ -99,16 +99,11 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({
           </div>
         )}
         
-        {/* Origin & Category */}
+        {/* Category */}
         {showDetails && (
-          <div className="flex flex-col gap-1 text-xs text-spice-300 dark:text-slate-400 mt-2">
-            <div className="flex items-center gap-1">
-              <Package className="h-3 w-3" />
-              <span>{product.category}</span>
-            </div>
-            <span className="text-xs">
-              {language === 'eng' ? 'Origin:' : 'Herkunft:'} {product.origin}
-            </span>
+          <div className="flex items-center gap-1 text-xs text-spice-300 dark:text-slate-400 mt-2">
+            <Package className="h-3 w-3" />
+            <span>{product.category}</span>
           </div>
         )}
         

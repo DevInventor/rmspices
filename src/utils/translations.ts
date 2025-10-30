@@ -22,11 +22,11 @@ export type Product = {
   topSelling?: boolean;
   name: string;
   category: string;
-  origin: string;
   description: string;
   image?: string;
   backgroundImage?: string;
   productImage?: string;
+  specSheetUrl?: string;
   specifications: Record<string, string>;
   shortDescription?: string;
   details?: {

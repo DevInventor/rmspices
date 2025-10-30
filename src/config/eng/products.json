@@ -10,15 +10,15 @@
   "loadMore": "Load More Products",
   "products": [
     {
-      "id": "cumin",
+      "id": "cumin-seeds",
       "topSelling": true,
       "name": "Cumin Seeds (Jeera)",
       "category": "Whole Spices",
-      "origin": "Rajasthan, India",
       "description": "Premium cumin seeds from the arid regions of Rajasthan, known for their intense aroma and earthy flavor. These seeds are carefully harvested and processed to maintain their natural oils and essential compounds.",
       "shortDescription": "Cumin seeds are the dried seeds of the Cuminum cyminum plant, widely used as a spice in cooking, especially in Indian, Middle Eastern, Latin American, and North African cuisines.",
-      "backgroundImage": "https://plus.unsplash.com/premium_photo-1723874683717-006f24c93975",
-      "productImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+      "backgroundImage": "/assets/products/cumin-seeds/background.jpg",
+      "productImage": "/assets/products/cumin-seeds/product.jpg",
+      "specSheetUrl": "/assets/products/cumin-seeds/spec.pdf",
       "specifications": {
         "form": "Whole Seeds",
         "moisture": "8-10%",
@@ -61,28 +61,11 @@
         "allergens": "Free from Allergens"
       },
       "packingImages": [
-        {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkBv7rfb9H2W8sRa2p2TgdXmnXBpYCJiiNbPexkhG4s7luBMjgeDn-rvg3ABDjjD6LrZgAzmmKdJvfwUlYzbbviwEjd-9BV-oUToWwAprBHXS1LjFr1lzYZCK2Tt4Bu8f0u1b3CttvbowycWK2fKlbdsX7YKUMtJQLO04sqm8H1ro1zBFWWEALIoc8_Z80_HO3Gusdwc5b7DK4Bc9dUUhr5abgkuVQbjcr2r-aPwQXkAMRGKsvSvX0r3-zedFnjLVO80dbrUGZt0E",
-          "alt": "Cumin Seeds Packing",
-          "title": "Premium Kraft Bag Packing"
-        },
-        {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxP1L7N_kEplgnxlS5uCFFQPuK3_B_z7zGqFCQafEylnoQHv-XF3IOZFWwmvoVsyiyUh4MXpRdb7zZAOc1qO82An8e3DKL-rKCZ69pQfMOvtX0jMhQGbcVKF6d6i4Oyo_R6oyu5PktBCjCf2nKwXIIUxW_Gf8z2gLBjQgTDaoNCcfXxdnc9b8OhcRNkPBySR4ux_PyGywMeQg1frJKaKckp4-qeGXrZgzFVULfZLg9zWK5LxJRyTiYKFAZMz257g2vGXtemiM3GMM",
-          "alt": "Cumin Seeds Container",
-          "title": "Export Container Loading"
-        },
-        {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAktrKiPZ8UxNJxU73KACMnwAJGykwMOUPhzCa0uzCeflWSzSewmePW18JkLwepp0MNNgQgSanFhahd7gmjt7vu0_CbOe4RxE0qLVhMVYws_2e6NgwidsGLBWp54yBJdUHVWzwuRvb66AePuUZk4ts40k_dzAsNk9tZazJgkUaL1eUf85wsu8gsBxJ5rPy-XOS8iy3dyLw3J5gexwAxbq1PzNurDrVD_zwfX02bc70Ei0eyBV0JHKUlqhyaqXysVKbbgbEdi58IscU",
-          "alt": "Cumin Seeds Quality Check",
-          "title": "Quality Inspection"
-        }
+        { "src": "/assets/products/cumin-seeds/packing-1.jpg", "alt": "Cumin Seeds Packing", "title": "Premium Kraft Bag Packing" },
+        { "src": "/assets/products/cumin-seeds/packing-2.jpg", "alt": "Cumin Seeds Container", "title": "Export Container Loading" }
       ],
       "brandLabels": [
-        {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
-          "alt": "RM Spices Brand Label",
-          "title": "RM Spices Premium Label"
-        }
+        { "src": "/assets/products/cumin-seeds/brand-1.png", "alt": "RM Spices Brand Label", "title": "RM Spices Premium Label" }
       ]
     },
     {
@@ -90,11 +73,11 @@
       "topSelling": true,
       "name": "Fennel Seeds (Saunf)",
       "category": "Whole Spices",
-      "origin": "Gujarat, India",
       "description": "Sweet and aromatic fennel seeds with a licorice-like flavor. Perfect for digestive purposes and adding a unique taste to dishes.",
       "shortDescription": "Fennel seeds are aromatic dried fruits with a sweet, licorice-like flavor, commonly used in Indian, Mediterranean, and Middle Eastern cuisines.",
-      "backgroundImage": "https://images.unsplash.com/photo-1701189975842-591ebd1e26a2",
-      "productImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+      "backgroundImage": "/assets/products/fennel-seeds/background.jpg",
+      "productImage": "/assets/products/fennel-seeds/product.jpg",
+      "specSheetUrl": "/assets/products/fennel-seeds/spec.pdf",
       "specifications": {
         "form": "Whole Seeds",
         "flavor": "Sweet & Aromatic",
@@ -137,23 +120,11 @@
         "allergens": "Free from Allergens"
       },
       "packingImages": [
-        {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkBv7rfb9H2W8sRa2p2TgdXmnXBpYCJiiNbPexkhG4s7luBMjgeDn-rvg3ABDjjD6LrZgAzmmKdJvfwUlYzbbviwEjd-9BV-oUToWwAprBHXS1LjFr1lzYZCK2Tt4Bu8f0u1b3CttvbowycWK2fKlbdsX7YKUMtJQLO04sqm8H1ro1zBFWWEALIoc8_Z80_HO3Gusdwc5b7DK4Bc9dUUhr5abgkuVQbjcr2r-aPwQXkAMRGKsvSvX0r3-zedFnjLVO80dbrUGZt0E",
-          "alt": "Fennel Seeds Packing",
-          "title": "Premium Kraft Bag Packing"
-        },
-        {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxP1L7N_kEplgnxlS5uCFFQPuK3_B_z7zGqFCQafEylnoQHv-XF3IOZFWwmvoVsyiyUh4MXpRdb7zZAOc1qO82An8e3DKL-rKCZ69pQfMOvtX0jMhQGbcVKF6d6i4Oyo_R6oyu5PktBCjCf2nKwXIIUxW_Gf8z2gLBjQgTDaoNCcfXxdnc9b8OhcRNkPBySR4ux_PyGywMeQg1frJKaKckp4-qeGXrZgzFVULfZLg9zWK5LxJRyTiYKFAZMz257g2vGXtemiM3GMM",
-          "alt": "Fennel Seeds Container",
-          "title": "Export Container Loading"
-        }
+        { "src": "/assets/products/fennel-seeds/packing-1.jpg", "alt": "Fennel Seeds Packing", "title": "Premium Kraft Bag Packing" },
+        { "src": "/assets/products/fennel-seeds/packing-2.jpg", "alt": "Fennel Seeds Container", "title": "Export Container Loading" }
       ],
       "brandLabels": [
-        {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
-          "alt": "RM Spices Brand Label",
-          "title": "RM Spices Premium Label"
-        }
+        { "src": "/assets/products/fennel-seeds/brand-1.png", "alt": "RM Spices Brand Label", "title": "RM Spices Premium Label" }
       ]
     },
     {
@@ -161,10 +132,11 @@
       "topSelling": false,
       "name": "Coriander Seeds (Dhaniya)",
       "category": "Whole Spices",
-      "origin": "Rajasthan, India",
       "description": "Mild and citrusy coriander seeds that enhance the flavor of any curry. Sourced from the finest coriander plants.",
       "shortDescription": "Coriander seeds are the dried fruits of the coriander plant, known for their citrusy, slightly sweet flavor with a warm, spicy undertone.",
-      "image": "https://images.unsplash.com/photo-1608797179072-4268dd68eff2",
+      "backgroundImage": "/assets/products/coriander-seeds/background.jpg",
+      "productImage": "/assets/products/coriander-seeds/product.jpg",
+      "specSheetUrl": "/assets/products/coriander-seeds/spec.pdf",
       "specifications": {
         "form": "Whole Seeds",
         "aroma": "Citrusy",
@@ -207,24 +179,441 @@
         "allergens": "Free from Allergens"
       },
       "packingImages": [
+        { "src": "/assets/products/coriander-seeds/packing-1.jpg", "alt": "Coriander Seeds Packing", "title": "Premium Kraft Bag Packing" },
+        { "src": "/assets/products/coriander-seeds/packing-2.jpg", "alt": "Coriander Seeds Container", "title": "Export Container Loading" }
+      ],
+      "brandLabels": [
+        { "src": "/assets/products/coriander-seeds/brand-1.png", "alt": "RM Spices Brand Label", "title": "RM Spices Premium Label" }
+      ]
+    },
+    {
+      "id": "sesame-seeds-til",
+      "topSelling": false,
+      "name": "Sesame Seeds (Til)",
+      "category": "Whole Seeds / Oilseed Spices",
+      "description": "Premium export-grade sesame seeds (Til) processed, cleaned and sorted, offering nutty flavour and high purity for international trade.",
+      "shortDescription": "Whole sesame seeds with strong warm aroma and clean export-ready quality, ideal for bakery toppings, oil extraction and seasoning.",
+      "backgroundImage": "/assets/products/sesame-seeds-til/background.jpg",  
+      "productImage": "/assets/products/sesame-seeds-til/product.jpg",
+      "specSheetUrl": "/assets/products/sesame-seeds-til/spec.pdf",
+      "specifications": {
+        "form": "Whole Seeds",
+        "aroma": "Strong, warm aroma",
+        "packaging": "20kg / 25kg / 30kg / 50kg Bags, PP/Kraft with inner liner",
+        "color": "Greyish Brown"
+      },
+      "details": {
+        "appearance": "Whole seeds, oval-small size, greyish brown colour, machine cleaned & sortex cleaned, free from taint and rancidity. :contentReference[oaicite:0]{index=0}",
+        "flavorAroma": "Nutty flavour and warm aroma typical of sesame seeds. :contentReference[oaicite:1]{index=1}",
+        "culinaryUses": "Used as bread and pastry topping, sushi and salads, granola, pressed for sesame oil, bakery and confectionery applications. :contentReference[oaicite:2]{index=2}",
+        "healthBenefits": "High in healthy fats, rich in protein, fiber and minerals such as calcium, magnesium, iron and zinc. Contains antioxidants like sesamin and sesamol. :contentReference[oaicite:3]{index=3}"
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Whole",
+          "purity": ["99.5%", "99%", "95%"]
+        },
+        "chemicalParameters": {
+          "moisture": "9% Max",
+          "ashContent": "9.5% Max",
+          "acidInsolubleAsh": "1.5% Max",
+          "volatileOil_ml_per100g": "1% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Absent",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Feet", "quantityMetricTons": 13 },
+          { "type": "40 Feet", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/30/50 Kgs, PP or Kraft bags with inner liner (customised export packing available). :contentReference[oaicite:4]{index=4}",
+        "shelfLife": "12 Months under proper storage condition. :contentReference[oaicite:5]{index=5}",
+        "pesticides": "Complies with requirements for pesticide residue levels as per destination country regulations.",
+        "allergens": "Free from Allergens. :contentReference[oaicite:6]{index=6}"
+      },
+      "packingImages": [
+        { "src": "/assets/products/sesame-seeds-til/packing-1.jpg", "alt": "Sesame Seeds Export Packing Bag", "title": "Premium Kraft Bag Packing – Sesame Seeds" },
+        { "src": "/assets/products/sesame-seeds-til/packing-2.jpg", "alt": "Sesame Seeds Container Loading", "title": "Container Loading – Sesame Seeds" }
+      ],
+      "brandLabels": [
+        { "src": "/assets/products/sesame-seeds-til/brand-1.png", "alt": "RM Spices Label", "title": "RM Spices Premium Label" }
+      ]
+    },    
+    {
+      "id": "fenugreek-seeds-methi",
+      "topSelling": false,
+      "name": "Fenugreek Seeds (Methi)",
+      "category": "Whole Spices",
+      "description": "Fenugreek Seeds (Methi) from RM Spices are carefully cleaned and sorted for export-grade quality, offering a distinct aromatic flavor and multiple health benefits.",
+      "shortDescription": "Aromatic fenugreek seeds with a warm, slightly bitter flavor, ideal for spice blends, pickles, and nutritional applications.",
+      "backgroundImage": "/assets/products/kalonji-seeds-nigella/background.jpg",
+      "productImage": "/assets/products/kalonji-seeds-nigella/product.jpg",
+      "specSheetUrl": "/assets/products/kalonji-seeds-nigella/spec.pdf",
+      "image": "",
+      "specifications": {
+        "form": "Whole Seeds",
+        "aroma": "Strong aromatic, characteristic fenugreek scent",
+        "packaging": "20kg / 25kg / 50kg Bags",
+        "color": "Golden Brown to Tan"
+      },
+      "details": {
+        "appearance": "Whole fenugreek seeds, small, irregularly shaped, golden brown to tan color, uniform size and free from foreign matter.",
+        "flavorAroma": "Distinctive, warm, slightly bitter taste with an aromatic fragrance that becomes intense when roasted or ground.",
+        "culinaryUses": "Used in pickles, spice mixes, curry powders, bread and baking, nutritional supplements, and herbal formulations.",
+        "healthBenefits": "Known to aid digestion, support metabolic health, help regulate blood sugar, and provide rich fiber and nutrients."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Whole Seeds",
+          "purity": ["99%", "98%", "95%"]
+        },
+        "chemicalParameters": {
+          "moisture": "10% Max",
+          "ashContent": "8% Max",
+          "acidInsolubleAsh": "2% Max",
+          "volatileOil_ml_per100g": "0.4-0.7% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Absent",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Feet", "quantityMetricTons": 13 },
+          { "type": "40 Feet", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/50 Kgs PP or Kraft bags with inner liner (customized export packaging available).",
+        "shelfLife": "12-18 Months under cool, dry storage conditions.",
+        "pesticides": "Complies with global pesticide residue limits (EU, US, etc.).",
+        "allergens": "Free from major allergens; cleaned and sorted."
+      },
+      "packingImages": [
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkBv7rfb9H2W8sRa2p2TgdXmnXBpYCJiiNbPexkhG4s7luBMjgeDn-rvg3ABDjjD6LrZgAzmmKdJvfwUlYzbbviwEjd-9BV-oUToWwAprBHXS1LjFr1lzYZCK2Tt4Bu8f0u1b3CttvbowycWK2fKlbdsX7YKUMtJQLO04sqm8H1ro1zBFWWEALIoc8_Z80_HO3Gusdwc5b7DK4Bc9dUUhr5abgkuVQbjcr2r-aPwQXkAMRGKsvSvX0r3-zedFnjLVO80dbrUGZt0E",
-          "alt": "Coriander Seeds Packing",
-          "title": "Premium Kraft Bag Packing"
+          "src": "https://pjmexport.com/wp-content/uploads/2022/06/fenugreek-seeds-bags.jpg",
+          "alt": "Fenugreek Seeds Export Packaging",
+          "title": "Fenugreek Seeds Kraft Bags"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxP1L7N_kEplgnxlS5uCFFQPuK3_B_z7zGqFCQafEylnoQHv-XF3IOZFWwmvoVsyiyUh4MXpRdb7zZAOc1qO82An8e3DKL-rKCZ69pQfMOvtX0jMhQGbcVKF6d6i4Oyo_R6oyu5PktBCjCf2nKwXIIUxW_Gf8z2gLBjQgTDaoNCcfXxdnc9b8OhcRNkPBySR4ux_PyGywMeQg1frJKaKckp4-qeGXrZgzFVULfZLg9zWK5LxJRyTiYKFAZMz257g2vGXtemiM3GMM",
-          "alt": "Coriander Seeds Container",
-          "title": "Export Container Loading"
+          "src": "https://pjmexport.com/wp-content/uploads/2022/06/fenugreek-seeds-container.jpg",
+          "alt": "Fenugreek Seeds Container Loading",
+          "title": "Container Loading Fenugreek Seeds"
         }
       ],
       "brandLabels": [
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
-          "alt": "RM Spices Brand Label",
-          "title": "RM Spices Premium Label"
+          "src": "https://yourdomain.com/assets/images/rmspices-label.png",
+          "alt": "RM Spices Label",
+          "title": "RM Spices Premium Export Label"
         }
       ]
-    }
+    },
+    {
+      "id": "kalonji-seeds-nigella",
+      "topSelling": false,
+      "name": "Kalonji Seeds (Nigella Seeds / Black Cumin Seeds / Kala Jeera)",
+      "category": "Whole Spices",
+      "description": "Premium-export grade Kalonji seeds (Nigella sativa), also known as black cumin or kala jeera, carefully cleaned and sorted from the Unjha region. These aromatic seeds bring a unique flavor and premium appeal for spice blends and international markets.",
+      "shortDescription": "Dark, aromatic nigella seeds with a smoky-earthy flavor, ideal for high-end spice blends, bakery applications, and functional spice markets.",
+      "backgroundImage": "/assets/products/ajwain-seeds-carom/background.jpg",
+      "productImage": "/assets/products/ajwain-seeds-carom/product.jpg",
+      "specSheetUrl": "/assets/products/ajwain-seeds-carom/spec.pdf",
+      "image": "",
+      "specifications": {
+        "form": "Whole Seeds",
+        "aroma": "Characteristic smoky earth aroma with hint of onion/garlic notes",
+        "packaging": "20kg / 25kg / 50kg Bags",
+        "color": "Black to dark brown"
+      },
+      "details": {
+        "appearance": "Small, matte black to dark-brown seeds, slightly angular shape, uniform size, free from foreign matter.",
+        "flavorAroma": "Distinct smoky-earthy flavor with subtle onion-garlic undertones, intensifies when roasted or used in tempering.",
+        "culinaryUses": "Used in Indian pickles, bakery products, spice blends (e.g., panch phoron), decorative breads, high-end culinary applications.",
+        "healthBenefits": "Rich in antioxidants, supports digestion, has traditional uses in wellness formulations, aids metabolic health."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Whole Seeds",
+          "purity": ["99%", "98%", "95%"]
+        },
+        "chemicalParameters": {
+          "moisture": "9% Max",
+          "ashContent": "8% Max",
+          "acidInsolubleAsh": "1.5% Max",
+          "volatileOil_ml_per100g": "0.3-0.6% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Absent",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Feet", "quantityMetricTons": 13 },
+          { "type": "40 Feet", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/30/50 Kgs, PP or Kraft bags with inner liner (custom export packing available).",
+        "shelfLife": "12-18 Months under proper dry storage conditions.",
+        "pesticides": "Complies with international maximum residue limits (MRLs) for destination markets.",
+        "allergens": "Free from allergens and foreign matter; cleaned, sorted and graded for export."
+      },
+      "packingImages": [
+        { "src": "/assets/products/kalonji-seeds-nigella/packing-1.jpg", "alt": "Kalonji Seeds Export Packing Bag", "title": "Premium Kraft Bag Packing – Kalonji Seeds" },
+        { "src": "/assets/products/kalonji-seeds-nigella/packing-2.jpg", "alt": "Container Loading Kalonji Seeds", "title": "Container Loading – Kalonji Seeds" }
+      ],
+      "brandLabels": [
+        { "src": "/assets/products/kalonji-seeds-nigella/brand-1.png", "alt": "RM Spices Premium Label", "title": "RM Spices Export Label" }
+      ]
+    },
+    {
+      "id": "ajwain-seeds-carom",
+      "topSelling": false,
+      "name": "Ajwain Seeds (Carom Seeds)",
+      "category": "Whole Spices",
+      "description": "Premium export-grade ajwain seeds (Trachyspermum ammi), also known as carom seeds, with authentic Indian origin, high purity, strong aroma and export-ready quality standards.",
+      "shortDescription": "Aromatic carom seeds with thyme-like aroma and warm pungent taste, ideal for spice blends, pickling, baking and global flavors.",
+      "backgroundImage": "https://images.unsplash.com/photo-1701189975842-591ebd1e26a2",
+      "productImage": "https://images.unsplash.com/photo-1701189975842-591ebd1e26a2",
+      "specSheetUrl": "",
+      "image": "",
+      "specifications": {
+        "form": "Whole Seeds",
+        "aroma": "Thyme-like, strong pungent aroma",
+        "packaging": "20kg / 25kg / 50kg Bags",
+        "color": "Light to Dark Greenish-Brown"
+      },
+      "details": {
+        "appearance": "Whole carom seeds, small, ridged surface, color from light greenish-brown to dark greenish-brown; uniform size and clean appearance.",
+        "flavorAroma": "Warm, pungent taste with thyme-like aroma; intensifies when roasted or ground.",
+        "culinaryUses": "Used in Indian and Middle-Eastern cuisines for tempering, breads, pastries, pickles, spice blends and herbal applications.",
+        "healthBenefits": "Traditionally used for digestion support, anti-flatulent effects, may support metabolic health and nutrient absorption."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Whole Seeds",
+          "purity": ["99.5%", "99%", "98%"]
+        },
+        "chemicalParameters": {
+          "moisture": "9% Max",
+          "ashContent": "8% Max",
+          "acidInsolubleAsh": "1.5% Max",
+          "volatileOil_ml_per100g": "0.4-0.7% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Absent",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Feet", "quantityMetricTons": 13 },
+          { "type": "40 Feet", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/30/50 Kgs PP or Kraft bags with inner liner (customised export packing available).",
+        "shelfLife": "12-18 Months under proper dry storage conditions.",
+        "pesticides": "Complies with international pesticide residue limits (EU, US etc.).",
+        "allergens": "Free from major allergens; cleaned, sorted, export-grade."
+      },
+      "packingImages": [
+        { "src": "/assets/products/ajwain-seeds-carom/packing-1.jpg", "alt": "Ajwain Seeds Export Packaging Bag", "title": "Ajwain Seeds Export Kraft Bag" },
+        { "src": "/assets/products/ajwain-seeds-carom/packing-2.jpg", "alt": "Ajwain Seeds Container Loading", "title": "Ajwain Seeds Bulk Export Container" }
+      ],
+      "brandLabels": [
+        { "src": "/assets/products/ajwain-seeds-carom/brand-1.png", "alt": "RM Spices Premium Label", "title": "RM Spices Export Label" }
+      ]
+    },
+    {
+      "id": "cumin-powder-jeera",
+      "topSelling": false,
+      "name": "Cumin Powder (Jeera Powder)",
+      "category": "Ground Spices",
+      "description": "Premium export-grade Cumin Powder (Jeera Powder) made from high quality Cumin Seeds (Cuminum cyminum), offered by RM Spices for global markets, cleaned, ground and packed under export specifications.",
+      "shortDescription": "Aromatic cumin powder with rich cumin seed flavour and fragrance, ideal for spice blends, seasonings, pickles and culinary applications.",
+      "backgroundImage": "/assets/products/cumin-powder-jeera/background.jpg",  
+      "productImage": "/assets/products/cumin-powder-jeera/product.jpg",  
+      "image": "",  
+      "specSheetUrl": "/assets/products/cumin-powder-jeera/spec.pdf",
+      "specifications": {
+        "form": "Powder",
+        "aroma": "Strong, characteristic cumin aroma",
+        "packaging": "20kg / 25kg / 30kg / 50kg Bags (PP/Kraft with inner liner)",
+        "color": "Greyish Brown"
+      },
+      "details": {
+        "appearance": "Fine powder derived from cumin seeds; greyish brown in colour; free from foreign matter.",
+        "flavorAroma": "Distinct cumin seed aroma with warm, earthy, slightly spicy flavour.",
+        "culinaryUses": "Used in rice, stuffed vegetables, curries, pickles and spice mixes; used also in flavouring for liqueurs and cordials.",
+        "healthBenefits": "Acts as a stimulant, carminative and stomachic; traditional use for digestive support."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Powder",
+          "purity": ["100%"]
+        },
+        "chemicalParameters": {
+          "moisture": "12% Max",
+          "ashContent": "8% Max",
+          "acidInsolubleAsh": "1% Max",
+          "volatileOil_ml_per100g": "2% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "50,000",
+          "salmonella_375g": "Absent",
+          "yeastAndMold_cfu_per_g": "100",
+          "coliforms_cfu_per_g": "",
+          "EColi_cfu_per_g": ""
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Feet", "quantityMetricTons": 16 },
+          { "type": "40 Feet", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/30/50 Kgs, PP or Kraft bags with inner liner (customised packing available).",
+        "shelfLife": "12 Months under proper storage condition.",
+        "pesticides": "Complies with requirements for pesticide residue levels as per destination country regulations.",
+        "allergens": "Free from Allergens"
+      },
+      "packingImages": [
+        { "src": "/assets/products/cumin-powder-jeera/packing-1.jpg", "alt": "Cumin Powder Export Packing Bag", "title": "Export Packing – Cumin Powder" },
+        { "src": "/assets/products/cumin-powder-jeera/packing-2.jpg", "alt": "Cumin Powder Container Loading", "title": "Container Loading – Cumin Powder" }
+      ],
+      "brandLabels": [
+        { "src": "/assets/products/cumin-powder-jeera/brand-1.png", "alt": "RM Spices Label", "title": "RM Spices Premium Label" }
+      ]
+    },
+    {
+      "id": "coriander-powder-dhaniya-powder",
+      "topSelling": false,
+      "name": "Coriander Powder (Dhaniya Powder)",
+      "category": "Ground Spices",
+      "description": "Export grade Coriander Powder (Dhaniya) made from high quality coriander seeds, processed and packaged under strict export standards for global markets.",
+      "shortDescription": "Fine, citrus-aromatic coriander powder ideal for spice blends, curries, pickles and international food processing.",
+      "backgroundImage": "/assets/products/coriander-powder-dhaniya-powder/background.jpg",
+      "productImage": "/assets/products/coriander-powder-dhaniya-powder/product.jpg",
+      "image": "",
+      "specSheetUrl": "/assets/products/coriander-powder-dhaniya-powder/spec.pdf",
+      "specifications": {
+        "form": "Powder",
+        "aroma": "Pleasant and aromatic",
+        "packaging": "20/25/30/50 Kgs PP/Kraft bags with inner liner (custom export packing available).",
+        "color": "Light brown to yellow-brown"
+      },
+      "details": {
+        "appearance": "Fine powder derived from coriander seeds; light brown to yellow-brown in colour; machine cleaned & sortex cleaned.",
+        "flavorAroma": "Citrusy aroma, warm and slightly sweet; enhances flavour in many culinary applications.",
+        "culinaryUses": "Used in curries, soups, spice mixes, pickles, bakery and beverage flavouring.",
+        "healthBenefits": "Rich in dietary fiber and minerals; traditional use for digestion support and general wellness."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "10% Max on 35 Mesh",
+          "purity": ["99.5%", "99%", "95%"]
+        },
+        "chemicalParameters": {
+          "moisture": "10% Max",
+          "ashContent": "9.5% Max",
+          "acidInsolubleAsh": "1% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Absent",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Feet", "quantityMetricTons": 13 },
+          { "type": "40 Feet", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/30/50 Kgs, PP or Kraft bags with inner liner (customised export packing available).",
+        "shelfLife": "12 Months under proper storage condition.",
+        "pesticides": "Complies with requirements for pesticide residue levels as per the regulations of the destination country.",
+        "allergens": "Free from Allergens"
+      },
+      "packingImages": [
+        { "src": "/assets/products/coriander-powder-dhaniya-powder/packing-1.jpg", "alt": "Coriander Powder Export Packing Bag", "title": "Export Packing – Coriander Powder" },
+        { "src": "/assets/products/coriander-powder-dhaniya-powder/packing-2.jpg", "alt": "Coriander Powder Container Loading", "title": "Container Loading – Coriander Powder" }
+      ],
+      "brandLabels": [
+        { "src": "/assets/products/coriander-powder-dhaniya-powder/brand-1.png", "alt": "RM Spices Label", "title": "RM Spices Premium Label" }
+      ]
+    },
+    {
+      "id": "watermelon-seeds",
+      "topSelling": false,
+      "name": "Watermelon Seeds (Til Magaj)",
+      "category": "Oil-Seeds & Snack Seeds",
+      "description": "Premium export-grade watermelon seeds (Til Magaj) sourced from high-yield farms, cleaned, sorted and calibrated for international food-snack and oil processing markets.",
+      "shortDescription": "Whole watermelon seeds with nutty flavour and high nutritive value, ideal for snacking, bakery toppings, oil extraction and health-food segments.",
+      "backgroundImage": "/assets/products/watermelon-seeds/background.jpg",
+      "productImage": "/assets/products/watermelon-seeds/product.jpg",
+      "specSheetUrl": "/assets/products/watermelon-seeds/spec.pdf",
+      "image": "",
+      "specifications": {
+        "form": "Whole Seeds",
+        "aroma": "Mild nutty aroma with fresh seed character",
+        "packaging": "25kg / 50kg PP/Kraft bags with inner liner (customised export packaging available)",
+        "color": "Cream-white to light brown (depending on variety)"
+      },
+      "details": {
+        "appearance": "Whole elongated oval seeds, average size 8-12 mm, clean, free from taint and foreign matter, uniform colour from cream-white to light brown.",
+        "flavorAroma": "Subtle nutty taste with a crunchy texture when roasted; mild seed aroma persists in raw form.",
+        "culinaryUses": "Roasted snacks, bakery toppings, granola mixes, trail-mixes, oil extraction for edible and cosmetic use.",
+        "healthBenefits": "Rich in protein (~22-30%), healthy fats (omega-6, omega-3), minerals (magnesium, zinc, iron), supports skin & hair health, bone strength and general wellness. :contentReference[oaicite:1]{index=1}"
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Whole Seeds 8-12 mm",
+          "purity": ["99.0%", "98.0%", "95.0%"]
+        },
+        "chemicalParameters": {
+          "moisture": "8% Max",
+          "oilContent_percentage": "30-35% Min",
+          "ashContent": "5% Max"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Absent",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Feet", "quantityMetricTons": 16 },
+          { "type": "40 Feet", "quantityMetricTons": 26 }
+        ],
+        "packing": "25/50 Kgs woven PP or Kraft bags with inner liner, palletised and containerised for export.",
+        "shelfLife": "12-18 Months when stored in a cool, dry warehouse.",
+        "pesticides": "Complies with international maximum residue limits (MRLs) for edible seeds.",
+        "allergens": "Naturally free from major allergens; processed in allergen-controlled facility."
+      },
+      "packingImages": [
+        { "src": "/assets/products/watermelon-seeds/packing-1.jpg", "alt": "Watermelon Seeds Export Packing Bag", "title": "Export Packaging – Watermelon Seeds" },
+        { "src": "/assets/products/watermelon-seeds/packing-2.jpg", "alt": "Watermelon Seeds Container Loading", "title": "Container Loading – Watermelon Seeds" }
+      ],
+      "brandLabels": [
+        { "src": "/assets/products/watermelon-seeds/brand-1.png", "alt": "RM Spices Premium Label", "title": "RM Spices Export Label" }
+      ]
+    }                    
   ]
 }
