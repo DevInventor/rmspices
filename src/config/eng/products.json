@@ -18,7 +18,7 @@
       "shortDescription": "Cumin seeds are the dried seeds of the Cuminum cyminum plant, widely used as a spice in cooking, especially in Indian, Middle Eastern, Latin American, and North African cuisines.",
       "backgroundImage": "/assets/products/cumin-seeds/background.jpg",
       "productImage": "/assets/products/cumin-seeds/product.jpg",
-      "specSheetUrl": "/assets/products/cumin-seeds/spec.pdf",
+      "specSheetUrl": "/assets/product-spces/cumin-seeds.pdf",
       "specifications": {
         "form": "Whole Seeds",
         "moisture": "8-10%",
@@ -77,7 +77,7 @@
       "shortDescription": "Fennel seeds are aromatic dried fruits with a sweet, licorice-like flavor, commonly used in Indian, Mediterranean, and Middle Eastern cuisines.",
       "backgroundImage": "/assets/products/fennel-seeds/background.jpg",
       "productImage": "/assets/products/fennel-seeds/product.jpg",
-      "specSheetUrl": "/assets/products/fennel-seeds/spec.pdf",
+      "specSheetUrl": "/assets/product-spces/fennel-seeds.pdf",
       "specifications": {
         "form": "Whole Seeds",
         "flavor": "Sweet & Aromatic",
@@ -136,7 +136,7 @@
       "shortDescription": "Coriander seeds are the dried fruits of the coriander plant, known for their citrusy, slightly sweet flavor with a warm, spicy undertone.",
       "backgroundImage": "/assets/products/coriander-seeds/background.jpg",
       "productImage": "/assets/products/coriander-seeds/product.jpg",
-      "specSheetUrl": "/assets/products/coriander-seeds/spec.pdf",
+      "specSheetUrl": "/assets/product-spces/coriander-seeds.pdf",
       "specifications": {
         "form": "Whole Seeds",
         "aroma": "Citrusy",
@@ -195,7 +195,7 @@
       "shortDescription": "Whole sesame seeds with strong warm aroma and clean export-ready quality, ideal for bakery toppings, oil extraction and seasoning.",
       "backgroundImage": "/assets/products/sesame-seeds-til/background.jpg",  
       "productImage": "/assets/products/sesame-seeds-til/product.jpg",
-      "specSheetUrl": "/assets/products/sesame-seeds-til/spec.pdf",
+      "specSheetUrl": "/assets/product-spces/sesame-seeds-til.pdf",
       "specifications": {
         "form": "Whole Seeds",
         "aroma": "Strong, warm aroma",
@@ -254,7 +254,7 @@
       "shortDescription": "Aromatic fenugreek seeds with a warm, slightly bitter flavor, ideal for spice blends, pickles, and nutritional applications.",
       "backgroundImage": "/assets/products/kalonji-seeds-nigella/background.jpg",
       "productImage": "/assets/products/kalonji-seeds-nigella/product.jpg",
-      "specSheetUrl": "/assets/products/kalonji-seeds-nigella/spec.pdf",
+      "specSheetUrl": "/assets/product-spces/fenugreek-seeds-methi.pdf",
       "image": "",
       "specifications": {
         "form": "Whole Seeds",
@@ -326,7 +326,7 @@
       "shortDescription": "Dark, aromatic nigella seeds with a smoky-earthy flavor, ideal for high-end spice blends, bakery applications, and functional spice markets.",
       "backgroundImage": "/assets/products/ajwain-seeds-carom/background.jpg",
       "productImage": "/assets/products/ajwain-seeds-carom/product.jpg",
-      "specSheetUrl": "/assets/products/ajwain-seeds-carom/spec.pdf",
+      "specSheetUrl": "/assets/product-spces/kalonji-seeds-nigella.pdf",
       "image": "",
       "specifications": {
         "form": "Whole Seeds",
@@ -386,7 +386,7 @@
       "shortDescription": "Aromatic carom seeds with thyme-like aroma and warm pungent taste, ideal for spice blends, pickling, baking and global flavors.",
       "backgroundImage": "https://images.unsplash.com/photo-1701189975842-591ebd1e26a2",
       "productImage": "https://images.unsplash.com/photo-1701189975842-591ebd1e26a2",
-      "specSheetUrl": "",
+      "specSheetUrl": "/assets/product-spces/ajwain-seeds-carom.pdf",
       "image": "",
       "specifications": {
         "form": "Whole Seeds",
@@ -447,7 +447,7 @@
       "backgroundImage": "/assets/products/cumin-powder-jeera/background.jpg",  
       "productImage": "/assets/products/cumin-powder-jeera/product.jpg",  
       "image": "",  
-      "specSheetUrl": "/assets/products/cumin-powder-jeera/spec.pdf",
+      "specSheetUrl": "/assets/product-spces/cumin-powder-jeera.pdf",
       "specifications": {
         "form": "Powder",
         "aroma": "Strong, characteristic cumin aroma",
@@ -507,7 +507,7 @@
       "backgroundImage": "/assets/products/coriander-powder-dhaniya-powder/background.jpg",
       "productImage": "/assets/products/coriander-powder-dhaniya-powder/product.jpg",
       "image": "",
-      "specSheetUrl": "/assets/products/coriander-powder-dhaniya-powder/spec.pdf",
+      "specSheetUrl": "/assets/product-spces/coriander-powder-dhaniya-powder.pdf",
       "specifications": {
         "form": "Powder",
         "aroma": "Pleasant and aromatic",
@@ -565,7 +565,7 @@
       "shortDescription": "Whole watermelon seeds with nutty flavour and high nutritive value, ideal for snacking, bakery toppings, oil extraction and health-food segments.",
       "backgroundImage": "/assets/products/watermelon-seeds/background.jpg",
       "productImage": "/assets/products/watermelon-seeds/product.jpg",
-      "specSheetUrl": "/assets/products/watermelon-seeds/spec.pdf",
+      "specSheetUrl": "/assets/product-spces/watermelon-seeds.pdf",
       "image": "",
       "specifications": {
         "form": "Whole Seeds",

@@ -42,6 +42,18 @@ export const ProductDetail: React.FC = () => {
   const products = (productsContent.products as Product[]) || [];
   const product = products.find(p => p.id === id);
   const contact = getCompanyContact();
+  const downloadFileName = React.useMemo(() => {
+    if (!product) return undefined;
+    const now = new Date();
+    const dd = String(now.getDate()).padStart(2, '0');
+    const mm = String(now.getMonth() + 1).padStart(2, '0');
+    const yy = String(now.getFullYear()).slice(-2);
+    const safeName = product.name
+      .replace(/[^a-z0-9\s()-]/gi, '')
+      .trim()
+      .replace(/\s+/g, '-');
+    return `${safeName}-Specification-${dd}-${mm}-${yy}.pdf`;
+  }, [product]);
   
   const tabs = useMemo(() => {
     if (!product || !product.productCharacteristics) return [];
@@ -76,6 +88,26 @@ export const ProductDetail: React.FC = () => {
       : 'Hallo! Ich interessiere mich für dieses Produkt.';
     const whatsappUrl = `https://wa.me/${contact.whatsapp.international}?text=${encodeURIComponent(`${message}\n\nProduct: ${product?.name || 'N/A'}\n\nPlease contact me for more information and pricing. Thank you!`)}`;
     window.open(whatsappUrl, '_blank');
+  };
+  
+  const handleDownloadSpec = async () => {
+    if (!product?.specSheetUrl) return;
+    try {
+      const response = await fetch(product.specSheetUrl, { cache: 'no-store' });
+      if (!response.ok) throw new Error('Failed to fetch spec sheet');
+      const blob = await response.blob();
+      const blobUrl = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = blobUrl;
+      link.download = downloadFileName || 'Specification.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+    } catch (err) {
+      // Fallback: open in new tab so the user can still access it
+      window.open(product.specSheetUrl, '_blank');
+    }
   };
   
   if (!product) {
@@ -126,17 +158,14 @@ export const ProductDetail: React.FC = () => {
                   Request Quote
                 </button>
                 {product.specSheetUrl ? (
-                  <a
-                    href={product.specSheetUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    download
+                  <button
+                    onClick={handleDownloadSpec}
                     className="flex items-center justify-center gap-2 px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg hover:bg-white/20 transition-colors border border-white/20 text-sm sm:text-base"
                   >
                     <Download className="h-3 w-3 sm:h-4 sm:w-4" />
                     <span className="hidden sm:inline">Download Spec Sheet</span>
                     <span className="sm:hidden">Download</span>
-                  </a>
+                  </button>
                 ) : (
                   <button
                     className="flex items-center justify-center gap-2 px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-white/20 text-sm sm:text-base opacity-60 cursor-not-allowed"
