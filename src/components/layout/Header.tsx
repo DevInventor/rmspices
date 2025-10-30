@@ -52,7 +52,7 @@ export const Header: React.FC = () => {
       <div className="container-fluid">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 min-w-0">
             <div className="text-primary-500">
               <svg className="h-8 w-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -63,7 +63,7 @@ export const Header: React.FC = () => {
                 />
               </svg>
             </div>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white truncate max-w-[10ch] sm:max-w-none">
               RM Spices
             </h2>
           </Link>

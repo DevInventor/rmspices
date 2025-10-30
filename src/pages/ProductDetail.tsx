@@ -292,13 +292,13 @@ export const ProductDetail: React.FC = () => {
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Usage & Benefits</h2>
               <div className="space-y-6">
                 {product.details.culinaryUses && (
-                  <div className="bg-primary-500/5 dark:bg-primary-500/10 border border-primary-500/20 dark:border-primary-500/30 rounded-xl p-6 transition-colors">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-primary-500 p-3 rounded-lg">
-                        <ChefHat className="h-6 w-6 text-white" />
+                  <div className="bg-primary-500/5 dark:bg-primary-500/10 border border-primary-500/20 dark:border-primary-500/30 rounded-xl p-4 sm:p-6 transition-colors">
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="bg-primary-500 p-2.5 sm:p-3 rounded-lg">
+                        <ChefHat className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                        <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2">
                           {language === 'eng' ? 'Culinary Uses' : 'Kulinarische Verwendung'}
                         </h3>
                         <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">{product.details.culinaryUses}</p>
@@ -308,13 +308,13 @@ export const ProductDetail: React.FC = () => {
                 )}
                 
                 {product.details.healthBenefits && (
-                  <div className="bg-red-500/5 dark:bg-red-500/10 border border-red-500/20 dark:border-red-500/30 rounded-xl p-6 transition-colors">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-red-500 p-3 rounded-lg">
-                        <Heart className="h-6 w-6 text-white" />
+                  <div className="bg-red-500/5 dark:bg-red-500/10 border border-red-500/20 dark:border-red-500/30 rounded-xl p-4 sm:p-6 transition-colors">
+                    <div className="flex items-start gap-3 sm:gap-4">
+                      <div className="bg-red-500 p-2.5 sm:p-3 rounded-lg">
+                        <Heart className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                        <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white mb-2">
                           {language === 'eng' ? 'Health Benefits' : 'Gesundheitsvorteile'}
                         </h3>
                         <p className="text-gray-600 dark:text-slate-400 text-sm leading-relaxed">{product.details.healthBenefits}</p>

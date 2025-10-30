@@ -57,6 +57,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Ensure media scales responsively */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Slightly tighter padding for extra-small devices */
+@media (max-width: 360px) {
+  .container-fluid {
+    padding: 0 0.75rem;
+  }
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 8px;

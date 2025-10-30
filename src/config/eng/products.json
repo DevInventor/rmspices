@@ -16,8 +16,8 @@
       "category": "Whole Spices",
       "description": "Premium cumin seeds from the arid regions of Rajasthan, known for their intense aroma and earthy flavor. These seeds are carefully harvested and processed to maintain their natural oils and essential compounds.",
       "shortDescription": "Cumin seeds are the dried seeds of the Cuminum cyminum plant, widely used as a spice in cooking, especially in Indian, Middle Eastern, Latin American, and North African cuisines.",
-      "backgroundImage": "/assets/products/cumin-seeds/background.jpg",
-      "productImage": "/assets/products/cumin-seeds/product.jpg",
+      "backgroundImage": "/assets/products/cumin-seeds/background.png",
+      "productImage": "/assets/products/cumin-seeds/product.png",
       "specSheetUrl": "/assets/product-spces/cumin-seeds.pdf",
       "specifications": {
         "form": "Whole Seeds",
@@ -75,8 +75,8 @@
       "category": "Whole Spices",
       "description": "Sweet and aromatic fennel seeds with a licorice-like flavor. Perfect for digestive purposes and adding a unique taste to dishes.",
       "shortDescription": "Fennel seeds are aromatic dried fruits with a sweet, licorice-like flavor, commonly used in Indian, Mediterranean, and Middle Eastern cuisines.",
-      "backgroundImage": "/assets/products/fennel-seeds/background.jpg",
-      "productImage": "/assets/products/fennel-seeds/product.jpg",
+      "backgroundImage": "/assets/products/fennel-seeds/background.png",
+      "productImage": "/assets/products/fennel-seeds/product.png",
       "specSheetUrl": "/assets/product-spces/fennel-seeds.pdf",
       "specifications": {
         "form": "Whole Seeds",

@@ -90,12 +90,12 @@ export const Home: React.FC = () => {
   
   return (
     
-    <div className="flex-1">
+    <div className="flex-1 overflow-x-hidden">
       {/* Hero Section */}
-      <div className="px-4 sm:px-6 md:px-10 flex justify-center py-5">
+      <div className="px-3 sm:px-6 md:px-10 flex justify-center py-4 sm:py-5">
         <div className="container-fluid flex flex-col max-w-[960px]">
           
-          <div className="relative flex min-h-[280px] sm:min-h-[350px] md:min-h-[480px] flex-col gap-4 md:gap-6 rounded-lg items-center justify-center p-4 sm:p-6 overflow-hidden">
+          <div className="relative w-full flex min-h-[260px] sm:min-h-[350px] md:min-h-[480px] flex-col gap-3 sm:gap-4 md:gap-6 rounded-lg items-center justify-center p-3 sm:p-6 overflow-hidden">
             {/* Banner Images with Sliding Animation */}
             <div className="absolute inset-0 w-full h-full">
               {hero.backgroundImages.map((_, index) => (
@@ -110,15 +110,15 @@ export const Home: React.FC = () => {
             </div>
             
             {/* Content Overlay */}
-            <div className="relative z-10 flex flex-col gap-2 text-center max-w-4xl px-4">
-              <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
+            <div className="relative z-10 flex flex-col gap-2 text-center w-full max-w-3xl px-2 sm:px-4">
+              <h1 className="text-white text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-snug sm:leading-tight tracking-tight break-words">
                 {hero.title}
               </h1>
-              <p className="text-white text-xs sm:text-sm md:text-base font-normal leading-normal px-4">
+              <p className="text-white text-[11px] xs:text-xs sm:text-sm md:text-base font-normal leading-normal px-0 sm:px-4">
                 {hero.subtitle}
               </p>
             </div>
-            <div className="relative z-10 flex flex-col sm:flex-row flex-wrap gap-3 justify-center px-4">
+            <div className="relative z-10 flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 justify-center px-2 sm:px-4">
               <Button variant="primary" size="lg" href="/products" className="w-full sm:w-auto">
                 {hero.ctaPrimary}
               </Button>
@@ -128,7 +128,7 @@ export const Home: React.FC = () => {
             </div>
             
             {/* Slide Indicators */}
-            <div className="absolute bottom-4 flex gap-2">
+            <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-2 px-2">
               {hero.backgroundImages.map((_, index) => (
                 <button
                   key={index}

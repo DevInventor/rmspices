@@ -30,7 +30,7 @@ const TopSellingProductCard: React.FC<{ product: Product }> = React.memo(({ prod
   return (
     <Link
       to={`/products/${product.id}`}
-      className="group relative flex h-full w-[280px] flex-shrink-0 flex-col gap-4 rounded-xl border-2 border-primary-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-primary-500 hover:shadow-xl transition-all duration-300 hover:scale-105"
+      className="group relative flex h-full w-full md:w-[260px] lg:w-[280px] flex-shrink-0 flex-col gap-4 rounded-xl border-2 border-primary-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-primary-500 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] md:hover:scale-105"
     >
       {/* Top Selling Badge */}
       <div className="absolute top-3 right-3 z-10 bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
@@ -49,16 +49,16 @@ const TopSellingProductCard: React.FC<{ product: Product }> = React.memo(({ prod
       {/* Product Info */}
       <div className="flex flex-col gap-3 px-4 pb-4">
         <div>
-          <h3 className="text-lg font-bold leading-tight text-gray-900 dark:text-white group-hover:text-primary-500 transition-colors mb-1">
+        <h3 className="text-base sm:text-lg font-bold leading-tight text-gray-900 dark:text-white group-hover:text-primary-500 transition-colors mb-1">
             {product.name}
           </h3>
-          <p className="text-spice-300 dark:text-slate-400 text-xs font-medium capitalize mb-2">
+        <p className="text-spice-300 dark:text-slate-400 text-xs sm:text-sm font-medium capitalize mb-2">
             {product.category}
           </p>
         </div>
 
         {/* Short Description */}
-        <p className="text-spice-300 dark:text-slate-400 text-sm font-normal leading-normal line-clamp-2 min-h-[40px]">
+        <p className="text-spice-300 dark:text-slate-400 text-xs sm:text-sm font-normal leading-normal line-clamp-2 min-h-[36px] sm:min-h-[40px]">
           {product.shortDescription || product.description}
         </p>
 
@@ -131,15 +131,25 @@ const TopSellingProductsComponent: React.FC<TopSellingProductsProps> = ({
   return (
     <div className="mb-12">
       {title && (
-        <h2 className="text-[22px] font-bold leading-tight tracking-[-0.015em] mb-6 text-gray-900 dark:text-white">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold leading-tight tracking-[-0.015em] mb-4 sm:mb-6 text-gray-900 dark:text-white">
           {title}
         </h2>
       )}
-      <div className="overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-        <div className="inline-flex items-stretch p-4 gap-4">
-          {topSellingProducts.map((product) => (
-            <TopSellingProductCard key={product.id} product={product} />
-          ))}
+      {/* Mobile Grid - mirror Products page spacing */}
+      <div className="grid grid-cols-1 gap-4 p-2 sm:hidden">
+        {topSellingProducts.map((product) => (
+          <TopSellingProductCard key={product.id} product={product} />
+        ))}
+      </div>
+
+      {/* Carousel on >= sm */}
+      <div className="hidden sm:block">
+        <div className="overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+          <div className="inline-flex items-stretch p-4 gap-4">
+            {topSellingProducts.map((product) => (
+              <TopSellingProductCard key={product.id} product={product} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
