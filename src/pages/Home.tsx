@@ -98,7 +98,7 @@ export const Home: React.FC = () => {
           <div className="relative flex min-h-[280px] sm:min-h-[350px] md:min-h-[480px] flex-col gap-4 md:gap-6 rounded-lg items-center justify-center p-4 sm:p-6 overflow-hidden">
             {/* Banner Images with Sliding Animation */}
             <div className="absolute inset-0 w-full h-full">
-              {hero.backgroundImages.map((image, index) => (
+              {hero.backgroundImages.map((_, index) => (
                 <div
                   key={index}
                   className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
