@@ -129,7 +129,7 @@
     },
     {
       "id": "coriander-seeds",
-      "topSelling": false,
+      "topSelling": true,
       "name": "Coriander Seeds (Dhaniya)",
       "category": "Whole Spices",
       "description": "Mild and citrusy coriander seeds that enhance the flavor of any curry. Sourced from the finest coriander plants.",
@@ -188,7 +188,7 @@
     },
     {
       "id": "sesame-seeds-til",
-      "topSelling": false,
+      "topSelling": true,
       "name": "Sesame Seeds (Til)",
       "category": "Whole Seeds / Oilseed Spices",
       "description": "Premium export-grade sesame seeds (Til) processed, cleaned and sorted, offering nutty flavour and high purity for international trade.",

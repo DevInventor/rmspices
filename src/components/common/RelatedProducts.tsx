@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import type { Product } from '../../utils/translations';
 import { Package } from 'lucide-react';
+import { normalizeImagePath } from '../../utils';
 
 interface RelatedProductsProps {
   products: Product[];
@@ -38,7 +39,7 @@ export const RelatedProducts: React.FC<RelatedProductsProps> = ({
       )}
       <div className="grid md:grid-cols-3 gap-6">
         {relatedProducts.map((product) => {
-          const imageUrl = product.image || product.backgroundImage || product.productImage;
+          const imageUrl = normalizeImagePath(product.image || product.backgroundImage || product.productImage);
           const specEntries = Object.entries(product.specifications).slice(0, 2);
           const shortText = (product as Product & { shortDescription?: string }).shortDescription || product.description;
 

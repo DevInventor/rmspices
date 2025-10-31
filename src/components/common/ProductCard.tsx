@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { ChefHat, Heart, Package } from 'lucide-react';
 import type { Product } from '../../utils/translations';
+import { normalizeImagePath } from '../../utils';
 
 interface ProductCardProps {
   product: Product;
@@ -26,7 +27,8 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({
 
   // Memoize image URL to avoid recreating style object
   const imageUrl = useMemo(() => {
-    return product.image || product.backgroundImage || product.productImage;
+    const path = product.image || product.backgroundImage || product.productImage;
+    return normalizeImagePath(path);
   }, [product.image, product.backgroundImage, product.productImage]);
 
   // Memoize image style to avoid recreation

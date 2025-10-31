@@ -10,6 +10,7 @@ import { RelatedProducts } from '../components/common/RelatedProducts';
 import { getCompanyContact } from '../config/glob';
 import { Download, ChefHat, Heart, Eye, Sparkles, Package, Truck, Clock, Shield, AlertCircle } from 'lucide-react';
 import type { Product } from '../utils/translations';
+import { normalizeImagePath, normalizePath } from '../utils';
 
 interface ProductDetailContent {
   breadcrumb: {
@@ -92,8 +93,9 @@ export const ProductDetail: React.FC = () => {
   
   const handleDownloadSpec = async () => {
     if (!product?.specSheetUrl) return;
+    const normalizedUrl = normalizePath(product.specSheetUrl);
     try {
-      const response = await fetch(product.specSheetUrl, { cache: 'no-store' });
+      const response = await fetch(normalizedUrl, { cache: 'no-store' });
       if (!response.ok) throw new Error('Failed to fetch spec sheet');
       const blob = await response.blob();
       const blobUrl = URL.createObjectURL(blob);
@@ -104,9 +106,9 @@ export const ProductDetail: React.FC = () => {
       link.click();
       document.body.removeChild(link);
       setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
-    } catch (err) {
+    } catch {
       // Fallback: open in new tab so the user can still access it
-      window.open(product.specSheetUrl, '_blank');
+      window.open(normalizePath(product.specSheetUrl), '_blank');
     }
   };
   
@@ -139,7 +141,7 @@ export const ProductDetail: React.FC = () => {
           <div
             className="relative h-[250px] sm:h-[300px] md:h-[400px] rounded-xl bg-cover bg-center flex items-end p-4 sm:p-6 md:p-8 lg:p-12"
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%), url("${product.backgroundImage || product.image}")`
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%), url("${normalizeImagePath(product.backgroundImage || product.image)}")`
             }}
           >
             <div className="w-full z-10">
@@ -195,7 +197,7 @@ export const ProductDetail: React.FC = () => {
               </div>
               <div className="relative h-[200px] sm:h-[250px] md:h-[300px] rounded-lg overflow-hidden">
                 <img
-                  src={product.productImage || product.image}
+                  src={normalizeImagePath(product.productImage || product.image)}
                   alt={product.name}
                   className="w-full h-full object-cover"
                 />
@@ -336,13 +338,13 @@ export const ProductDetail: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               {product.packingImages && product.packingImages.length > 0 && (
                 <ImageGallery
-                  images={product.packingImages}
+                  images={product.packingImages.map(img => ({ ...img, src: normalizePath(img.src) }))}
                   title={language === 'eng' ? 'Packing Images' : 'Verpackungsbilder'}
                 />
               )}
               {product.brandLabels && product.brandLabels.length > 0 && (
                 <ImageGallery
-                  images={product.brandLabels}
+                  images={product.brandLabels.map(img => ({ ...img, src: normalizePath(img.src) }))}
                   title={language === 'eng' ? 'Brand Labels' : 'Markenetiketten'}
                 />
               )}
