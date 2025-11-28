@@ -50,6 +50,8 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({
       <div
         className="w-full aspect-square bg-cover bg-center rounded-lg"
         style={imageStyle}
+        title={`${product.name} - Premium Indian Spice`}
+        aria-label={`${product.name} product image`}
       />
         
       {/* Product Info */}

@@ -1,0 +1,87 @@
+{
+  "default": {
+    "title": "RM Spices - Premium Indian Spices for Global Markets",
+    "description": "RM Spices specializes in premium Indian spices for global markets. Experience authentic flavors with our carefully sourced, high-quality spices. Trusted for generations since 1969.",
+    "keywords": "RM Spices, Indian Spices, Premium Spices, Global Spice Trade, Spice Export, Spice Import, Cumin, Turmeric, Cardamom, Fennel, Coriander, Black Pepper, Saffron, Organic Spices, Whole Spices, Ground Spices, Spice Trading, International Spice Trade, Quality Spices, Authentic Indian Flavors, Spice Export India, Spice Import Services, Bulk Spices, Wholesale Spices",
+    "author": "RM Spices",
+    "robots": "index, follow",
+    "canonical": "https://www.rmspices.com/",
+    "og": {
+      "type": "website",
+      "site_name": "RM Spices",
+      "locale": "en_US",
+      "image": "https://www.rmspices.com/assets/hero-section.png",
+      "image_width": "1200",
+      "image_height": "630",
+      "image_alt": "RM Spices - Premium Indian Spices for Global Markets"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "site": "@rmspices",
+      "creator": "@rmspices"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "RM Spices - Premium Indian Spices for Global Markets",
+      "description": "Experience the authentic flavors of India with our carefully sourced, high-quality spices that bring the taste of tradition to your table. Premium Indian spices for global markets.",
+      "keywords": "RM Spices, Indian spices, premium spices, global spice trade, authentic Indian flavors, spice export, cumin, turmeric, cardamom, fennel, coriander, black pepper, saffron, organic spices, whole spices, ground spices, spice trading, international spice trade, quality spices",
+      "og": {
+        "title": "RM Spices - Premium Indian Spices for Global Markets",
+        "description": "Experience the authentic flavors of India with our carefully sourced, high-quality spices that bring the taste of tradition to your table.",
+        "url": "https://www.rmspices.com/"
+      }
+    },
+    "about": {
+      "title": "About RM Spices - Your Trusted Spice Trading Partner Since 1969",
+      "description": "Learn about RM Spices, your trusted partner in the global spice trade since 1969. We connect authentic Indian flavors with markets worldwide through quality, sustainability, and innovation.",
+      "keywords": "about RM Spices, spice trading company, Indian spice exporter, global spice trade, spice trading partner, quality spices, sustainable spice trade, spice industry, spice business, international spice trade, spice certifications, ISO certified spices, HACCP compliant, organic spice certification",
+      "og": {
+        "title": "About RM Spices - Your Trusted Spice Trading Partner Since 1969",
+        "description": "Learn about RM Spices, your trusted partner in the global spice trade since 1969. We connect authentic Indian flavors with markets worldwide.",
+        "url": "https://www.rmspices.com/about"
+      }
+    },
+    "products": {
+      "title": "Premium Indian Spices - Products | RM Spices",
+      "description": "Discover our premium collection of authentic Indian spices including cumin, turmeric, cardamom, fennel, coriander, black pepper, saffron, and more. Quality guaranteed with international certifications.",
+      "keywords": "RM Spices products, Indian spices products, premium spices, cumin seeds, turmeric, cardamom, fennel seeds, coriander seeds, black pepper, saffron, whole spices, ground spices, organic spices, spice products, quality spices, authentic Indian spices, spice catalog, spice varieties, spice specifications, bulk spices, wholesale spices",
+      "og": {
+        "title": "Premium Indian Spices - Products | RM Spices",
+        "description": "Discover our premium collection of authentic Indian spices including cumin, turmeric, cardamom, fennel, coriander, black pepper, saffron, and more.",
+        "url": "https://www.rmspices.com/products"
+      }
+    },
+    "contact": {
+      "title": "Contact RM Spices - Get in Touch for Premium Spice Trading",
+      "description": "Contact RM Spices for premium Indian spice trading services. Get in touch with our expert team for quality spices, competitive pricing, and reliable global delivery.",
+      "keywords": "contact RM Spices, spice trading contact, Indian spice exporter contact, spice trading inquiry, spice business contact, spice trading consultation, spice pricing, spice delivery, spice trading support, spice trading partnership, spice trading quote",
+      "og": {
+        "title": "Contact RM Spices - Get in Touch for Premium Spice Trading",
+        "description": "Contact RM Spices for premium Indian spice trading services. Get in touch with our expert team for quality spices and reliable delivery.",
+        "url": "https://www.rmspices.com/contact"
+      }
+    },
+    "certifications": {
+      "title": "Certifications & Quality Standards | RM Spices",
+      "description": "RM Spices maintains the highest quality standards with international certifications including ISO 22000:2018, HACCP, FSSAI, USDA Organic, APEDA, and Spice Board of India. Trusted quality for global spice trade.",
+      "keywords": "RM Spices certifications, spice certifications, ISO 22000, HACCP certification, FSSAI certified, USDA Organic spices, APEDA certification, Spice Board India, organic spice certification, quality certifications, food safety certifications, spice quality standards, certified spices, international spice certifications",
+      "og": {
+        "title": "Certifications & Quality Standards | RM Spices",
+        "description": "RM Spices maintains the highest quality standards with international certifications including ISO 22000:2018, HACCP, FSSAI, USDA Organic, APEDA, and Spice Board of India.",
+        "url": "https://www.rmspices.com/certifications"
+      }
+    },
+    "product-detail": {
+      "title": "Premium {productName} - {category} | RM Spices",
+      "description": "Discover premium {productName} from {origin}. {description} Quality guaranteed with international certifications. Available in bulk quantities for global trade.",
+      "keywords": "{productName}, {category}, premium spices, {origin} spices, quality spices, bulk spices, wholesale spices, spice specifications, spice quality, authentic Indian spices, spice trading, international spice trade, RM Spices",
+      "og": {
+        "title": "Premium {productName} - {category} | RM Spices",
+        "description": "Discover premium {productName} from {origin}. Quality guaranteed with international certifications.",
+        "url": "https://www.rmspices.com/products/{productId}"
+      }
+    }
+  }
+}
+

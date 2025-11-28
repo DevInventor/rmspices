@@ -139,6 +139,8 @@ export const About: React.FC = () => {
                 <div
                   className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full"
                   style={{ backgroundImage: `url(${member.image})` }}
+                  title={`${member.name} - ${member.role} at RM Spices`}
+                  aria-label={`${member.name} team member photo`}
                 />
               </div>
               <div>

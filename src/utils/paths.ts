@@ -1,19 +1,17 @@
 /**
- * Utility functions for handling paths, especially for GitHub Pages deployment
- * with a base path.
+ * Utility functions for handling paths and asset URLs.
  */
 
 /**
  * Normalizes an asset path to work correctly with the base URL.
- * Handles both development (base = '/') and production (base = '/rmspices/') environments.
+ * Handles paths for root domain deployment.
  * 
  * @param path - The asset path (e.g., '/assets/products/image.png')
  * @returns The normalized path with the base URL prepended if needed
  * 
  * @example
  * normalizePath('/assets/products/image.png')
- * // Development: '/assets/products/image.png'
- * // Production: '/rmspices/assets/products/image.png'
+ * // Returns: '/assets/products/image.png'
  */
 export function normalizePath(path: string | undefined | null): string {
   if (!path) return '';

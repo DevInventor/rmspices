@@ -7,6 +7,7 @@ import { Tabs, type Tab } from '../components/common/Tabs';
 import { SpecificationTable } from '../components/common/SpecificationTable';
 import { ImageGallery } from '../components/common/ImageGallery';
 import { RelatedProducts } from '../components/common/RelatedProducts';
+import { SEOHead } from '../components/seo';
 import { getCompanyContact } from '../config/glob';
 import { Download, ChefHat, Heart, Eye, Sparkles, Package, Truck, Clock, Shield, AlertCircle } from 'lucide-react';
 import type { Product } from '../utils/translations';
@@ -126,6 +127,19 @@ export const ProductDetail: React.FC = () => {
   
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950 py-4 sm:py-6 md:py-8 transition-colors">
+      {product && (
+        <SEOHead
+          productData={{
+            name: product.name,
+            category: product.category,
+            origin: 'India',
+            description: product.shortDescription || product.description,
+            id: product.id,
+          }}
+          image={normalizeImagePath(product.backgroundImage || product.image)}
+          type="product"
+        />
+      )}
       <div className="container-fluid max-w-[1200px] mx-auto px-2 sm:px-4 md:px-6">
         {/* Breadcrumb */}
         <div className="flex flex-wrap gap-1 sm:gap-2 mb-4 sm:mb-6 md:mb-8 text-sm sm:text-base">
@@ -199,6 +213,7 @@ export const ProductDetail: React.FC = () => {
                 <img
                   src={normalizeImagePath(product.productImage || product.image)}
                   alt={product.name}
+                  title={`${product.name} - Premium Indian Spice`}
                   className="w-full h-full object-cover"
                 />
               </div>

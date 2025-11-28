@@ -44,6 +44,8 @@ const TopSellingProductCard: React.FC<{ product: Product }> = React.memo(({ prod
         <div
           className="w-full aspect-square bg-center bg-no-repeat bg-cover"
           style={imageStyle}
+          title={`${product.name} - Premium Indian Spice`}
+          aria-label={`${product.name} product image`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       </div>

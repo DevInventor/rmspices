@@ -76,6 +76,8 @@ export const Certifications: React.FC = () => {
               <div
                 className="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg transition-transform duration-200 hover:scale-[1.02]"
                 style={{ backgroundImage: `url(${item.image})` }}
+                title={`${item.name} Certification - ${item.description}`}
+                aria-label={`${item.name} certification badge`}
               />
               <div>
                 <p className="text-base font-medium leading-normal text-gray-900 dark:text-white">{item.name}</p>
@@ -138,6 +140,7 @@ export const Certifications: React.FC = () => {
             <img
               src={previewImageUrl}
               alt="Certification preview"
+              title="Certification Document - RM Spices Quality Standards"
               className="w-full h-auto max-h-[80vh] object-contain rounded-lg shadow-lg bg-white"
             />
           </div>

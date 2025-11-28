@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe, Sun, Moon } from 'lucide-react';
+import { Menu, Globe, Sun, Moon } from 'lucide-react';
 import { useLanguage } from '../../contexts/useLanguage';
 import { useTheme } from '../../contexts/useTheme';
 import { Button } from '../common/Button';
+import { Sidebar } from './Sidebar';
 
 interface NavigationItem {
   name: string;
@@ -14,7 +15,7 @@ export const Header: React.FC = () => {
   const { language, setLanguage, translations } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   
   // Memoize navigation items to avoid recalculation
   const navigationItems = useMemo(() => {
@@ -31,18 +32,18 @@ export const Header: React.FC = () => {
     setLanguage(language === 'eng' ? 'ger' : 'eng');
   }, [language, setLanguage]);
 
-  // Memoize mobile menu toggle
-  const handleMobileMenuToggle = useCallback(() => {
-    setIsMobileMenuOpen(prev => !prev);
+  // Memoize sidebar toggle
+  const handleSidebarToggle = useCallback(() => {
+    setIsSidebarOpen(prev => !prev);
   }, []);
 
-  const handleCloseMobileMenu = useCallback(() => {
-    setIsMobileMenuOpen(false);
+  const handleCloseSidebar = useCallback(() => {
+    setIsSidebarOpen(false);
   }, []);
 
-  // Close mobile menu when route changes
+  // Close sidebar when route changes
   useEffect(() => {
-    setIsMobileMenuOpen(false);
+    setIsSidebarOpen(false);
   }, [location.pathname]);
 
   return (
@@ -117,66 +118,19 @@ export const Header: React.FC = () => {
               {language === 'eng' ? 'Request a Quote' : 'Angebot anfordern'}
             </Button>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Sidebar Button */}
             <button
-              onClick={handleMobileMenuToggle}
+              onClick={handleSidebarToggle}
               className="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-spice-100 dark:hover:bg-slate-800"
-              aria-label="Toggle mobile menu"
+              aria-label="Toggle sidebar"
             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <Menu className="h-6 w-6" />
             </button>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-spice-100 dark:border-slate-800">
-            <div className="flex flex-col space-y-4">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  onClick={handleCloseMobileMenu}
-                  className={`text-lg font-medium px-3 py-2 rounded-lg transition-colors hover:scale-105 transform transition-all duration-200 ${
-                    isActiveRoute(item.href)
-                      ? 'text-primary-500 bg-primary-500/10 font-semibold'
-                      : 'text-gray-600 dark:text-gray-300 hover:bg-spice-100 dark:hover:bg-slate-800'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              
-              <div className="flex items-center justify-between px-3 py-2 gap-2">
-                <Button
-                  variant="primary"
-                  size="sm"
-                  href="/contact"
-                  className="flex-1"
-                >
-                  {language === 'eng' ? 'Request a Quote' : 'Angebot anfordern'}
-                </Button>
-                <button
-                  onClick={toggleTheme}
-                  className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-spice-100 dark:hover:bg-slate-800 transition-colors"
-                  aria-label="Toggle theme"
-                >
-                  {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
-                </button>
-                <Button
-                  onClick={handleLanguageToggle}
-                  variant="outline"
-                  size="sm"
-                  className="flex items-center gap-2"
-                >
-                  <Globe className="w-4 h-4" />
-                  {language === 'eng' ? 'DE' : 'EN'}
-                </Button>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
+      {/* Mobile Sidebar */}
+      <Sidebar isOpen={isSidebarOpen} onClose={handleCloseSidebar} />
     </header>
   );
 };

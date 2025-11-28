@@ -77,6 +77,7 @@ const ImageGalleryComponent: React.FC<ImageGalleryProps> = ({ images, title }) =
             <img
               src={currentImage.src}
               alt={currentImage.alt}
+              title={currentImage.title || currentImage.alt}
               className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
               onClick={() => openLightbox(currentIndex)}
             />
@@ -124,6 +125,7 @@ const ImageGalleryComponent: React.FC<ImageGalleryProps> = ({ images, title }) =
                 <img
                   src={image.src}
                   alt={image.alt}
+                  title={image.title || image.alt}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -160,6 +162,7 @@ const ImageGalleryComponent: React.FC<ImageGalleryProps> = ({ images, title }) =
             <img
               src={lightboxImage.src}
               alt={lightboxImage.alt}
+              title={lightboxImage.title || lightboxImage.alt}
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />
