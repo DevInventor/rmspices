@@ -8,6 +8,8 @@ import {
   getCompanySocialMedia 
 } from '../../config/glob';
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { useLanguage } from '../../contexts/useLanguage';
+import { getPageTranslations } from '../../utils/translations';
 
 interface SocialMediaItem {
   name: string;
@@ -17,10 +19,25 @@ interface SocialMediaItem {
 }
 
 export const TopbarBanner: React.FC = () => {
+  const { language } = useLanguage();
   const companyInfo = getCompanyInfo();
   const contact = getCompanyContact();
   const businessHours = getCompanyBusinessHours();
   const socialMedia = getCompanySocialMedia();
+  
+  // Get contact info from contact.json translations
+  const contactTranslations = getPageTranslations('contact', language) as {
+    contactInfo?: {
+      phone?: { value1?: string; value2?: string };
+      whatsapp?: { value?: string; value1?: string; value2?: string };
+    };
+  };
+  
+  // Handle both 'value' and 'value1' for whatsapp (English uses 'value', German uses 'value1')
+  const whatsapp1 = contactTranslations?.contactInfo?.whatsapp?.value || 
+                    contactTranslations?.contactInfo?.whatsapp?.value1 || 
+                    contact.whatsapp.number;
+  const whatsapp2 = contactTranslations?.contactInfo?.whatsapp?.value2;
 
   // Icon mapping for dynamic icon rendering
   const iconMap: Record<string, LucideIcon> = {
@@ -33,9 +50,11 @@ export const TopbarBanner: React.FC = () => {
     window.location.href = `mailto:${contact.email.primary}`;
   };
 
-  const handleWhatsAppClick = () => {
+  const handleWhatsAppClick = (number?: string) => {
+    const whatsappNumber = number || whatsapp1;
     const message = encodeURIComponent('Hello! I am interested in RM Spices products.');
-    window.open(`${contact.whatsapp.url}?text=${message}`, '_blank');
+    const cleanNumber = whatsappNumber.replace(/\D/g, '');
+    window.open(`https://wa.me/${cleanNumber}?text=${message}`, '_blank');
   };
 
   const socialMediaArray = Object.values(socialMedia) as SocialMediaItem[];
@@ -97,15 +116,38 @@ export const TopbarBanner: React.FC = () => {
             {/* Separator */}
             <div className="hidden lg:block w-px h-4 bg-white/30"></div>
 
-            {/* WhatsApp */}
+            {/* WhatsApp Numbers */}
+            <div className="hidden lg:flex items-center gap-2">
+              <button
+                onClick={() => handleWhatsAppClick(whatsapp1)}
+                className="flex items-center gap-1.5 text-white/90 hover:text-white transition-colors duration-200 group"
+                aria-label={`Chat on WhatsApp: ${whatsapp1}`}
+              >
+                <MessageCircle className="w-3.5 h-3.5 group-hover:scale-110 transition-transform duration-200" />
+                <span className="text-xs">{whatsapp1}</span>
+              </button>
+              {whatsapp2 && (
+                <>
+                  <span className="text-white/50">|</span>
+                  <button
+                    onClick={() => handleWhatsAppClick(whatsapp2)}
+                    className="flex items-center gap-1.5 text-white/90 hover:text-white transition-colors duration-200 group"
+                    aria-label={`Chat on WhatsApp: ${whatsapp2}`}
+                  >
+                    <span className="text-xs">{whatsapp2}</span>
+                  </button>
+                </>
+              )}
+            </div>
+            
+            {/* Mobile: Show single WhatsApp button */}
             <button
-              onClick={handleWhatsAppClick}
-              className="flex items-center gap-1.5 text-white/90 hover:text-white transition-colors duration-200 group"
-              aria-label={`Chat on WhatsApp: ${contact.whatsapp.number}`}
+              onClick={() => handleWhatsAppClick(whatsapp1)}
+              className="lg:hidden flex items-center gap-1.5 text-white/90 hover:text-white transition-colors duration-200 group"
+              aria-label={`Chat on WhatsApp: ${whatsapp1}`}
             >
               <MessageCircle className="w-3.5 h-3.5 group-hover:scale-110 transition-transform duration-200" />
-              <span className="hidden md:inline">{contact.whatsapp.number}</span>
-              <span className="md:hidden">Chat</span>
+              <span>Chat</span>
             </button>
           </div>
         </div>

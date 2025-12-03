@@ -8,6 +8,7 @@ import {
   getCompanySocialMedia 
 } from '../../config/glob';
 import { Facebook, Linkedin, Instagram } from 'lucide-react';
+import { getPageTranslations } from '../../utils/translations';
 
 const footerLinks = [
   { name: 'Home', href: '/' },
@@ -29,10 +30,28 @@ export const Footer: React.FC = () => {
   const contact = getCompanyContact();
   const socialMedia = getCompanySocialMedia();
 
+  // Get contact info from contact.json translations
+  const contactTranslations = getPageTranslations('contact', language) as {
+    contactInfo?: {
+      phone?: { value1?: string; value2?: string };
+      whatsapp?: { value?: string; value1?: string; value2?: string };
+    };
+  };
+  
+  const phone1 = contactTranslations?.contactInfo?.phone?.value1 || contact.phone.primary;
+  const phone2 = contactTranslations?.contactInfo?.phone?.value2;
+  // Handle both 'value' and 'value1' for whatsapp (English uses 'value', German uses 'value1')
+  const whatsapp1 = contactTranslations?.contactInfo?.whatsapp?.value || 
+                    contactTranslations?.contactInfo?.whatsapp?.value1 || 
+                    contact.whatsapp.number;
+  const whatsapp2 = contactTranslations?.contactInfo?.whatsapp?.value2;
+
   // Handle WhatsApp click
-  const handleWhatsAppClick = () => {
+  const handleWhatsAppClick = (number?: string) => {
+    const whatsappNumber = number || whatsapp1;
     const message = encodeURIComponent('Hello! I am interested in RM Spices products.');
-    window.open(`${contact.whatsapp.url}?text=${message}`, '_blank');
+    const cleanNumber = whatsappNumber.replace(/\D/g, '');
+    window.open(`https://wa.me/${cleanNumber}?text=${message}`, '_blank');
   };
   
   return (
@@ -135,21 +154,35 @@ export const Footer: React.FC = () => {
               {language === 'eng' ? 'Get in Touch' : 'Kontakt'}
             </h3>
             <div className="space-y-4">
-          <button
-            onClick={handleWhatsAppClick}
-            aria-label="Chat with us on WhatsApp"
-            className="inline-flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 rounded-full bg-[#25D366] text-white font-semibold hover:bg-[#20BA5A] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base w-full sm:w-auto"
-          >
-            <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5" />
-            <span>{language === 'eng' ? 'Chat on WhatsApp' : 'Bei WhatsApp kontaktieren'}</span>
-          </button>
+              {/* WhatsApp Button - Only value1 */}
+              <button
+                onClick={() => handleWhatsAppClick(whatsapp1)}
+                aria-label="Chat with us on WhatsApp"
+                className="inline-flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-3 rounded-full bg-[#25D366] text-white font-semibold hover:bg-[#20BA5A] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base w-full sm:w-auto"
+              >
+                <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span>{language === 'eng' ? 'Chat on WhatsApp' : 'Bei WhatsApp kontaktieren'}</span>
+              </button>
               <div className="text-sm text-slate-600 dark:text-slate-400">
                 <p className="mb-1">
                   <span className="font-medium">Email:</span> {contact.email.primary}
                 </p>
-                <p>
-                  <span className="font-medium">Phone:</span> {contact.phone.primary}
-                </p>
+                <div className="space-y-1">
+                  <p>
+                    <span className="font-medium">Phone:</span>{' '}
+                    <a href={`tel:${phone1.replace(/\s/g, '')}`} className="hover:text-primary-500 transition-colors">
+                      {phone1}
+                    </a>
+                  </p>
+                  {phone2 && (
+                    <p>
+                      <span className="font-medium">Phone:</span>{' '}
+                      <a href={`tel:${phone2.replace(/\s/g, '')}`} className="hover:text-primary-500 transition-colors">
+                        {phone2}
+                      </a>
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
           </div>

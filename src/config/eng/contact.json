@@ -48,11 +48,13 @@
     },
     "phone": {
       "title": "Phone",
-      "value": "+91 9725151605"
+      "value1": "+91 9725151605",
+      "value2": "+91 9727731003"
     },
     "whatsapp": {
       "title": "WhatsApp",
-      "value": "+91 9725151605"
+      "value": "+91 9725151605",
+      "value2": "+91 9727731003"
     }
   },
   "productOptions": [

@@ -14,7 +14,9 @@ interface ReachOutFormProps {
   title?: string;
   email: string;
   phone: string;
+  phone2?: string;
   whatsapp: string;
+  whatsapp2?: string;
   address: string;
   onSubmit?: (formData: FormData) => void;
   language?: 'eng' | 'ger';
@@ -24,7 +26,9 @@ const ReachOutFormComponent: React.FC<ReachOutFormProps> = ({
   title = "Let's connect",
   email,
   phone,
+  phone2,
   whatsapp,
+  whatsapp2,
   address,
   onSubmit,
   language = 'eng',
@@ -59,31 +63,56 @@ const ReachOutFormComponent: React.FC<ReachOutFormProps> = ({
   ], []);
 
   // Memoize contact methods to avoid recreation
-  const contactMethods = useMemo(() => [
-    {
-      icon: <Mail className="h-6 w-6" />,
-      title: language === 'eng' ? 'Email' : 'E-Mail',
-      value: email,
-      href: `mailto:${email}`,
-    },
-    {
+  const contactMethods = useMemo(() => {
+    const methods: Array<{
+      icon: React.ReactNode;
+      title: string;
+      value: string | Array<{ value: string; href: string }>;
+      href?: string;
+    }> = [
+      {
+        icon: <Mail className="h-6 w-6" />,
+        title: language === 'eng' ? 'Email' : 'E-Mail',
+        value: email,
+        href: `mailto:${email}`,
+      },
+    ];
+
+    // Add phone numbers - both with single icon
+    const phoneNumbers: Array<{ value: string; href: string }> = [
+      { value: phone, href: `tel:${phone.replace(/\s/g, '')}` }
+    ];
+    if (phone2) {
+      phoneNumbers.push({ value: phone2, href: `tel:${phone2.replace(/\s/g, '')}` });
+    }
+    methods.push({
       icon: <Phone className="h-6 w-6" />,
       title: language === 'eng' ? 'Phone' : 'Telefon',
-      value: phone,
-      href: `tel:${phone}`,
-    },
-    {
+      value: phoneNumbers,
+    });
+
+    // Add WhatsApp numbers - both with single icon
+    const whatsappNumbers: Array<{ value: string; href: string }> = [
+      { value: whatsapp, href: `https://wa.me/${whatsapp.replace(/\D/g, '')}` }
+    ];
+    if (whatsapp2) {
+      whatsappNumbers.push({ value: whatsapp2, href: `https://wa.me/${whatsapp2.replace(/\D/g, '')}` });
+    }
+    methods.push({
       icon: <MessageCircle className="h-6 w-6" />,
       title: language === 'eng' ? 'WhatsApp' : 'WhatsApp',
-      value: whatsapp,
-      href: `https://wa.me/${whatsapp.replace(/\D/g, '')}`,
-    },
-    {
+      value: whatsappNumbers,
+    });
+
+    // Add address
+    methods.push({
       icon: <MapPin className="h-6 w-6" />,
       title: language === 'eng' ? 'Address' : 'Adresse',
       value: address,
-    },
-  ], [language, email, phone, whatsapp, address]);
+    });
+
+    return methods;
+  }, [language, email, phone, phone2, whatsapp, whatsapp2, address]);
 
   return (
     <div className="grid lg:grid-cols-5 gap-6 sm:gap-8">
@@ -111,7 +140,19 @@ const ReachOutFormComponent: React.FC<ReachOutFormProps> = ({
               </div>
               <div>
                 <p className="font-semibold text-gray-800 dark:text-white mb-1">{method.title}</p>
-                {method.href ? (
+                {Array.isArray(method.value) ? (
+                  <div className="flex flex-col gap-1">
+                    {method.value.map((item, itemIdx) => (
+                      <a
+                        key={itemIdx}
+                        href={item.href}
+                        className="text-gray-600 dark:text-slate-400 hover:text-primary-600 transition-colors"
+                      >
+                        {item.value}
+                      </a>
+                    ))}
+                  </div>
+                ) : method.href ? (
                   <a
                     href={method.href}
                     className="text-gray-600 dark:text-slate-400 hover:text-primary-600 transition-colors"

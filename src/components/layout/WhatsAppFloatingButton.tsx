@@ -2,11 +2,24 @@ import React, { useState } from 'react';
 import { getCompanyContact } from '../../config/glob';
 import { WhatsAppDialog } from './WhatsAppDialog';
 import { useLanguage } from '../../contexts/useLanguage';
+import { getPageTranslations } from '../../utils/translations';
 
 export const WhatsAppFloatingButton: React.FC = () => {
   const { language } = useLanguage();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const contact = getCompanyContact();
+
+  // Get contact info from contact.json translations to use value1 (value field)
+  const contactTranslations = getPageTranslations('contact', language) as {
+    contactInfo?: {
+      whatsapp?: { value?: string; value1?: string };
+    };
+  };
+  
+  // Use value1 (which is the 'value' field in English, 'value1' in German) from contact.json, fallback to glob contact
+  const phoneNumber = contactTranslations?.contactInfo?.whatsapp?.value || 
+                      contactTranslations?.contactInfo?.whatsapp?.value1 || 
+                      contact.whatsapp.number;
 
   const handleButtonClick = () => {
     setIsDialogOpen(true);
@@ -16,7 +29,6 @@ export const WhatsAppFloatingButton: React.FC = () => {
     setIsDialogOpen(false);
   };
 
-  const phoneNumber = contact.whatsapp.number;
   const message = language === 'eng' 
     ? 'Hello! I am interested in RM Spices products.'
     : 'Hallo! Ich interessiere mich für RM Spices Produkte.';

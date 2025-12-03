@@ -26,8 +26,8 @@ interface ContactContent {
     title: string;
     address: { title: string; value: string };
     email: { title: string; value: string };
-    phone: { title: string; value: string };
-    whatsapp: { title: string; value: string };
+    phone: { title: string; value1: string; value2?: string };
+    whatsapp: { title: string; value?: string; value1?: string; value2?: string };
   };
   productOptions: string[];
   map: {
@@ -46,13 +46,15 @@ export const Contact: React.FC = () => {
         <ReachOutForm
           title={hero.title}
           email={contactInfo.email.value}
-          phone={contactInfo.phone.value}
-          whatsapp={contactInfo.whatsapp.value}
+          phone={contactInfo.phone.value1}
+          phone2={contactInfo.phone.value2}
+          whatsapp={contactInfo.whatsapp.value || contactInfo.whatsapp.value1 || ''}
+          whatsapp2={contactInfo.whatsapp.value2}
           address={contactInfo.address.value}
           language={language}
           onSubmit={(data) => {
             // Handle form submission with WhatsApp integration
-            const whatsappNumber = contactInfo.whatsapp.value.replace(/\D/g, '');
+            const whatsappNumber = (contactInfo.whatsapp.value || contactInfo.whatsapp.value1 || '').replace(/\D/g, '');
             const message = `Hello! I'm interested in your products.
 
 Name: ${data.name || 'Not provided'}
