@@ -26,7 +26,7 @@ function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <BrowserRouter basename="/">
+        <BrowserRouter basename="/rmspices">
           <SEOHead />
           <MainLayout>
             <Routes>
