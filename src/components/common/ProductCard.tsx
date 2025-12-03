@@ -44,7 +44,7 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({
   return (
     <Link
       to={`/products/${product.id}`}
-      className={`flex flex-col gap-3 sm:gap-4 rounded-lg border border-spice-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-3 sm:p-4 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 group ${className}`}
+      className={`flex flex-col gap-2 sm:gap-3 md:gap-4 rounded-lg border border-spice-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-2 sm:p-3 md:p-4 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] sm:hover:scale-105 group ${className}`}
     >
       {/* Product Image */}
       <div
@@ -56,20 +56,20 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({
         
       {/* Product Info */}
       <div className="flex flex-col gap-2">
-        <h3 className="text-base font-bold leading-tight text-gray-900 dark:text-white group-hover:text-primary-500 transition-colors">
+        <h3 className="text-sm sm:text-base font-bold leading-tight text-gray-900 dark:text-white group-hover:text-primary-500 transition-colors line-clamp-2">
           {product.name}
         </h3>
         
-        {/* Description */}
+        {/* Description - Show on mobile but shorter */}
         {showDetails && (
-          <p className="text-spice-300 dark:text-slate-400 text-sm font-normal leading-normal line-clamp-2">
+          <p className="text-spice-300 dark:text-slate-400 text-xs sm:text-sm font-normal leading-normal line-clamp-2">
             {detailedProduct.shortDescription || product.description}
           </p>
         )}
         
-        {/* Key Features */}
+        {/* Key Features - Hidden on mobile, shown on sm and up */}
         {showDetails && detailedProduct.details && (
-          <div className="flex flex-col gap-2 mt-2">
+          <div className="hidden sm:flex flex-col gap-2 mt-2">
             {detailedProduct.details.culinaryUses && (
               <div className="flex items-start gap-2">
                 <ChefHat className="h-4 w-4 text-primary-500 flex-shrink-0 mt-0.5" />
@@ -89,9 +89,9 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({
           </div>
         )}
         
-        {/* Quick Specs */}
+        {/* Quick Specs - Hidden on mobile, shown on sm and up */}
         {showDetails && (
-          <div className="flex flex-wrap gap-2 mt-2">
+          <div className="hidden sm:flex flex-wrap gap-2 mt-2">
             {specEntries.map(([key, value]) => (
               <span
                 key={key}
@@ -103,17 +103,17 @@ const ProductCardComponent: React.FC<ProductCardProps> = ({
           </div>
         )}
         
-        {/* Category */}
+        {/* Category - Hidden on mobile, shown on sm and up */}
         {showDetails && (
-          <div className="flex items-center gap-1 text-xs text-spice-300 dark:text-slate-400 mt-2">
+          <div className="hidden sm:flex items-center gap-1 text-xs text-spice-300 dark:text-slate-400 mt-2">
             <Package className="h-3 w-3" />
             <span>{product.category}</span>
           </div>
         )}
         
-        {/* View Details Link */}
+        {/* View Details Link - Hidden on mobile, shown on sm and up */}
         {showDetails && (
-          <div className="mt-2 pt-2 border-t border-spice-100 dark:border-slate-800">
+          <div className="hidden sm:block mt-2 pt-2 border-t border-spice-100 dark:border-slate-800">
             <span className="text-primary-500 text-sm font-medium group-hover:underline">
               {language === 'eng' ? 'View Details →' : 'Details anzeigen →'}
             </span>

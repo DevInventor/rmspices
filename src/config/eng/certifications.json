@@ -5,34 +5,39 @@
     "title": "Export Certifications",
     "items": [
       {
-        "name": "BRCGS Food Safety",
-        "description": "BRC Global Standard for Food Safety — ensuring compliance with international best practices for food quality, safety, and operational criteria.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBRCGS-placeholder-image"
-      },
-      {
-        "name": "USDA Organic",
-        "description": "Certified Organic by the United States Department of Agriculture — verifying that our products are grown and processed according to organic standards.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuUSDAOrganic-placeholder-image"
-      },
-      {
-        "name": "FSSAI",
-        "description": "Food Safety and Standards Authority of India — certifying that our products meet India’s national standards for food safety and hygiene.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuByqo_nLrDk6l0aT6C3X50IEQ0fF0GdO2isD6eEVXE1wTRUa4MQY4kxAf4euiQO5QkjTolMkUG8jClL_TfWVzS5RgsfAMJYOK3P8RGz9NJ47W3mftEHBwRzSJdudait29cijhZidkjAS6mVmnmkjV937A8rQGuDkYQJxAoOKI8I31Y-CaOfx1ccdK6h8AO5JA5WYknuymVNM0ymUhbNom2QIGpIHjh11rtGe6Ll3771BQYx2vP7W3f-_lZbpBZgiCau8dOBleS8BUc"
+        "name": "ISO 22000:2018",
+        "description": "Food Safety Management System - International standard for food safety management systems ensuring safe food supply chains from farm to table",
+        "image": "/assets/certificates/iso-22000-2018.png"
       },
       {
         "name": "HACCP",
-        "description": "Hazard Analysis and Critical Control Points — a globally recognized system for managing food safety risks through preventive controls.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuHACCP-placeholder-image"
+        "description": "Hazard Analysis Critical Control Points - Systematic approach to food safety from biological, chemical, and physical hazards in production processes",
+        "image": "/assets/certificates/haccp.jpg"
       },
       {
-        "name": "GMP Quality",
-        "description": "Good Manufacturing Practices — ensuring that products are consistently produced and controlled according to quality standards.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuGMP-placeholder-image"
+        "name": "FSSAI",
+        "description": "Food Safety and Standards Authority of India - Licensed food business operator ensuring compliance with Indian food safety standards and regulations",
+        "image": "/assets/certificates/fssai.jpg"
       },
       {
-        "name": "ISO 22000",
-        "description": "International Organization for Standardization — certifying that our food safety management system meets global standards for food processing and distribution.",
-        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-WHi_G1MVJUIBPr_CTybjrzuj2YDUoGYaMDoEop32sao7lD95zRYJdsLHl-79qsI_K1aWhWe9ETsOZ9_zcOpvj-8cp6kEjmDH_aZTcC7ORcRBuFr80i-zZEwNqfdIlHPLA90c2z0bVG5uBNSYmAsU_KPny6gmdD_u1xqjrOt3qJXG9iMNq6iKv_CbeLOBiqWz9pI71jKsaGcyon271Am_A1hqknHf3uxv5MRaVMjsnnliJIjxT3N9ezRRcNFqX_cGNp-6vlRAvYQ"
+        "name": "Organic India",
+        "description": "NPOP Organic Certification - Certified organic spice production meeting National Programme for Organic Production standards",
+        "image": "/assets/certificates/organic-india.jpg"
+      },
+      {
+        "name": "USDA Organic",
+        "description": "United States Department of Agriculture - USDA certified organic products meeting United States organic standards for international markets",
+        "image": "/assets/certificates/usda.png"
+      },
+      {
+        "name": "Spice Board of India",
+        "description": "Spice Board of India Certification - Certified spice production meeting Spice Board of India standards",
+        "image": "/assets/certificates/spice-board.jpeg"
+      },
+      {
+        "name": "APEDA",
+        "description": "APEDA Certification - Certified spice production meeting APEDA standards",
+        "image": "/assets/certificates/apeda.png"
       }
     ]
   },

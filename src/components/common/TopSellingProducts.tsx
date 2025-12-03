@@ -32,7 +32,7 @@ const TopSellingProductCard: React.FC<{ product: Product }> = React.memo(({ prod
   return (
     <Link
       to={`/products/${product.id}`}
-      className="group relative flex h-full w-full md:w-[260px] lg:w-[280px] flex-shrink-0 flex-col gap-4 rounded-xl border-2 border-primary-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-primary-500 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] md:hover:scale-105"
+      className="group relative flex h-full w-full md:w-[260px] lg:w-[280px] flex-shrink-0 flex-col gap-2 sm:gap-4 rounded-xl border-2 border-primary-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-primary-500 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] md:hover:scale-105"
     >
       {/* Top Selling Badge */}
       <div className="absolute top-3 right-3 z-10 bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
@@ -51,24 +51,25 @@ const TopSellingProductCard: React.FC<{ product: Product }> = React.memo(({ prod
       </div>
 
       {/* Product Info */}
-      <div className="flex flex-col gap-3 px-4 pb-4">
+      <div className="flex flex-col gap-2 sm:gap-3 px-3 sm:px-4 pb-3 sm:pb-4">
         <div>
-        <h3 className="text-base sm:text-lg font-bold leading-tight text-gray-900 dark:text-white group-hover:text-primary-500 transition-colors mb-1">
+          <h3 className="text-sm sm:text-base md:text-lg font-bold leading-tight text-gray-900 dark:text-white group-hover:text-primary-500 transition-colors mb-1 line-clamp-2">
             {product.name}
           </h3>
-        <p className="text-spice-300 dark:text-slate-400 text-xs sm:text-sm font-medium capitalize mb-2">
+          {/* Category - Hidden on mobile, shown on sm and up */}
+          <p className="hidden sm:block text-spice-300 dark:text-slate-400 text-xs sm:text-sm font-medium capitalize mb-2">
             {product.category}
           </p>
         </div>
 
         {/* Short Description */}
-        <p className="text-spice-300 dark:text-slate-400 text-xs sm:text-sm font-normal leading-normal line-clamp-2 min-h-[36px] sm:min-h-[40px]">
+        <p className="text-spice-300 dark:text-slate-400 text-xs sm:text-sm font-normal leading-normal line-clamp-2 sm:min-h-[40px]">
           {product.shortDescription || product.description}
         </p>
 
-        {/* Key Features */}
+        {/* Key Features - Hidden on mobile, shown on sm and up */}
         {product.details && (
-          <div className="flex flex-col gap-2 border-t border-spice-100 dark:border-slate-800 pt-3">
+          <div className="hidden sm:flex flex-col gap-2 border-t border-spice-100 dark:border-slate-800 pt-3">
             {product.details.culinaryUses && (
               <div className="flex items-start gap-2">
                 <ChefHat className="h-4 w-4 text-primary-500 flex-shrink-0 mt-0.5" />
@@ -88,11 +89,9 @@ const TopSellingProductCard: React.FC<{ product: Product }> = React.memo(({ prod
           </div>
         )}
 
-        {/* Removed origin */}
-
-        {/* Quick Specs */}
+        {/* Quick Specs - Hidden on mobile, shown on sm and up */}
         {specEntries.length > 0 && (
-          <div className="flex flex-wrap gap-2">
+          <div className="hidden sm:flex flex-wrap gap-2">
             {specEntries.map(([key, value]) => (
               <span
                 key={key}
@@ -104,8 +103,8 @@ const TopSellingProductCard: React.FC<{ product: Product }> = React.memo(({ prod
           </div>
         )}
 
-        {/* View Details Link */}
-        <div className="mt-2 pt-3 border-t border-primary-100 dark:border-slate-800">
+        {/* View Details Link - Hidden on mobile, shown on sm and up */}
+        <div className="hidden sm:block mt-2 pt-3 border-t border-primary-100 dark:border-slate-800">
           <span className="text-primary-500 text-sm font-semibold group-hover:underline inline-flex items-center gap-1">
             View Details <span className="text-xs">→</span>
           </span>
@@ -139,8 +138,8 @@ const TopSellingProductsComponent: React.FC<TopSellingProductsProps> = ({
           {title}
         </h2>
       )}
-      {/* Mobile Grid - mirror Products page spacing */}
-      <div className="grid grid-cols-1 gap-4 p-2 sm:hidden">
+      {/* Mobile Grid - 2 columns on mobile, matching Products page */}
+      <div className="grid grid-cols-2 gap-4 p-2 sm:hidden">
         {topSellingProducts.map((product) => (
           <TopSellingProductCard key={product.id} product={product} />
         ))}
