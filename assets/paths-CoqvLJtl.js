@@ -1,0 +1,1 @@
+function e(t){if(!t)return"";if(t.startsWith("http://")||t.startsWith("https://"))return t;const r="/rmspices/",s=r.endsWith("/")?r.slice(0,-1):r,n=t.startsWith("/")?t:`/${t}`;return s==="/"?n:`${s}${n}`}function i(t){return e(t)}export{e as a,i as n};

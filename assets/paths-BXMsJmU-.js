@@ -1,1 +1,0 @@
-function e(t){if(!t)return"";if(t.startsWith("http://")||t.startsWith("https://"))return t;const r="/",n=r.endsWith("/")?r.slice(0,-1):r,s=t.startsWith("/")?t:`/${t}`;return n==="/"?s:`${n}${s}`}function i(t){return e(t)}export{e as a,i as n};
