@@ -23,10 +23,15 @@ const Certifications = lazy(() => import('./pages/Certifications').then(module =
 const Contact = lazy(() => import('./pages/Contact').then(module => ({ default: module.Contact })));
 
 function App() {
+  // Get base path from Vite's environment variable
+  // This matches the base path configured in vite.config.ts
+  // Remove trailing slash and use empty string for root deployment
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '';
+  
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <BrowserRouter basename="/rmspices">
+        <BrowserRouter basename={basename}>
           <SEOHead />
           <MainLayout>
             <Routes>

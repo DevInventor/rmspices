@@ -9,7 +9,8 @@ import { ImageGallery } from '../components/common/ImageGallery';
 import { RelatedProducts } from '../components/common/RelatedProducts';
 import { SEOHead } from '../components/seo';
 import { getCompanyContact } from '../config/glob';
-import { Download, ChefHat, Heart, Eye, Sparkles, Package, Truck, Clock, Shield, AlertCircle } from 'lucide-react';
+// import { Download, ChefHat, Heart, Eye, Sparkles, Package, Truck, Clock, Shield, AlertCircle } from 'lucide-react';
+import { ChefHat, Heart, Eye, Sparkles, Package, Truck, Clock, Shield, AlertCircle } from 'lucide-react';
 import type { Product } from '../utils/translations';
 import { normalizeImagePath, normalizePath } from '../utils';
 
@@ -44,18 +45,18 @@ export const ProductDetail: React.FC = () => {
   const products = (productsContent.products as Product[]) || [];
   const product = products.find(p => p.id === id);
   const contact = getCompanyContact();
-  const downloadFileName = React.useMemo(() => {
-    if (!product) return undefined;
-    const now = new Date();
-    const dd = String(now.getDate()).padStart(2, '0');
-    const mm = String(now.getMonth() + 1).padStart(2, '0');
-    const yy = String(now.getFullYear()).slice(-2);
-    const safeName = product.name
-      .replace(/[^a-z0-9\s()-]/gi, '')
-      .trim()
-      .replace(/\s+/g, '-');
-    return `${safeName}-Specification-${dd}-${mm}-${yy}.pdf`;
-  }, [product]);
+  // const downloadFileName = React.useMemo(() => {
+  //   if (!product) return undefined;
+  //   const now = new Date();
+  //   const dd = String(now.getDate()).padStart(2, '0');
+  //   const mm = String(now.getMonth() + 1).padStart(2, '0');
+  //   const yy = String(now.getFullYear()).slice(-2);
+  //   const safeName = product.name
+  //     .replace(/[^a-z0-9\s()-]/gi, '')
+  //     .trim()
+  //     .replace(/\s+/g, '-');
+  //   return `${safeName}-Specification-${dd}-${mm}-${yy}.pdf`;
+  // }, [product]);
   
   const tabs = useMemo(() => {
     if (!product || !product.productCharacteristics) return [];
@@ -92,26 +93,26 @@ export const ProductDetail: React.FC = () => {
     window.open(whatsappUrl, '_blank');
   };
   
-  const handleDownloadSpec = async () => {
-    if (!product?.specSheetUrl) return;
-    const normalizedUrl = normalizePath(product.specSheetUrl);
-    try {
-      const response = await fetch(normalizedUrl, { cache: 'no-store' });
-      if (!response.ok) throw new Error('Failed to fetch spec sheet');
-      const blob = await response.blob();
-      const blobUrl = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = blobUrl;
-      link.download = downloadFileName || 'Specification.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
-    } catch {
-      // Fallback: open in new tab so the user can still access it
-      window.open(normalizePath(product.specSheetUrl), '_blank');
-    }
-  };
+  // const handleDownloadSpec = async () => {
+  //   if (!product?.specSheetUrl) return;
+  //   const normalizedUrl = normalizePath(product.specSheetUrl);
+  //   try {
+  //     const response = await fetch(normalizedUrl, { cache: 'no-store' });
+  //     if (!response.ok) throw new Error('Failed to fetch spec sheet');
+  //     const blob = await response.blob();
+  //     const blobUrl = URL.createObjectURL(blob);
+  //     const link = document.createElement('a');
+  //     link.href = blobUrl;
+  //     link.download = downloadFileName || 'Specification.pdf';
+  //     document.body.appendChild(link);
+  //     link.click();
+  //     document.body.removeChild(link);
+  //     setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+  //   } catch {
+  //     // Fallback: open in new tab so the user can still access it
+  //     window.open(normalizePath(product.specSheetUrl), '_blank');
+  //   }
+  // };
   
   if (!product) {
     return (
@@ -173,7 +174,7 @@ export const ProductDetail: React.FC = () => {
                 >
                   Request Quote
                 </button>
-                {product.specSheetUrl ? (
+                {/* {product.specSheetUrl ? (
                   <button
                     onClick={handleDownloadSpec}
                     className="flex items-center justify-center gap-2 px-4 py-2 sm:px-6 sm:py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg hover:bg-white/20 transition-colors border border-white/20 text-sm sm:text-base"
@@ -192,7 +193,7 @@ export const ProductDetail: React.FC = () => {
                     <span className="hidden sm:inline">Download Spec Sheet</span>
                     <span className="sm:hidden">Download</span>
                   </button>
-                )}
+                )} */}
               </div>
             </div>
           </div>
@@ -345,27 +346,23 @@ export const ProductDetail: React.FC = () => {
         </div>
 
         {/* Packing Images & Brand Labels */}
-        {(product.packingImages || product.brandLabels) && (
-          <div className="mb-8 sm:mb-12 md:mb-16">
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-              {language === 'eng' ? 'Packing Images & Brand Labels' : 'Verpackungsbilder & Markenetiketten'}
-            </h2>
-            <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
-              {product.packingImages && product.packingImages.length > 0 && (
-                <ImageGallery
-                  images={product.packingImages.map(img => ({ ...img, src: normalizePath(img.src) }))}
-                  title={language === 'eng' ? 'Packing Images' : 'Verpackungsbilder'}
-                />
-              )}
-              {product.brandLabels && product.brandLabels.length > 0 && (
-                <ImageGallery
-                  images={product.brandLabels.map(img => ({ ...img, src: normalizePath(img.src) }))}
-                  title={language === 'eng' ? 'Brand Labels' : 'Markenetiketten'}
-                />
-              )}
-            </div>
+        <div className="mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
+            {language === 'eng' ? 'Packing Images & Brand Labels' : 'Verpackungsbilder & Markenetiketten'}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+            <ImageGallery
+              images={product.packingImages?.map(img => ({ ...img, src: normalizePath(img.src) })) || []}
+              title={language === 'eng' ? 'Packing Images' : 'Verpackungsbilder'}
+              language={language}
+            />
+            <ImageGallery
+              images={product.brandLabels?.map(img => ({ ...img, src: normalizePath(img.src) })) || []}
+              title={language === 'eng' ? 'Brand Labels' : 'Markenetiketten'}
+              language={language}
+            />
           </div>
-        )}
+        </div>
 
         {/* Packaging & Logistics */}
         {product.logistics && (

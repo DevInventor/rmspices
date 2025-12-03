@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, Image as ImageIcon } from 'lucide-react';
 
 interface ImageGalleryProps {
   images: Array<{
@@ -8,9 +8,10 @@ interface ImageGalleryProps {
     title?: string;
   }>;
   title?: string;
+  language?: 'eng' | 'ger';
 }
 
-const ImageGalleryComponent: React.FC<ImageGalleryProps> = ({ images, title }) => {
+const ImageGalleryComponent: React.FC<ImageGalleryProps> = ({ images, title, language = 'eng' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -56,11 +57,33 @@ const ImageGalleryComponent: React.FC<ImageGalleryProps> = ({ images, title }) =
   }, [isLightboxOpen, prevLightboxImage, nextLightboxImage, closeLightbox]);
 
   // Memoize current image data
-  const currentImage = useMemo(() => images[currentIndex], [images, currentIndex]);
-  const lightboxImage = useMemo(() => images[lightboxIndex], [images, lightboxIndex]);
+  const currentImage = useMemo(() => images?.[currentIndex], [images, currentIndex]);
+  const lightboxImage = useMemo(() => images?.[lightboxIndex], [images, lightboxIndex]);
 
+  // Show "Coming Soon" placeholder when no images
   if (!images || images.length === 0) {
-    return null;
+    return (
+      <div className="bg-white dark:bg-slate-900 border border-spice-200 dark:border-slate-800 rounded-xl p-4 sm:p-6 md:p-8 transition-colors">
+        {title && (
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">{title}</h3>
+        )}
+        <div className="relative aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 dark:from-slate-800 dark:to-slate-900 border-2 border-dashed border-spice-200 dark:border-slate-700 flex items-center justify-center">
+          <div className="flex flex-col items-center justify-center text-center px-4 py-8 sm:py-12">
+            <div className="mb-4 sm:mb-6 p-4 sm:p-6 rounded-full bg-primary-50 dark:bg-primary-900/20">
+              <ImageIcon className="h-8 w-8 sm:h-12 sm:w-12 text-primary-500 dark:text-primary-400" />
+            </div>
+            <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-700 dark:text-slate-300 mb-2">
+              {language === 'eng' ? 'Coming Soon' : 'Demnächst verfügbar'}
+            </h4>
+            <p className="text-sm sm:text-base text-gray-500 dark:text-slate-400 max-w-md">
+              {language === 'eng' 
+                ? 'Images will be available soon. Please check back later.' 
+                : 'Bilder werden in Kürze verfügbar sein. Bitte schauen Sie später noch einmal vorbei.'}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (

@@ -10,14 +10,15 @@
   "loadMore": "Mehr Produkte laden",
   "products": [
     {
-      "id": "cumin",
+      "id": "cumin-seeds",
       "topSelling": true,
       "name": "Kreuzkümmel (Jeera)",
       "category": "Ganze Gewürze",
       "description": "Premium-Kreuzkümmelsamen aus den trockenen Regionen von Rajasthan, bekannt für ihren intensiven Duft und erdigen Geschmack. Diese Samen werden sorgfältig geerntet und verarbeitet, um ihre natürlichen Öle und essentiellen Verbindungen zu erhalten.",
       "shortDescription": "Kreuzkümmelsamen sind die getrockneten Samen der Cuminum cyminum Pflanze, weit verbreitet als Gewürz, besonders in der indischen, nahöstlichen, lateinamerikanischen und nordafrikanischen Küche.",
-      "backgroundImage": "https://plus.unsplash.com/premium_photo-1723874683717-006f24c93975",
-      "productImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+      "backgroundImage": "/assets/products/cumin-seeds/background-1.png",
+      "productImage": "/assets/products/cumin-seeds/product.png",
+      "specSheetUrl": "/assets/product-spces/cumin-seeds.pdf",
       "specifications": {
         "form": "Ganze Samen",
         "moisture": "8-10%",
@@ -60,39 +61,23 @@
         "allergens": "Frei von Allergenen"
       },
       "packingImages": [
-        {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkBv7rfb9H2W8sRa2p2TgdXmnXBpYCJiiNbPexkhG4s7luBMjgeDn-rvg3ABDjjD6LrZgAzmmKdJvfwUlYzbbviwEjd-9BV-oUToWwAprBHXS1LjFr1lzYZCK2Tt4Bu8f0u1b3CttvbowycWK2fKlbdsX7YKUMtJQLO04sqm8H1ro1zBFWWEALIoc8_Z80_HO3Gusdwc5b7DK4Bc9dUUhr5abgkuVQbjcr2r-aPwQXkAMRGKsvSvX0r3-zedFnjLVO80dbrUGZt0E",
-          "alt": "Kreuzkümmel-Verpackung",
-          "title": "Premium Kraftsack-Verpackung"
-        },
-        {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxP1L7N_kEplgnxlS5uCFFQPuK3_B_z7zGqFCQafEylnoQHv-XF3IOZFWwmvoVsyiyUh4MXpRdb7zZAOc1qO82An8e3DKL-rKCZ69pQfMOvtX0jMhQGbcVKF6d6i4Oyo_R6oyu5PktBCjCf2nKwXIIUxW_Gf8z2gLBjQgTDaoNCcfXxdnc9b8OhcRNkPBySR4ux_PyGywMeQg1frJKaKckp4-qeGXrZgzFVULfZLg9zWK5LxJRyTiYKFAZMz257g2vGXtemiM3GMM",
-          "alt": "Kreuzkümmel-Container",
-          "title": "Export-Container-Beladung"
-        },
-        {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAktrKiPZ8UxNJxU73KACMnwAJGykwMOUPhzCa0uzCeflWSzSewmePW18JkLwepp0MNNgQgSanFhahd7gmjt7vu0_CbOe4RxE0qLVhMVYws_2e6NgwidsGLBWp54yBJdUHVWzwuRvb66AePuUZk4ts40k_dzAsNk9tZazJgkUaL1eUf85wsu8gsBxJ5rPy-XOS8iy3dyLw3J5gexwAxbq1PzNurDrVD_zwfX02bc70Ei0eyBV0JHKUlqhyaqXysVKbbgbEdi58IscU",
-          "alt": "Kreuzkümmel-Qualitätskontrolle",
-          "title": "Qualitätsinspektion"
-        }
+        { "src": "/assets/products/cumin-seeds/packing-1.jpg", "alt": "Kreuzkümmel-Verpackung", "title": "Premium Kraftsack-Verpackung" },
+        { "src": "/assets/products/cumin-seeds/packing-2.jpg", "alt": "Kreuzkümmel-Container", "title": "Export-Container-Beladung" }
       ],
       "brandLabels": [
-        {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
-          "alt": "RM Gewürze Markenlabel",
-          "title": "RM Gewürze Premium-Label"
-        }
+        { "src": "/assets/products/cumin-seeds/brand-1.png", "alt": "RM Gewürze Markenlabel", "title": "RM Gewürze Premium-Label" }
       ]
     },
     {
       "id": "fennel-seeds",
-      "topSelling": false,
+      "topSelling": true,
       "name": "Fenchelsamen (Saunf)",
       "category": "Ganze Gewürze",
       "description": "Süße und aromatische Fenchelsamen mit einem Lakritz-ähnlichen Geschmack. Perfekt für Verdauungszwecke und um Gerichten einen einzigartigen Geschmack zu verleihen.",
       "shortDescription": "Fenchelsamen sind aromatische getrocknete Früchte mit einem süßen, lakritzähnlichen Geschmack, häufig in der indischen, mediterranen und nahöstlichen Küche verwendet.",
-      "backgroundImage": "https://images.unsplash.com/photo-1701189975842-591ebd1e26a2",
-      "productImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
+      "backgroundImage": "/assets/products/fennel-seeds/background.png",
+      "productImage": "/assets/products/fennel-seeds/product.png",
+      "specSheetUrl": "/assets/product-spces/fennel-seeds.pdf",
       "specifications": {
         "form": "Ganze Samen",
         "flavor": "Süß & Aromatisch",
@@ -135,35 +120,24 @@
         "allergens": "Frei von Allergenen"
       },
       "packingImages": [
-        {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkBv7rfb9H2W8sRa2p2TgdXmnXBpYCJiiNbPexkhG4s7luBMjgeDn-rvg3ABDjjD6LrZgAzmmKdJvfwUlYzbbviwEjd-9BV-oUToWwAprBHXS1LjFr1lzYZCK2Tt4Bu8f0u1b3CttvbowycWK2fKlbdsX7YKUMtJQLO04sqm8H1ro1zBFWWEALIoc8_Z80_HO3Gusdwc5b7DK4Bc9dUUhr5abgkuVQbjcr2r-aPwQXkAMRGKsvSvX0r3-zedFnjLVO80dbrUGZt0E",
-          "alt": "Fenchelsamen-Verpackung",
-          "title": "Premium Kraftsack-Verpackung"
-        },
-        {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxP1L7N_kEplgnxlS5uCFFQPuK3_B_z7zGqFCQafEylnoQHv-XF3IOZFWwmvoVsyiyUh4MXpRdb7zZAOc1qO82An8e3DKL-rKCZ69pQfMOvtX0jMhQGbcVKF6d6i4Oyo_R6oyu5PktBCjCf2nKwXIIUxW_Gf8z2gLBjQgTDaoNCcfXxdnc9b8OhcRNkPBySR4ux_PyGywMeQg1frJKaKckp4-qeGXrZgzFVULfZLg9zWK5LxJRyTiYKFAZMz257g2vGXtemiM3GMM",
-          "alt": "Fenchelsamen-Container",
-          "title": "Export-Container-Beladung"
-        }
+        { "src": "/assets/products/fennel-seeds/packing-1.jpg", "alt": "Fenchelsamen-Verpackung", "title": "Premium Kraftsack-Verpackung" },
+        { "src": "/assets/products/fennel-seeds/packing-2.jpg", "alt": "Fenchelsamen-Container", "title": "Export-Container-Beladung" }
       ],
       "brandLabels": [
-        {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
-          "alt": "RM Gewürze Markenlabel",
-          "title": "RM Gewürze Premium-Label"
-        }
+        { "src": "/assets/products/fennel-seeds/brand-1.png", "alt": "RM Gewürze Markenlabel", "title": "RM Gewürze Premium-Label" }
       ]
     },
     {
       "id": "coriander-seeds",
-      "topSelling": false,
+      "topSelling": true,
       "name": "Koriandersamen (Dhaniya)",
       "category": "Ganze Gewürze",
       "description": "Milde und zitrusartige Koriandersamen, die den Geschmack jedes Currys verbessern. Bezogen von den feinsten Korianderpflanzen.",
       "shortDescription": "Koriandersamen sind die getrockneten Früchte der Korianderpflanze, bekannt für ihren zitrusartigen, leicht süßen Geschmack mit einem warmen, würzigen Unterton.",
-      "backgroundImage": "https://plus.unsplash.com/premium_photo-1723874683717-006f24c93975",
-      "productImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
-      "image": "https://images.unsplash.com/photo-1608797179072-4268dd68eff2",
+      "backgroundImage": "/assets/products/coriander-seeds/background-1.png",
+      "productImage": "/assets/products/coriander-seeds/product.png",
+      "specSheetUrl": "/assets/product-spces/coriander-seeds.pdf",
+      "image": "",
       "specifications": {
         "form": "Ganze Samen",
         "aroma": "Zitrusartig",
@@ -206,23 +180,440 @@
         "allergens": "Frei von Allergenen"
       },
       "packingImages": [
+        { "src": "/assets/products/coriander-seeds/packing-1.jpg", "alt": "Koriandersamen-Verpackung", "title": "Premium Kraftsack-Verpackung" },
+        { "src": "/assets/products/coriander-seeds/packing-2.jpg", "alt": "Koriandersamen-Container", "title": "Export-Container-Beladung" }
+      ],
+      "brandLabels": [
+        { "src": "/assets/products/coriander-seeds/brand-1.png", "alt": "RM Gewürze Markenlabel", "title": "RM Gewürze Premium-Label" }
+      ]
+    },
+    {
+      "id": "sesame-seeds-til",
+      "topSelling": true,
+      "name": "Sesamsamen (Til)",
+      "category": "Ganze Samen / Ölsaaten-Gewürze",
+      "description": "Premium Export-Qualität Sesamsamen (Til), verarbeitet, gereinigt und sortiert, mit nussigem Geschmack und hoher Reinheit für den internationalen Handel.",
+      "shortDescription": "Ganze Sesamsamen mit starkem warmem Aroma und sauberer Export-Qualität, ideal für Bäckerei-Toppings, Ölextraktion und Gewürzung.",
+      "backgroundImage": "/assets/products/sesame-seeds-til/background.jpeg",
+      "productImage": "/assets/products/sesame-seeds-til/product.png",
+      "specSheetUrl": "/assets/product-spces/sesame-seeds-til.pdf",
+      "specifications": {
+        "form": "Ganze Samen",
+        "aroma": "Starkes, warmes Aroma",
+        "packaging": "20kg / 25kg / 30kg / 50kg Säcke, PP/Kraft mit Innenfolie",
+        "color": "Graubraun"
+      },
+      "details": {
+        "appearance": "Ganze Samen, oval-kleine Größe, graubraune Farbe, maschinell gereinigt & sortex gereinigt, frei von Verunreinigungen und Ranzigkeit.",
+        "flavorAroma": "Nussiger Geschmack und warmes Aroma, typisch für Sesamsamen.",
+        "culinaryUses": "Verwendet als Brot- und Gebäck-Topping, Sushi und Salate, Granola, gepresst für Sesamöl, Bäckerei- und Süßwarenanwendungen.",
+        "healthBenefits": "Reich an gesunden Fetten, reich an Protein, Ballaststoffen und Mineralien wie Calcium, Magnesium, Eisen und Zink. Enthält Antioxidantien wie Sesamin und Sesamol."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Ganz",
+          "purity": ["99,5%", "99%", "95%"]
+        },
+        "chemicalParameters": {
+          "moisture": "9% Max",
+          "ashContent": "9,5% Max",
+          "acidInsolubleAsh": "1,5% Max",
+          "volatileOil_ml_per100g": "1% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Nicht vorhanden",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Fuß", "quantityMetricTons": 13 },
+          { "type": "40 Fuß", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/30/50 kg, PP oder Krafttaschen mit Innenfolie (individualisierte Export-Verpackung verfügbar).",
+        "shelfLife": "12 Monate unter ordnungsgemäßen Lagerbedingungen.",
+        "pesticides": "Einhaltung der Anforderungen für Pestizidrückstände gemäß den Bestimmungen des Ziellandes.",
+        "allergens": "Frei von Allergenen"
+      },
+      "packingImages": [
+        { "src": "/assets/products/sesame-seeds-til/packing-1.jpg", "alt": "Sesamsamen Export-Verpackungssack", "title": "Premium Kraftsack-Verpackung – Sesamsamen" },
+        { "src": "/assets/products/sesame-seeds-til/packing-2.jpg", "alt": "Sesamsamen Container-Beladung", "title": "Container-Beladung – Sesamsamen" }
+      ],
+      "brandLabels": [
+        { "src": "/assets/products/sesame-seeds-til/brand-1.png", "alt": "RM Gewürze Label", "title": "RM Gewürze Premium-Label" }
+      ]
+    },
+    {
+      "id": "fenugreek-seeds-methi",
+      "topSelling": false,
+      "name": "Bockshornkleesamen (Methi)",
+      "category": "Ganze Gewürze",
+      "description": "Bockshornkleesamen (Methi) von RM Gewürze werden sorgfältig gereinigt und sortiert für Export-Qualität, mit einem ausgeprägten aromatischen Geschmack und mehreren gesundheitlichen Vorteilen.",
+      "shortDescription": "Aromatische Bockshornkleesamen mit warmem, leicht bitterem Geschmack, ideal für Gewürzmischungen, Pickles und ernährungsphysiologische Anwendungen.",
+      "backgroundImage": "/assets/products/fenugreek-seeds-methi/background.jpeg",
+      "productImage": "/assets/products/fenugreek-seeds-methi/product.png",
+      "specSheetUrl": "/assets/product-spces/fenugreek-seeds-methi.pdf",
+      "image": "",
+      "specifications": {
+        "form": "Ganze Samen",
+        "aroma": "Stark aromatisch, charakteristischer Bockshornklee-Duft",
+        "packaging": "20kg / 25kg / 50kg Säcke",
+        "color": "Goldbraun bis Beige"
+      },
+      "details": {
+        "appearance": "Ganze Bockshornkleesamen, klein, unregelmäßig geformt, goldbraun bis beige Farbe, einheitliche Größe und frei von Fremdstoffen.",
+        "flavorAroma": "Ausgeprägter, warmer, leicht bitterer Geschmack mit einem aromatischen Duft, der beim Rösten oder Mahlen intensiv wird.",
+        "culinaryUses": "Verwendet in Pickles, Gewürzmischungen, Currypulver, Brot und Backwaren, Nahrungsergänzungsmitteln und Kräuterformulierungen.",
+        "healthBenefits": "Bekannt für die Unterstützung der Verdauung, Förderung der Stoffwechselgesundheit, Hilfe bei der Regulierung des Blutzuckerspiegels und Bereitstellung von reichlich Ballaststoffen und Nährstoffen."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Ganze Samen",
+          "purity": ["99%", "98%", "95%"]
+        },
+        "chemicalParameters": {
+          "moisture": "10% Max",
+          "ashContent": "8% Max",
+          "acidInsolubleAsh": "2% Max",
+          "volatileOil_ml_per100g": "0,4-0,7% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Nicht vorhanden",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Fuß", "quantityMetricTons": 13 },
+          { "type": "40 Fuß", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/50 kg PP oder Krafttaschen mit Innenfolie (individualisierte Export-Verpackung verfügbar).",
+        "shelfLife": "12-18 Monate unter kühlen, trockenen Lagerbedingungen.",
+        "pesticides": "Einhaltung der globalen Pestizidrückstands-Grenzwerte (EU, USA, etc.).",
+        "allergens": "Frei von Hauptallergenen; gereinigt und sortiert."
+      },
+      "packingImages": [
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBkBv7rfb9H2W8sRa2p2TgdXmnXBpYCJiiNbPexkhG4s7luBMjgeDn-rvg3ABDjjD6LrZgAzmmKdJvfwUlYzbbviwEjd-9BV-oUToWwAprBHXS1LjFr1lzYZCK2Tt4Bu8f0u1b3CttvbowycWK2fKlbdsX7YKUMtJQLO04sqm8H1ro1zBFWWEALIoc8_Z80_HO3Gusdwc5b7DK4Bc9dUUhr5abgkuVQbjcr2r-aPwQXkAMRGKsvSvX0r3-zedFnjLVO80dbrUGZt0E",
-          "alt": "Koriandersamen-Verpackung",
-          "title": "Premium Kraftsack-Verpackung"
+          "src": "https://pjmexport.com/wp-content/uploads/2022/06/fenugreek-seeds-bags.jpg",
+          "alt": "Bockshornkleesamen Export-Verpackung",
+          "title": "Bockshornkleesamen Krafttaschen"
         },
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxP1L7N_kEplgnxlS5uCFFQPuK3_B_z7zGqFCQafEylnoQHv-XF3IOZFWwmvoVsyiyUh4MXpRdb7zZAOc1qO82An8e3DKL-rKCZ69pQfMOvtX0jMhQGbcVKF6d6i4Oyo_R6oyu5PktBCjCf2nKwXIIUxW_Gf8z2gLBjQgTDaoNCcfXxdnc9b8OhcRNkPBySR4ux_PyGywMeQg1frJKaKckp4-qeGXrZgzFVULfZLg9zWK5LxJRyTiYKFAZMz257g2vGXtemiM3GMM",
-          "alt": "Koriandersamen-Container",
-          "title": "Export-Container-Beladung"
+          "src": "https://pjmexport.com/wp-content/uploads/2022/06/fenugreek-seeds-container.jpg",
+          "alt": "Bockshornkleesamen Container-Beladung",
+          "title": "Container-Beladung Bockshornkleesamen"
         }
       ],
       "brandLabels": [
         {
-          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCj0Zs8zI8KTln3Bqtaf4B1tA_mX2CAX4QI3SpmtmFFCD5wdNoFCp5aaHgwUVEnT7B4aMkivTkQMTeQ77LOp6UiAc9tK8gmMJ1j1WpLHoF1MPuN3dF6Mc5NOJVMgduMrKk9alzqMNOaRgjFPVVJrbaiqmPyHXLrixa_OXivTLLHyS_mUlQ9AwVvdJdA62lE9Hf5BTeVkyHBcFFfimGBgtEMxaDZYQR5PvGhzyBza2zVncsX1EBNWB5iv26z35UcawyHWrtNfu_hnJQ",
-          "alt": "RM Gewürze Markenlabel",
-          "title": "RM Gewürze Premium-Label"
+          "src": "https://yourdomain.com/assets/images/rmspices-label.png",
+          "alt": "RM Gewürze Label",
+          "title": "RM Gewürze Premium Export-Label"
         }
+      ]
+    },
+    {
+      "id": "kalonji-seeds-nigella",
+      "topSelling": false,
+      "name": "Kalonji-Samen (Nigella-Samen / Schwarze Kreuzkümmelsamen / Kala Jeera)",
+      "category": "Ganze Gewürze",
+      "description": "Premium Export-Qualität Kalonji-Samen (Nigella sativa), auch bekannt als schwarzer Kreuzkümmel oder Kala Jeera, sorgfältig gereinigt und sortiert aus der Unjha-Region. Diese aromatischen Samen bringen einen einzigartigen Geschmack und Premium-Appeal für Gewürzmischungen und internationale Märkte.",
+      "shortDescription": "Dunkle, aromatische Nigella-Samen mit rauchig-erdigem Geschmack, ideal für hochwertige Gewürzmischungen, Bäckereianwendungen und funktionelle Gewürzmärkte.",
+      "backgroundImage": "/assets/products/kalonji-seeds-nigella/background.png",
+      "productImage": "/assets/products/kalonji-seeds-nigella/product.png",
+      "specSheetUrl": "/assets/product-spces/kalonji-seeds-nigella.pdf",
+      "image": "",
+      "specifications": {
+        "form": "Ganze Samen",
+        "aroma": "Charakteristisches rauchig-erdiges Aroma mit Hauch von Zwiebel/Knoblauch-Noten",
+        "packaging": "20kg / 25kg / 50kg Säcke",
+        "color": "Schwarz bis dunkelbraun"
+      },
+      "details": {
+        "appearance": "Kleine, matte schwarze bis dunkelbraune Samen, leicht eckige Form, einheitliche Größe, frei von Fremdstoffen.",
+        "flavorAroma": "Ausgeprägter rauchig-erdiger Geschmack mit subtilen Zwiebel-Knoblauch-Untertönen, wird beim Rösten oder beim Tempern intensiver.",
+        "culinaryUses": "Verwendet in indischen Pickles, Bäckereiprodukten, Gewürzmischungen (z.B. Panch Phoron), dekorativen Broten, hochwertigen kulinarischen Anwendungen.",
+        "healthBenefits": "Reich an Antioxidantien, unterstützt die Verdauung, hat traditionelle Verwendungen in Wellness-Formulierungen, fördert die Stoffwechselgesundheit."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Ganze Samen",
+          "purity": ["99%", "98%", "95%"]
+        },
+        "chemicalParameters": {
+          "moisture": "9% Max",
+          "ashContent": "8% Max",
+          "acidInsolubleAsh": "1,5% Max",
+          "volatileOil_ml_per100g": "0,3-0,6% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Nicht vorhanden",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Fuß", "quantityMetricTons": 13 },
+          { "type": "40 Fuß", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/30/50 kg, PP oder Krafttaschen mit Innenfolie (individualisierte Export-Verpackung verfügbar).",
+        "shelfLife": "12-18 Monate unter ordnungsgemäßen trockenen Lagerbedingungen.",
+        "pesticides": "Einhaltung der internationalen maximalen Rückstands-Grenzwerte (MRLs) für Zielländer.",
+        "allergens": "Frei von Allergenen und Fremdstoffen; gereinigt, sortiert und für den Export klassifiziert."
+      },
+      "packingImages": [
+        { "src": "/assets/products/kalonji-seeds-nigella/packing-1.jpg", "alt": "Kalonji-Samen Export-Verpackungssack", "title": "Premium Kraftsack-Verpackung – Kalonji-Samen" },
+        { "src": "/assets/products/kalonji-seeds-nigella/packing-2.jpg", "alt": "Container-Beladung Kalonji-Samen", "title": "Container-Beladung – Kalonji-Samen" }
+      ],
+      "brandLabels": [
+        { "src": "/assets/products/kalonji-seeds-nigella/brand-1.png", "alt": "RM Gewürze Premium-Label", "title": "RM Gewürze Export-Label" }
+      ]
+    },
+    {
+      "id": "ajwain-seeds-carom",
+      "topSelling": false,
+      "name": "Ajwain-Samen (Carom-Samen)",
+      "category": "Ganze Gewürze",
+      "description": "Premium Export-Qualität Ajwain-Samen (Trachyspermum ammi), auch bekannt als Carom-Samen, mit authentischer indischer Herkunft, hoher Reinheit, starkem Aroma und exportfertigen Qualitätsstandards.",
+      "shortDescription": "Aromatische Carom-Samen mit thymianähnlichem Aroma und warmem, scharfem Geschmack, ideal für Gewürzmischungen, Einlegen, Backen und globale Aromen.",
+      "backgroundImage": "/assets/products/ajwain-seeds-carom/background.png",
+      "productImage": "/assets/products/ajwain-seeds-carom/product.png",
+      "specSheetUrl": "/assets/product-spces/ajwain-seeds-carom.pdf",
+      "image": "",
+      "specifications": {
+        "form": "Ganze Samen",
+        "aroma": "Thymianähnlich, starkes scharfes Aroma",
+        "packaging": "20kg / 25kg / 50kg Säcke",
+        "color": "Hell bis dunkel grünlich-braun"
+      },
+      "details": {
+        "appearance": "Ganze Carom-Samen, klein, gerippte Oberfläche, Farbe von hell grünlich-braun bis dunkel grünlich-braun; einheitliche Größe und sauberes Aussehen.",
+        "flavorAroma": "Warmer, scharfer Geschmack mit thymianähnlichem Aroma; wird beim Rösten oder Mahlen intensiver.",
+        "culinaryUses": "Verwendet in indischer und nahöstlicher Küche zum Tempern, Broten, Gebäck, Pickles, Gewürzmischungen und Kräuteranwendungen.",
+        "healthBenefits": "Traditionell verwendet zur Unterstützung der Verdauung, anti-blähende Wirkung, kann die Stoffwechselgesundheit und Nährstoffaufnahme unterstützen."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Ganze Samen",
+          "purity": ["99,5%", "99%", "98%"]
+        },
+        "chemicalParameters": {
+          "moisture": "9% Max",
+          "ashContent": "8% Max",
+          "acidInsolubleAsh": "1,5% Max",
+          "volatileOil_ml_per100g": "0,4-0,7% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Nicht vorhanden",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Fuß", "quantityMetricTons": 13 },
+          { "type": "40 Fuß", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/30/50 kg PP oder Krafttaschen mit Innenfolie (individualisierte Export-Verpackung verfügbar).",
+        "shelfLife": "12-18 Monate unter ordnungsgemäßen trockenen Lagerbedingungen.",
+        "pesticides": "Einhaltung der internationalen Pestizidrückstands-Grenzwerte (EU, USA etc.).",
+        "allergens": "Frei von Hauptallergenen; gereinigt, sortiert, Export-Qualität."
+      },
+      "packingImages": [
+        { "src": "/assets/products/ajwain-seeds-carom/packing-1.jpg", "alt": "Ajwain-Samen Export-Verpackungssack", "title": "Ajwain-Samen Export Kraftsack" },
+        { "src": "/assets/products/ajwain-seeds-carom/packing-2.jpg", "alt": "Ajwain-Samen Container-Beladung", "title": "Ajwain-Samen Bulk Export-Container" }
+      ],
+      "brandLabels": [
+        { "src": "/assets/products/ajwain-seeds-carom/brand-1.png", "alt": "RM Gewürze Premium-Label", "title": "RM Gewürze Export-Label" }
+      ]
+    },
+    {
+      "id": "cumin-powder-jeera",
+      "topSelling": false,
+      "name": "Kreuzkümmelpulver (Jeera-Pulver)",
+      "category": "Gemahlene Gewürze",
+      "description": "Premium Export-Qualität Kreuzkümmelpulver (Jeera-Pulver) aus hochwertigen Kreuzkümmelsamen (Cuminum cyminum), angeboten von RM Gewürze für globale Märkte, gereinigt, gemahlen und verpackt nach Export-Spezifikationen.",
+      "shortDescription": "Aromatisches Kreuzkümmelpulver mit reichem Kreuzkümmelsamen-Geschmack und Duft, ideal für Gewürzmischungen, Gewürzungen, Pickles und kulinarische Anwendungen.",
+      "backgroundImage": "/assets/products/cumin-powder-jeera/background.png",
+      "productImage": "/assets/products/cumin-powder-jeera/product.png",
+      "image": "",
+      "specSheetUrl": "/assets/product-spces/cumin-powder-jeera.pdf",
+      "specifications": {
+        "form": "Pulver",
+        "aroma": "Starkes, charakteristisches Kreuzkümmel-Aroma",
+        "packaging": "20kg / 25kg / 30kg / 50kg Säcke (PP/Kraft mit Innenfolie)",
+        "color": "Graubraun"
+      },
+      "details": {
+        "appearance": "Feines Pulver aus Kreuzkümmelsamen; graubraune Farbe; frei von Fremdstoffen.",
+        "flavorAroma": "Ausgeprägtes Kreuzkümmelsamen-Aroma mit warmem, erdigem, leicht würzigem Geschmack.",
+        "culinaryUses": "Verwendet in Reis, gefülltem Gemüse, Currys, Pickles und Gewürzmischungen; wird auch zur Aromatisierung von Likören und Cordials verwendet.",
+        "healthBenefits": "Wirkt als Stimulans, karminativ und magenstärkend; traditionelle Verwendung zur Unterstützung der Verdauung."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Pulver",
+          "purity": ["100%"]
+        },
+        "chemicalParameters": {
+          "moisture": "12% Max",
+          "ashContent": "8% Max",
+          "acidInsolubleAsh": "1% Max",
+          "volatileOil_ml_per100g": "2% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "50,000",
+          "salmonella_375g": "Nicht vorhanden",
+          "yeastAndMold_cfu_per_g": "100",
+          "coliforms_cfu_per_g": "",
+          "EColi_cfu_per_g": ""
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Fuß", "quantityMetricTons": 16 },
+          { "type": "40 Fuß", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/30/50 kg, PP oder Krafttaschen mit Innenfolie (individualisierte Verpackung verfügbar).",
+        "shelfLife": "12 Monate unter ordnungsgemäßen Lagerbedingungen.",
+        "pesticides": "Einhaltung der Anforderungen für Pestizidrückstände gemäß den Bestimmungen des Ziellandes.",
+        "allergens": "Frei von Allergenen"
+      },
+      "packingImages": [
+        { "src": "/assets/products/cumin-powder-jeera/packing-1.jpg", "alt": "Kreuzkümmelpulver Export-Verpackungssack", "title": "Export-Verpackung – Kreuzkümmelpulver" },
+        { "src": "/assets/products/cumin-powder-jeera/packing-2.jpg", "alt": "Kreuzkümmelpulver Container-Beladung", "title": "Container-Beladung – Kreuzkümmelpulver" }
+      ],
+      "brandLabels": [
+        { "src": "/assets/products/cumin-powder-jeera/brand-1.png", "alt": "RM Gewürze Label", "title": "RM Gewürze Premium-Label" }
+      ]
+    },
+    {
+      "id": "coriander-powder-dhaniya-powder",
+      "topSelling": false,
+      "name": "Korianderpulver (Dhaniya-Pulver)",
+      "category": "Gemahlene Gewürze",
+      "description": "Export-Qualität Korianderpulver (Dhaniya) aus hochwertigen Koriandersamen, verarbeitet und verpackt nach strengen Export-Standards für globale Märkte.",
+      "shortDescription": "Feines, zitrus-aromatisches Korianderpulver ideal für Gewürzmischungen, Currys, Pickles und internationale Lebensmittelverarbeitung.",
+      "backgroundImage": "/assets/products/coriander-powder-dhaniya-powder/background.jpeg",
+      "productImage": "/assets/products/coriander-powder-dhaniya-powder/product.png",
+      "image": "",
+      "specSheetUrl": "/assets/product-spces/coriander-powder-dhaniya-powder.pdf",
+      "specifications": {
+        "form": "Pulver",
+        "aroma": "Angenehm und aromatisch",
+        "packaging": "20/25/30/50 kg PP/Krafttaschen mit Innenfolie (individualisierte Export-Verpackung verfügbar).",
+        "color": "Hellbraun bis gelblich-braun"
+      },
+      "details": {
+        "appearance": "Feines Pulver aus Koriandersamen; hellbraun bis gelblich-braune Farbe; maschinell gereinigt & sortex gereinigt.",
+        "flavorAroma": "Zitrusartiges Aroma, warm und leicht süß; verstärkt den Geschmack in vielen kulinarischen Anwendungen.",
+        "culinaryUses": "Verwendet in Currys, Suppen, Gewürzmischungen, Pickles, Bäckerei und Getränke-Aromatisierung.",
+        "healthBenefits": "Reich an Ballaststoffen und Mineralien; traditionelle Verwendung zur Unterstützung der Verdauung und allgemeinen Gesundheit."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "10% Max auf 35 Mesh",
+          "purity": ["99,5%", "99%", "95%"]
+        },
+        "chemicalParameters": {
+          "moisture": "10% Max",
+          "ashContent": "9,5% Max",
+          "acidInsolubleAsh": "1% Min"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Nicht vorhanden",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Fuß", "quantityMetricTons": 13 },
+          { "type": "40 Fuß", "quantityMetricTons": 26 }
+        ],
+        "packing": "20/25/30/50 kg, PP oder Krafttaschen mit Innenfolie (individualisierte Export-Verpackung verfügbar).",
+        "shelfLife": "12 Monate unter ordnungsgemäßen Lagerbedingungen.",
+        "pesticides": "Einhaltung der Anforderungen für Pestizidrückstände gemäß den Bestimmungen des Ziellandes.",
+        "allergens": "Frei von Allergenen"
+      },
+      "packingImages": [
+        { "src": "/assets/products/coriander-powder-dhaniya-powder/packing-1.jpg", "alt": "Korianderpulver Export-Verpackungssack", "title": "Export-Verpackung – Korianderpulver" },
+        { "src": "/assets/products/coriander-powder-dhaniya-powder/packing-2.jpg", "alt": "Korianderpulver Container-Beladung", "title": "Container-Beladung – Korianderpulver" }
+      ],
+      "brandLabels": [
+        { "src": "/assets/products/coriander-powder-dhaniya-powder/brand-1.png", "alt": "RM Gewürze Label", "title": "RM Gewürze Premium-Label" }
+      ]
+    },
+    {
+      "id": "watermelon-seeds",
+      "topSelling": false,
+      "name": "Wassermelonensamen (Til Magaj)",
+      "category": "Ölsaaten & Snack-Samen",
+      "description": "Premium Export-Qualität Wassermelonensamen (Til Magaj) aus ertragsreichen Farmen, gereinigt, sortiert und kalibriert für internationale Lebensmittel-Snack- und Ölverarbeitungsmärkte.",
+      "shortDescription": "Ganze Wassermelonensamen mit nussigem Geschmack und hohem Nährwert, ideal für Snacks, Bäckerei-Toppings, Ölextraktion und Gesundheitsnahrungsmittel-Segmente.",
+      "backgroundImage": "/assets/products/watermelon-seeds/background.png",
+      "productImage": "/assets/products/watermelon-seeds/product.png",
+      "specSheetUrl": "/assets/product-spces/watermelon-seeds.pdf",
+      "image": "",
+      "specifications": {
+        "form": "Ganze Samen",
+        "aroma": "Mildes nussiges Aroma mit frischem Samen-Charakter",
+        "packaging": "25kg / 50kg PP/Krafttaschen mit Innenfolie (individualisierte Export-Verpackung verfügbar)",
+        "color": "Cremeweiß bis hellbraun (je nach Sorte)"
+      },
+      "details": {
+        "appearance": "Ganze längliche ovale Samen, durchschnittliche Größe 8-12 mm, sauber, frei von Verunreinigungen und Fremdstoffen, einheitliche Farbe von cremeweiß bis hellbraun.",
+        "flavorAroma": "Subtiler nussiger Geschmack mit knuspriger Textur beim Rösten; mildes Samen-Aroma bleibt in roher Form erhalten.",
+        "culinaryUses": "Geröstete Snacks, Bäckerei-Toppings, Granola-Mischungen, Trail-Mixes, Ölextraktion für essbare und kosmetische Verwendung.",
+        "healthBenefits": "Reich an Protein (~22-30%), gesunden Fetten (Omega-6, Omega-3), Mineralien (Magnesium, Zink, Eisen), unterstützt Haut- & Haargesundheit, Knochenstärke und allgemeine Gesundheit."
+      },
+      "productCharacteristics": {
+        "physicalParameters": {
+          "dimensions": "Ganze Samen 8-12 mm",
+          "purity": ["99,0%", "98,0%", "95,0%"]
+        },
+        "chemicalParameters": {
+          "moisture": "8% Max",
+          "oilContent_percentage": "30-35% Min",
+          "ashContent": "5% Max"
+        },
+        "microbiologyParameters": {
+          "totalPlateCount_cfu_per_g": "<200000",
+          "salmonella_375g": "Nicht vorhanden",
+          "yeastAndMold_cfu_per_g": "<1000",
+          "coliforms_cfu_per_g": "<100",
+          "EColi_cfu_per_g": "<10"
+        }
+      },
+      "logistics": {
+        "containerCapacity": [
+          { "type": "20 Fuß", "quantityMetricTons": 16 },
+          { "type": "40 Fuß", "quantityMetricTons": 26 }
+        ],
+        "packing": "25/50 kg gewebte PP oder Krafttaschen mit Innenfolie, palettiert und containerisiert für den Export.",
+        "shelfLife": "12-18 Monate bei Lagerung in einem kühlen, trockenen Lagerhaus.",
+        "pesticides": "Einhaltung der internationalen maximalen Rückstands-Grenzwerte (MRLs) für essbare Samen.",
+        "allergens": "Natürlich frei von Hauptallergenen; verarbeitet in allergenkontrollierter Einrichtung."
+      },
+      "packingImages": [
+        { "src": "/assets/products/watermelon-seeds/packing-1.jpg", "alt": "Wassermelonensamen Export-Verpackungssack", "title": "Export-Verpackung – Wassermelonensamen" },
+        { "src": "/assets/products/watermelon-seeds/packing-2.jpg", "alt": "Wassermelonensamen Container-Beladung", "title": "Container-Beladung – Wassermelonensamen" }
+      ],
+      "brandLabels": [
+        { "src": "/assets/products/watermelon-seeds/brand-1.png", "alt": "RM Gewürze Premium-Label", "title": "RM Gewürze Export-Label" }
       ]
     }
   ]

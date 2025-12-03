@@ -61,11 +61,11 @@
         "allergens": "Free from Allergens"
       },
       "packingImages": [
-        { "src": "/assets/products/cumin-seeds/packing-1.jpg", "alt": "Cumin Seeds Packing", "title": "Premium Kraft Bag Packing" },
-        { "src": "/assets/products/cumin-seeds/packing-2.jpg", "alt": "Cumin Seeds Container", "title": "Export Container Loading" }
+        { "src": "/assets/products/cumin-seeds/packing-1.webp", "alt": "Cumin Seeds Packing", "title": "Premium Kraft Bag Packing" },
+        { "src": "/assets/products/cumin-seeds/packing-2.webp", "alt": "Cumin Seeds Container", "title": "Export Container Loading" }
       ],
       "brandLabels": [
-        { "src": "/assets/products/cumin-seeds/brand-1.png", "alt": "RM Spices Brand Label", "title": "RM Spices Premium Label" }
+        { "src": "/assets/products/cumin-seeds/brand-1.webp", "alt": "RM Spices Brand Label", "title": "RM Spices Premium Label" }
       ]
     },
     {
@@ -120,11 +120,11 @@
         "allergens": "Free from Allergens"
       },
       "packingImages": [
-        { "src": "/assets/products/fennel-seeds/packing-1.jpg", "alt": "Fennel Seeds Packing", "title": "Premium Kraft Bag Packing" },
-        { "src": "/assets/products/fennel-seeds/packing-2.jpg", "alt": "Fennel Seeds Container", "title": "Export Container Loading" }
+        { "src": "/assets/products/fennel-seeds/packing-1.webp", "alt": "Fennel Seeds Packing", "title": "Premium Kraft Bag Packing" },
+        { "src": "/assets/products/fennel-seeds/packing-2.webp", "alt": "Fennel Seeds Container", "title": "Export Container Loading" }
       ],
       "brandLabels": [
-        { "src": "/assets/products/fennel-seeds/brand-1.png", "alt": "RM Spices Brand Label", "title": "RM Spices Premium Label" }
+        { "src": "/assets/products/fennel-seeds/brand-1.webp", "alt": "RM Spices Brand Label", "title": "RM Spices Premium Label" }
       ]
     },
     {
@@ -179,11 +179,11 @@
         "allergens": "Free from Allergens"
       },
       "packingImages": [
-        { "src": "/assets/products/coriander-seeds/packing-1.jpg", "alt": "Coriander Seeds Packing", "title": "Premium Kraft Bag Packing" },
-        { "src": "/assets/products/coriander-seeds/packing-2.jpg", "alt": "Coriander Seeds Container", "title": "Export Container Loading" }
+        { "src": "/assets/products/coriander-seeds/packing-1.webp", "alt": "Coriander Seeds Packing", "title": "Premium Kraft Bag Packing" },
+        { "src": "/assets/products/coriander-seeds/packing-2.webp", "alt": "Coriander Seeds Container", "title": "Export Container Loading" }
       ],
       "brandLabels": [
-        { "src": "/assets/products/coriander-seeds/brand-1.png", "alt": "RM Spices Brand Label", "title": "RM Spices Premium Label" }
+        { "src": "/assets/products/coriander-seeds/brand-1.webp", "alt": "RM Spices Brand Label", "title": "RM Spices Premium Label" }
       ]
     },
     {
@@ -238,11 +238,11 @@
         "allergens": "Free from Allergens. :contentReference[oaicite:6]{index=6}"
       },
       "packingImages": [
-        { "src": "/assets/products/sesame-seeds-til/packing-1.jpg", "alt": "Sesame Seeds Export Packing Bag", "title": "Premium Kraft Bag Packing – Sesame Seeds" },
-        { "src": "/assets/products/sesame-seeds-til/packing-2.jpg", "alt": "Sesame Seeds Container Loading", "title": "Container Loading – Sesame Seeds" }
+        { "src": "/assets/products/sesame-seeds-til/packing-1.webp", "alt": "Sesame Seeds Export Packing Bag", "title": "Premium Kraft Bag Packing – Sesame Seeds" },
+        { "src": "/assets/products/sesame-seeds-til/packing-2.webp", "alt": "Sesame Seeds Container Loading", "title": "Container Loading – Sesame Seeds" }
       ],
       "brandLabels": [
-        { "src": "/assets/products/sesame-seeds-til/brand-1.png", "alt": "RM Spices Label", "title": "RM Spices Premium Label" }
+        { "src": "/assets/products/sesame-seeds-til/brand-1.webp", "alt": "RM Spices Label", "title": "RM Spices Premium Label" }
       ]
     },    
     {
@@ -298,23 +298,11 @@
         "allergens": "Free from major allergens; cleaned and sorted."
       },
       "packingImages": [
-        {
-          "src": "https://pjmexport.com/wp-content/uploads/2022/06/fenugreek-seeds-bags.jpg",
-          "alt": "Fenugreek Seeds Export Packaging",
-          "title": "Fenugreek Seeds Kraft Bags"
-        },
-        {
-          "src": "https://pjmexport.com/wp-content/uploads/2022/06/fenugreek-seeds-container.jpg",
-          "alt": "Fenugreek Seeds Container Loading",
-          "title": "Container Loading Fenugreek Seeds"
-        }
+        { "src": "/assets/products/fenugreek-seeds-methi/packing-1.webp", "alt": "Sesame Seeds Export Packing Bag", "title": "Premium Kraft Bag Packing – Sesame Seeds" },
+        { "src": "/assets/products/fenugreek-seeds-methi/packing-2.webp", "alt": "Sesame Seeds Container Loading", "title": "Container Loading – Sesame Seeds" }
       ],
       "brandLabels": [
-        {
-          "src": "https://yourdomain.com/assets/images/rmspices-label.png",
-          "alt": "RM Spices Label",
-          "title": "RM Spices Premium Export Label"
-        }
+        { "src": "/assets/products/fenugreek-seeds-methi/brand-1.webp", "alt": "RM Spices Label", "title": "RM Spices Premium Label" }
       ]
     },
     {
@@ -370,11 +358,11 @@
         "allergens": "Free from allergens and foreign matter; cleaned, sorted and graded for export."
       },
       "packingImages": [
-        { "src": "/assets/products/kalonji-seeds-nigella/packing-1.jpg", "alt": "Kalonji Seeds Export Packing Bag", "title": "Premium Kraft Bag Packing – Kalonji Seeds" },
-        { "src": "/assets/products/kalonji-seeds-nigella/packing-2.jpg", "alt": "Container Loading Kalonji Seeds", "title": "Container Loading – Kalonji Seeds" }
+        { "src": "/assets/products/kalonji-seeds-nigella/packing-1.webp", "alt": "Kalonji Seeds Export Packing Bag", "title": "Premium Kraft Bag Packing – Kalonji Seeds" },
+        { "src": "/assets/products/kalonji-seeds-nigella/packing-2.webp", "alt": "Container Loading Kalonji Seeds", "title": "Container Loading – Kalonji Seeds" }
       ],
       "brandLabels": [
-        { "src": "/assets/products/kalonji-seeds-nigella/brand-1.png", "alt": "RM Spices Premium Label", "title": "RM Spices Export Label" }
+        { "src": "/assets/products/kalonji-seeds-nigella/brand-1.webp", "alt": "RM Spices Premium Label", "title": "RM Spices Export Label" }
       ]
     },
     {
@@ -430,11 +418,11 @@
         "allergens": "Free from major allergens; cleaned, sorted, export-grade."
       },
       "packingImages": [
-        { "src": "/assets/products/ajwain-seeds-carom/packing-1.jpg", "alt": "Ajwain Seeds Export Packaging Bag", "title": "Ajwain Seeds Export Kraft Bag" },
-        { "src": "/assets/products/ajwain-seeds-carom/packing-2.jpg", "alt": "Ajwain Seeds Container Loading", "title": "Ajwain Seeds Bulk Export Container" }
+        { "src": "/assets/products/ajwain-seeds-carom/packing-1.webp", "alt": "Ajwain Seeds Export Packaging Bag", "title": "Ajwain Seeds Export Kraft Bag" },
+        { "src": "/assets/products/ajwain-seeds-carom/packing-2.webp", "alt": "Ajwain Seeds Container Loading", "title": "Ajwain Seeds Bulk Export Container" }
       ],
       "brandLabels": [
-        { "src": "/assets/products/ajwain-seeds-carom/brand-1.png", "alt": "RM Spices Premium Label", "title": "RM Spices Export Label" }
+        { "src": "/assets/products/ajwain-seeds-carom/brand-1.webp", "alt": "RM Spices Premium Label", "title": "RM Spices Export Label" }
       ]
     },
     {
@@ -490,11 +478,11 @@
         "allergens": "Free from Allergens"
       },
       "packingImages": [
-        { "src": "/assets/products/cumin-powder-jeera/packing-1.jpg", "alt": "Cumin Powder Export Packing Bag", "title": "Export Packing – Cumin Powder" },
-        { "src": "/assets/products/cumin-powder-jeera/packing-2.jpg", "alt": "Cumin Powder Container Loading", "title": "Container Loading – Cumin Powder" }
+        { "src": "/assets/products/cumin-powder-jeera/packing-1.webp", "alt": "Cumin Powder Export Packing Bag", "title": "Export Packing – Cumin Powder" },
+        { "src": "/assets/products/cumin-powder-jeera/packing-2.webp", "alt": "Cumin Powder Container Loading", "title": "Container Loading – Cumin Powder" }
       ],
       "brandLabels": [
-        { "src": "/assets/products/cumin-powder-jeera/brand-1.png", "alt": "RM Spices Label", "title": "RM Spices Premium Label" }
+        { "src": "/assets/products/cumin-powder-jeera/brand-1.webp", "alt": "RM Spices Label", "title": "RM Spices Premium Label" }
       ]
     },
     {
@@ -549,11 +537,11 @@
         "allergens": "Free from Allergens"
       },
       "packingImages": [
-        { "src": "/assets/products/coriander-powder-dhaniya-powder/packing-1.jpg", "alt": "Coriander Powder Export Packing Bag", "title": "Export Packing – Coriander Powder" },
-        { "src": "/assets/products/coriander-powder-dhaniya-powder/packing-2.jpg", "alt": "Coriander Powder Container Loading", "title": "Container Loading – Coriander Powder" }
+        { "src": "/assets/products/coriander-powder-dhaniya-powder/packing-1.webp", "alt": "Coriander Powder Export Packing Bag", "title": "Export Packing – Coriander Powder" },
+        { "src": "/assets/products/coriander-powder-dhaniya-powder/packing-2.webp", "alt": "Coriander Powder Container Loading", "title": "Container Loading – Coriander Powder" }
       ],
       "brandLabels": [
-        { "src": "/assets/products/coriander-powder-dhaniya-powder/brand-1.png", "alt": "RM Spices Label", "title": "RM Spices Premium Label" }
+        { "src": "/assets/products/coriander-powder-dhaniya-powder/brand-1.webp", "alt": "RM Spices Label", "title": "RM Spices Premium Label" }
       ]
     },
     {
@@ -608,11 +596,11 @@
         "allergens": "Naturally free from major allergens; processed in allergen-controlled facility."
       },
       "packingImages": [
-        { "src": "/assets/products/watermelon-seeds/packing-1.jpg", "alt": "Watermelon Seeds Export Packing Bag", "title": "Export Packaging – Watermelon Seeds" },
-        { "src": "/assets/products/watermelon-seeds/packing-2.jpg", "alt": "Watermelon Seeds Container Loading", "title": "Container Loading – Watermelon Seeds" }
+        { "src": "/assets/products/watermelon-seeds/packing-1.webp", "alt": "Watermelon Seeds Export Packing Bag", "title": "Export Packaging – Watermelon Seeds" },
+        { "src": "/assets/products/watermelon-seeds/packing-2.webp", "alt": "Watermelon Seeds Container Loading", "title": "Container Loading – Watermelon Seeds" }
       ],
       "brandLabels": [
-        { "src": "/assets/products/watermelon-seeds/brand-1.png", "alt": "RM Spices Premium Label", "title": "RM Spices Export Label" }
+        { "src": "/assets/products/watermelon-seeds/brand-1.webp", "alt": "RM Spices Premium Label", "title": "RM Spices Export Label" }
       ]
     }                    
   ]
