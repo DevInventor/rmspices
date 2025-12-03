@@ -44,7 +44,6 @@ export const Footer: React.FC = () => {
   const whatsapp1 = contactTranslations?.contactInfo?.whatsapp?.value || 
                     contactTranslations?.contactInfo?.whatsapp?.value1 || 
                     contact.whatsapp.number;
-  const whatsapp2 = contactTranslations?.contactInfo?.whatsapp?.value2;
 
   // Handle WhatsApp click
   const handleWhatsAppClick = (number?: string) => {
